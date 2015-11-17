@@ -16,3 +16,4 @@ gems:
   - jemoji
   - jekyll-mentions
   - jekyll-lunr-js-search
+  - jekyll-sitemap
