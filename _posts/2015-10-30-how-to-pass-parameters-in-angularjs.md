@@ -3,7 +3,7 @@ layout: post
 title: AngularJS - 页面跳转传参详解
 date: 2015-11-01
 categories: [angularjs]
-tags: [angularjs, javascript]
+tags: [Angularjs, Javascript]
 ---
 
 这篇博客源于一个[知乎问题: angularjs项目需要从一个页面跳转到另一个页面，同时需要传递一个参数。通过什么实现？](http://www.zhihu.com/question/33565135/answer/69651500)。我因此总结归纳了4种最常见的方法供大家参考。
