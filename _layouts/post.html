@@ -1,0 +1,92 @@
+<!doctype>
+<html>
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <header class="header">
+      <div class="align-text">
+        <a href="/" class="home js-head">&nbsp;</a>
+      </div>
+    </header>
+
+    <div class="wrapper {% if page.date %}post-layout{% endif %}">
+      <div class="sidebar">
+        <a class="name" href="/"><span class="mu-an">黄野</span><span class="mu-an">Crab</span><span class="mu-an">Canon</span> ! !</a>
+        <p>
+          I work at Solue Oy as a <mark>web developer</mark>. Recently I began to enjoy the withered tree outside my window.
+        </p>
+        
+        <div class="sidebar-menu">
+
+          <div class="sidebar-blogs">
+            <p class="sidebar-title">Blogs</p>
+            <span><a href="{{ site.baseurl }}/">sort / date</a></span><br />
+            <span><a href="{{ site.baseurl }}/categories/">sort / categories</a></span><br />
+            <span><a href="{{ site.baseurl }}/tags/">sort / tags</a></span><br />
+          </div>
+
+          <div class="sidebar-projects">
+            <p class="sidebar-title">Projects</p>     
+            <span><a href="{{ site.baseurl }}/projects/">sort / date</a></span><br />
+          </div>
+
+          <div class="sidebar-contact">
+            <p class="sidebar-title">Contact</p>
+            <span><a href="{{ site.baseurl }}/about/">about me</a></span><br />
+          </div>
+
+          <!-- <div class="sidebar-search">          
+            <p class="sidebar-title">Search</p>        
+            <div id="search" style="margin-top: 20px;">
+              <form action="/search" method="get">
+                <input class="search-input" type="text" id="search-query" name="q" placeholder="Search Blogs" autocomplete="off">
+              </form>
+            </div>
+          </div> -->
+
+        </div>
+
+        <div class="sidebar-menu-mobile">
+          <p class="sidebar-title"><a href="{{ site.baseurl }}/projects/">Recent Projects</a></p>
+          <p class="sidebar-title"><a href="{{ site.baseurl }}/about/">About me</a></p>
+        </div>
+
+      </div>
+
+      <div class="column js-content">
+        {% if page.date %}
+          <article>
+            <header class="post-header">
+              <h3 class="post-title">{{ page.title }}</h4>
+              {% if page.date %}
+                <small>
+                  {{ page.date | date_to_string }} -
+                  by <a href="https://crabcanon.github.io/about" target="_blank">@黄野</a>
+                </small>
+              {% endif %}
+            </header>
+            {{ content }}
+          </article>
+          <div class="pagination">
+            {% if page.previous %}
+              <a class="page-nav" href="{{ page.previous.url }}" id="js-previous-post">PREV</a>
+            {% endif %}
+              <a class="page-nav" href="{{ site.url }}" id="">Home</a>
+            {% if page.next %}
+              <a class="page-nav" href="{{ page.next.url }}" id="js-next-post">NEXT</a>
+            {% endif %}
+          </div>
+        {% else %}
+          {{ content }}
+        {% endif %}
+      </div>
+    </div>
+    <footer class="footer">
+      The end.
+    </footer>
+
+    {% include lunr.html %}
+
+  </body>
+</html>
