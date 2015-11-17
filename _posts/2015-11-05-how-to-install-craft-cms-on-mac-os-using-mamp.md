@@ -86,7 +86,7 @@ Congratulations!
 Sometimes, you may not start from the beginning in development, for example, your project has started for a while and other developers have created a bunch of staff based on the original code package and have updated MySQL database, then your boss tells you to set up the development environment from this middle phase. What are you going to do? Usually, you will get a database dump (a .sql file) and one complete code package. The following instruction will tell you how to handle this kind situation.
 
 * <mark>Step 1 - Upload files</mark> 
-	*Unzip your code package and copy it to /Applications/MAMP folder (the root folder of MAMP).
+	* Unzip your code package and copy it to /Applications/MAMP folder (the root folder of MAMP).
 
 * <mark>Step 2 - Configure the root of Apache server</mark> 
 	* Open MAMP.
