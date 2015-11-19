@@ -11,6 +11,47 @@ body {
   word-wrap: break-word;
 }
 
+// Github markdown style for <code>
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+.highlight pre {
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow-x: scroll;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre {
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow-x: scroll;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
 ::-webkit-input-placeholder {
    font-family: "Cutive Mono", "jYuMincho", monospace, serif;
 }
