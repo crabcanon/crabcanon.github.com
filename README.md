@@ -1,7 +1,7 @@
 # A blog
 
 * This is where Ye Huang/黄野 shares his works every once in a while. It mainly contains blogs, personal works and Ye's contact information.
-* Site URL: [yehuang.me](http://yehuang.me/)
+* Site URL: [yehuang.me](https://yehuang.me/)
 ![Ye Huang Home Page Screenshot](/images/homepage/home-screenshot.png) 
 
 ## About the website
@@ -19,11 +19,13 @@
 - Sort blogs by categories
 - Sort blogs by tags
 - Full-text search functionality for blogs
-- Independent page for 'My projects' by [material-design-lite](https://github.com/google/material-design-lite)
-- Independent page for 'About me'
+- Independent page for "My projects" by [material-design-lite](https://github.com/google/material-design-lite)
+- Independent page for "About me"
 - Style of **code snippet highlighting** optimization
 - **Mobile first** user experience optimization
-- **Network optimizaition** for China, using [360网站卫士常用前端公共库CDN服务](http://libs.useso.com/) for webfonts
+- ~~**Network optimization** for China, using [360网站卫士常用前端公共库CDN服务](http://libs.useso.com/) for webfonts~~
+- **Network, performance and security optimizations** by [CloudFlare](https://www.cloudflare.com/)
+- **"https" instead of "http"**
 
 ## Get started
 
@@ -32,7 +34,7 @@
 * `bundle exec jekyll serve`
 * If you want to enable the 'search for blogs' functionality, go to _layouts/post.html and activate the commented part
 
-## TODO
+## Todo
 
 * Search for other languages
 * Search for categories/tags/title of blogs
