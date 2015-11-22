@@ -58,7 +58,7 @@ images/
 
 * :email: sysuhuangye@gmail.com
 * WeChat/微信: @huangye_sysu
-* Linkedin: [@Ye Huang](https://fi.linkedin.com/pub/huang-ye/4a/668/425) 
-* 知乎: [@Ye Huang](http://www.zhihu.com/people/ye-huang-7-35)
+* [Linkedin](https://fi.linkedin.com/pub/huang-ye/4a/668/425) 
+* [知乎](http://www.zhihu.com/people/ye-huang-7-35)
 
 
