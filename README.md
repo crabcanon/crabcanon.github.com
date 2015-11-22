@@ -1,7 +1,7 @@
 # A blog
 
 * This is where Ye Huang/黄野 shares his works every once in a while. It mainly contains blogs, personal works and Ye's contact information.
-* Site URL: [yehuang.me](https://yehuang.me/)
+* Site URL: [https://yehuang.me](https://yehuang.me/)
 ![Ye Huang Home Page Screenshot One](/images/homepage/home-screenshot-1.png) 
 ![Ye Huang Home Page Screenshot Two](/images/homepage/home-screenshot-2.png) 
 
