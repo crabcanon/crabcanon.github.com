@@ -25,7 +25,7 @@
 - Style of **code snippet highlighting** optimization
 - **Mobile first** user experience optimization
 - ~~Network optimization for China, using [360网站卫士常用前端公共库CDN服务](http://libs.useso.com/) for webfonts~~
-- Network, performance and security optimizations by [CloudFlare](https://www.cloudflare.com/)
+- Network and security optimizations by [CloudFlare](https://www.cloudflare.com/)
 - **"https" instead of "http"**
 
 ## Get started
