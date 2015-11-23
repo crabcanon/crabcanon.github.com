@@ -96,6 +96,20 @@ pre code, pre tt {
   -webkit-font-smoothing: antialiased;
 }
 
+.mdl-card__supporting-text{
+  width: 100%;
+  font-size: 1em;
+  font-family: "Cutive Mono", "YuMincho", monospace, serif;
+}
+
+.mdl-card__title-text{
+  font-family: "Cutive Mono", "YuMincho", monospace, serif;
+}
+
+.mdl-button{
+  font-family: "Cutive Mono", "YuMincho", monospace, serif;
+}
+
 .sidebar-menu-mobile{
   display: none;
 }
