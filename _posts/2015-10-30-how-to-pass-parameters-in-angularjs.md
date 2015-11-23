@@ -6,11 +6,11 @@ categories: [angularjs]
 tags: [Angularjs, Javascript]
 ---
 
-这篇博客源于一个[知乎问题: angularjs项目需要从一个页面跳转到另一个页面，同时需要传递一个参数。通过什么实现？](http://www.zhihu.com/question/33565135/answer/69651500)。我因此总结归纳了4种最常见的方法供大家参考。
+这篇博客源于一个[知乎问题: angularjs项目需要从一个页面跳转到另一个页面，同时需要传递一个参数。通过什么实现？](http://www.zhihu.com/question/33565135/answer/69651500)。我因此总结了4种最常见方法供大家参考。
 
 **1. 基于ui-router的页面跳转传参**
 
-（1）在AngularJS的app.js中用ui-router定义路由，比如现在有两个页面，一个页面（producers.html）放置了多个producers，点击其中一个目标，页面跳转到对应的producer页，同时将producerId这个参数传过去。
+（1）在AngularJS的app.js中用ui-router定义路由，比如现在有两个页面，一个页面producers.html放置了多个producers，点击其中一个目标，页面跳转到对应的producer.html页，同时将producerId这个参数传过去。
 
 {% highlight javascript %}
 //定义producers状态
