@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AngularJS - 页面跳转传参详解
+title: AngularJS - 页面跳转传参
 date: 2015-11-01
 categories: [angularjs]
 tags: [Angularjs, Javascript]
