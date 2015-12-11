@@ -19,7 +19,7 @@ layout: post
   {% if post.link %}
   <div class="mdl-card__menu">
     <a href="{{ post.link }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-      <i class="material-icons" style="color: white;">launch</i>
+      <i class="material-icons" style="color: white;">&#xE895;</i>
     </a>
   </div>
   {% endif %}
