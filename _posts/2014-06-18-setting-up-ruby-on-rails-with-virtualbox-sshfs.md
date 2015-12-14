@@ -146,7 +146,7 @@ $ thin start --ssl
 
 ####2.3. Part Three - Connect virtual Ubuntu Server with your Mac OS and develop/test the webapp on the local IDE/browsers based on SSH and SSHFS
 
-Because we are not able to develop or test the webapp in a place (Ubuntu Server) where no IDEs and browsers exist, we need to connect the virtual Ubuntu Server with Mac OS so that all the resources of our computer can be utilized. For example, how to use your favourite [RubyMine](https://www.jetbrains.com/ruby/), [Sublime Text](http://www.sublimetext.com/) or [Atom](https://atom.io/) installed on your Mac to develop webapps deployed on the virtual Ubuntu Server and meanwhile how to preview or test the app on your local browsers like Safari, Chrome or Firefox? This is actually a very tricky issue if you don't have any experience under this kind of situation before. But by following the instruction below, you can easily get out of the woods for sure.
+Because we are not able to develop or test the webapp in a place (Ubuntu Server) where IDEs and browsers don't exist, we have to connect the virtual Ubuntu Server with Mac OS so that all the resources of our computer can be utilized. For example, how to use your favourite [RubyMine](https://www.jetbrains.com/ruby/), [Sublime Text](http://www.sublimetext.com/) or [Atom](https://atom.io/) installed on your Mac to develop a webapp deployed on the virtual Ubuntu Server and meanwhile how to preview or test it on local browsers like Safari, Chrome or Firefox? This is actually a pretty tricky issue if you don't have any experience before. But by following the instruction below, you can easily get out of the woods for sure.
 
 * Install SSH on your Ubuntu Server and shutdown it
 
