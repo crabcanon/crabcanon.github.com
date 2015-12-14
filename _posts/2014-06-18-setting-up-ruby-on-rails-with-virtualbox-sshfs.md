@@ -15,7 +15,7 @@ As a web developer, setting up a local development environment is the first issu
 
 ####*2.1. Part One - Install and start Ubuntu Server on VirtualBox*
 
-* Download [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+* Download and install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 * Download [Ubuntu Server](http://www.ubuntu.com/download/server)
 * Install Ubuntu Server ISO image on VirtualBox by following [video one](https://www.youtube.com/watch?v=HjuazgdyAdc) or [video two](https://www.youtube.com/watch?v=MaAqAx77COM)
 * Start Ubuntu Server on VirtualBox
