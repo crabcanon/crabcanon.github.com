@@ -233,7 +233,7 @@ It is not a surprise that the northern areas of Espoo suffer from long travel ti
 
 Another clear fact by far is the total amount of children is a bit overloaded for those day care centres in the municipal and the day care system simply could not be able to take in all the small children currently. Therefore, some cooperations with private kindergartens and other municipalities become more important.
 
->*Team work by Huang Ye, Anna Gorodetskaya, Simo Syrman*
+>*Team work by Ye Huang, Anna Gorodetskaya and Simo Syrman*
 
 
 
