@@ -148,7 +148,7 @@ $ thin start --ssl
 
 Because we are not able to develop or test the webapp in a place (Ubuntu Server) where IDEs and browsers don't exist, we have to connect the virtual Ubuntu Server with Mac OS so that all the resources of our computer can be utilized. For example, how to use your favourite [RubyMine](https://www.jetbrains.com/ruby/), [Sublime Text](http://www.sublimetext.com/) or [Atom](https://atom.io/) installed on your Mac to develop a webapp deployed on the virtual Ubuntu Server and meanwhile how to preview or test it on local browsers like Safari, Chrome or Firefox? This is actually a pretty tricky issue if you don't have any experience before. But by following the instruction below, you can easily get out of the woods for sure.
 
-* Install SSH on your Ubuntu Server and then shutdown the server
+* Install SSH on Ubuntu Server and then shutdown the server
 
 {% highlight bash %}
 $ sudo apt-get install opens
@@ -188,18 +188,18 @@ $ ssh-keygen -R 192.168.xx.xxx
 $ Are you sure you want to continue connecting (yes/no)? yes
 {% endhighlight %}
 
-* Open your browsers and input URL 192.168.xx.xxx:3000 to preview your Rails webapp
+* Open browsers and input URL 192.168.xx.xxx:3000 to preview your Rails webapp
 
 * Using SSHFS to mount the remote file system (your webapp code package on Ubuntu Server) over SSH
 
     * Download and install [SSHFS](http://fuse.sourceforge.net/sshfs.html) on your Mac
-    * We are going to mount the remote file system to for example ~/Desktop/mountpoint folder (PS: No need to create this folder before). Open your Mac Terminal and directly input:
+    * We are going to mount the remote file system to for example ~/Desktop/mountpoint folder (PS: No need to create this folder before). Open your Mac Terminal and input command (for more detailed information, please check [here](https://github.com/osxfuse/osxfuse/wiki/SSHFS)):
     
 {% highlight bash %}
-$ sshfs -p 22 username@192.168.xx.xxx:repository/your-repository-name/ ~/Desktop/mountpoint -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=xxx
+$ sshfs -p 22 username@host:repository/your-repository-name/ ~/Desktop/mountpoint -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=xxx
 {% endhighlight %}
 
-* Open the mountpoint (~/Desktop/mountpoint) in your favourite IDE and you can now start the amazing development journey! (PS: all your changes or updates will be automatically synchronized on the virtual Ubuntu Server!)
+* Open the mountpoint (~/Desktop/mountpoint) in your favourite IDE and you can now start the amazing development journey! (PS: all changes or updates will be automatically synchronized on the virtual Ubuntu Server!)
 
 
 
