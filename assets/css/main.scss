@@ -11,6 +11,10 @@ body {
   word-wrap: break-word;
 }
 
+img[alt=figure] { 
+  width: 500px; 
+}
+
 // Github markdown style for <code>
 code, tt {
   margin: 0 2px;
