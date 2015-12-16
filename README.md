@@ -37,11 +37,11 @@
 
 ## Todo
 
-* Search for other languages
-* Search for categories/tags/title of blogs
-* [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)
-* Support for more Chinese fonts
-* Comment system or share functionality are not necessary for now, but if you have good recommendations which could fit this theme together, please let me know. Thanks!
+- [] Search for other languages
+- [] Search for categories/tags/title of blogs
+- [] [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)
+- [] Support for more Chinese fonts
+- [] Comment system or share functionality are not necessary for now, but if you have good recommendations which could fit this theme together, please let me know. Thanks!
 
 ## License
 
