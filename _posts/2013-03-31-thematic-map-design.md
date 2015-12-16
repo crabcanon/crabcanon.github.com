@@ -87,7 +87,7 @@ The main processes can be summarized as following steps:
 
 ####*2.3 The final work*
 
-<img src="/images/blogs/20130331-3.png" width="100%"/>
+<img src="/images/blogs/20130331-5.png" width="100%"/>
 
 *Figure 4 Life Expectancy of European Countries in 2007*
 
