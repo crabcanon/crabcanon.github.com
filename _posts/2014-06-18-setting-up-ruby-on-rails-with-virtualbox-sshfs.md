@@ -200,7 +200,7 @@ $ rails s
    Listening on 0.0.0.0:3000, CTRL+C to stop
 {% endhighlight %}
 
-* Open browsers and input URL 192.168.xx.xxx:3000 to preview(please remember you actually start a remote rails app via your Mac Terminal. Though it shows "Listening on 0.0.0.0:3000, CTRL+C to stop", you still have to replace 0.0.0.0 to 192.168.xx.xxx which is the IP address of remote server)
+* Open browsers and input URL 192.168.xx.xxx:3000 to preview(please remember you actually start a remote rails app via your Mac Terminal. Though it shows "Listening on 0.0.0.0:3000, CTRL+C to stop", you still have to replace 0.0.0.0 to 192.168.xx.xxx which is a public IP address of the remote server)
 
 * Using SSHFS to mount the remote file system (your webapp code package on Ubuntu Server) over SSH
 
