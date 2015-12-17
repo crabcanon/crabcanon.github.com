@@ -8,11 +8,11 @@ tags: [Geoserver, OpenLayers, Apache Tomcat]
 
 ####Youtube
 
-<iframe width="500" height="420" src="//www.youtube.com/embed/HJ3vejLnQ3g" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="420" src="//www.youtube.com/embed/HJ3vejLnQ3g" frameborder="0" allowfullscreen></iframe>
 
 ####Youku (China)
 
-<iframe width="500" height="420" src="http://player.youku.com/embed/XNTcyOTA3ODEy" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="420" src="http://player.youku.com/embed/XNTcyOTA3ODEy" frameborder="0" allowfullscreen></iframe>
 
 ####1. Background
 
