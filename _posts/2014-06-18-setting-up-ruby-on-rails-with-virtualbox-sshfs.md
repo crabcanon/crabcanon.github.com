@@ -193,9 +193,9 @@ $ rails s
 => Rails 3.2.12 application starting in development on http://0.0.0.0:3000
 => Call with -d to detach
 => Ctrl-C to shutdown server
-=> Thin web server (v1.5.1 codename Straight Razor)
-=> Maximum connections set to 1024
-=> Listening on 0.0.0.0:3000, CTRL+C to stop
+   Thin web server (v1.5.1 codename Straight Razor)
+   Maximum connections set to 1024
+   Listening on 0.0.0.0:3000, CTRL+C to stop
 {% endhighlight %}
 
 * Open browsers and input URL 192.168.xx.xxx:3000 to preview your Rails app(please remember because you actually start a remote rails app in your Mac Terminal, though it shows "Listening on 0.0.0.0:3000, CTRL+C to stop", you still have to replace IP 0.0.0.0 to 192.168.xx.xxx)
