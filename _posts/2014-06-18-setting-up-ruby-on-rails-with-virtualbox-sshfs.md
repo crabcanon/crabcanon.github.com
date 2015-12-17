@@ -183,10 +183,12 @@ Open Mac Terminal and input:
 $ ssh -l username-of-your-ubuntu-server -Y 192.168.xx.xxx
 
 // If you get this problem: "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!", you can resolve it by the following commands:
+
 $ ssh-keygen -R 192.168.xx.xxx
 $ Are you sure you want to continue connecting (yes/no)? yes
 
 // After you successfully connect to Ubuntu Server, navigate to the root of your code package(in this example, the path is /repository/your-repository-name):
+
 $ cd repository/your-repository-name
 $ rails s
 => Booting Thin
