@@ -182,7 +182,7 @@ Open Mac Terminal and input:
 {% highlight bash %}
 $ ssh -l username-of-your-ubuntu-server -Y 192.168.xx.xxx
 
-// If you get this problem: "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!", you can resolve it by the following commands:
+// If you get this problem: "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!", you can resolve it by commands below:
 
 $ ssh-keygen -R 192.168.xx.xxx
 $ Are you sure you want to continue connecting (yes/no)? yes
