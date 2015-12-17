@@ -168,7 +168,7 @@ $ sudo shutdown -h now
     * Select "Host-only Adapter" for "Attached to: "
     * Select "Allow All" for "Promiscuous Mode: "
 
-* Restart Ubuntu Server, configure the "dhclient" and check IP address of the server (This needs to be done in Ubuntu Server side)
+* Restart Ubuntu Server, configure the "dhclient" and check IP address of the server (These need to be done on Ubuntu Server)
 
 {% highlight bash %}
 $ sudo dhclient eth1
