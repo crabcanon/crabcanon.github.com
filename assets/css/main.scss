@@ -11,6 +11,10 @@ body {
   word-wrap: break-word;
 }
 
+small{
+  text-transform: capitalize;
+}
+
 img[alt=figure] { 
   width: 500px; 
 }
