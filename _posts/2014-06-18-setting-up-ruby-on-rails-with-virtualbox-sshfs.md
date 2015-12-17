@@ -8,7 +8,7 @@ tags: [Ubuntu Server, Ruby on Rails, MySQL, VirtualBox, SSHFS]
 
 ####1. Introduction
 
-As a web developer, setting up a local development environment is the first issue that needs to be done before you truly start. In many cases, we have to deal with different types of tech-stacks, for example, the most popular MEAN(MongoDB, Express, AngularJS & Node.js), React-fullstack(React.js, Redux, Express, MongoDB, Babel, Webpack, etc.), LAMP(Apache, MySQL & PHP), LEMP(Nginx, MySQL & PHP-FPM), Ruby on Rails and so on. Actually, most top cloud platforms nowadays have provided very easy to use "cloud launcher" that allows you to deploy apps with just a few clicks or commands. For example, [Google Cloud Platform - Cloud Launcher](https://cloud.google.com/launcher/?cat=INFRASTRUCTURE), [AWS Marketplace - Application Development](https://aws.amazon.com/marketplace/b/2649279011/ref=gtw_navlft_node_2649279011?page=1&category=2649279011), [Heroku Platform - Buildpacks](https://elements.heroku.com/buildpacks) and [DigitalOcean - DISTROS & 1-CLICK APPS](https://www.digitalocean.com/features/one-click-apps/). However, sometimes you still have to setup everything from the beginning in your local computer for some reasons, for example, if you are going to launch apps on the server without the support of "cloud launcher". In this tutorial, I will show you how to setup a complete development environment for an existing Ruby on Rails webapp (the main tech-stack is made up of Ruby on Rails, MySQL, Apache, Nginx and Ubuntu Server) on Mac OS. 
+As a web developer, setting up a local development environment is the first issue that needs to be done before you truly start. In many cases, we have to deal with different types of tech-stacks, such as the most popular MEAN(MongoDB, Express, AngularJS & Node.js), React-fullstack(React.js, Redux, Express, MongoDB, Babel, Webpack, etc.), LAMP(Apache, MySQL & PHP), LEMP(Nginx, MySQL & PHP-FPM), Ruby on Rails and so on. Actually, most top cloud platforms nowadays have provided very easy to use "cloud launcher" that allows you to deploy apps with just a few clicks or commands. For example, [Google Cloud Platform - Cloud Launcher](https://cloud.google.com/launcher/?cat=INFRASTRUCTURE), [AWS Marketplace - Application Development](https://aws.amazon.com/marketplace/b/2649279011/ref=gtw_navlft_node_2649279011?page=1&category=2649279011), [Heroku Platform - Buildpacks](https://elements.heroku.com/buildpacks) and [DigitalOcean - DISTROS & 1-CLICK APPS](https://www.digitalocean.com/features/one-click-apps/). However, sometimes we still have to setup everything from the beginning in our local computers. For example, if you are going to launch apps on some servers without the support of "cloud launcher". In this tutorial, I will show you how to setup a complete development environment for an existing Ruby on Rails webapp (the main tech-stack is made up of Ruby on Rails, MySQL, Apache, Nginx and Ubuntu Server) on Mac OS. 
 
 
 ####2. Step by step
@@ -146,7 +146,7 @@ $ thin start --ssl
 
 ####*2.3. Part Three - Connect virtual Ubuntu Server with your Mac OS and develop/test the webapp on the local IDE/browsers based on SSH and SSHFS*
 
-Because we are not able to develop or test the webapp in a place (Ubuntu Server) where IDEs and browsers don't exist, we have to connect the virtual Ubuntu Server with Mac OS so that all the resources of our computer can be utilized. For example, how to use your favourite [RubyMine](https://www.jetbrains.com/ruby/), [Sublime Text](http://www.sublimetext.com/) or [Atom](https://atom.io/) installed on your Mac to develop a webapp deployed on the virtual Ubuntu Server and meanwhile how to preview or test it on local browsers like Safari, Chrome or Firefox? This is actually a pretty tricky issue if you don't have any experience before. But by following the instruction below, you can easily get out of the woods for sure.
+Because we are not able to develop or test the webapp in a place (Ubuntu Server) where IDEs and browsers don't exist, we have to connect the virtual Ubuntu Server with Mac OS so that all the resources of our computer can be utilized. For example, how to use your favourite [RubyMine](https://www.jetbrains.com/ruby/), [Sublime Text](http://www.sublimetext.com/) or [Atom](https://atom.io/) installed on your Mac to develop a webapp deployed on the virtual Ubuntu Server and meanwhile how to preview or test it on local browsers such as Safari, Chrome or Firefox? This is actually a pretty tricky issue if you don't have any experience before. But by following the instruction below, you can easily get out of the woods for sure.
 
 * Install SSH on Ubuntu Server and then shutdown the server
 
@@ -168,27 +168,37 @@ $ sudo shutdown -h now
     * Select "Host-only Adapter" for "Attached to: "
     * Select "Allow All" for "Promiscuous Mode: "
 
-* Restart Ubuntu Server, configure the "dhclient", check IP address of the server and start your app
+* Restart Ubuntu Server, configure the "dhclient" and check IP address of the server (This needs to be done in Ubuntu Server side)
 
 {% highlight bash %}
 $ sudo dhclient eth1
 $ ip a
 //You will find two IP addresses: one is 127.0.0.1 and the other is something like 192.168.xx.xxx which will be our target.
-$ cd repository/your-repository-name
-$ rails s
 {% endhighlight %}
 
-* Connect the virtual Ubuntu Server to Mac OS via SSH
+* Connect Ubuntu Server to Mac OS via SSH and start your Ruby on Rails app in Mac Terminal
 
-Open your Mac Terminal and input:
+Open Mac Terminal and input:
 {% highlight bash %}
 $ ssh -l username-of-your-ubuntu-server -Y 192.168.xx.xxx
+
 // If you get this problem: "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!", you can resolve it by the following commands:
 $ ssh-keygen -R 192.168.xx.xxx
 $ Are you sure you want to continue connecting (yes/no)? yes
+
+// After you successfully connect to Ubuntu Server, navigate to the root of your code package(in this example, the path is /repository/your-repository-name):
+$ cd repository/your-repository-name
+$ rails s
+=> Booting Thin
+=> Rails 3.2.12 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+=> Thin web server (v1.5.1 codename Straight Razor)
+=> Maximum connections set to 1024
+=> Listening on 0.0.0.0:3000, CTRL+C to stop
 {% endhighlight %}
 
-* Open browsers and input URL 192.168.xx.xxx:3000 to preview your Rails webapp
+* Open browsers and input URL 192.168.xx.xxx:3000 to preview your Rails app(please remember because you actually start a remote rails app in your Mac Terminal, though it shows "Listening on 0.0.0.0:3000, CTRL+C to stop", you still have to replace IP 0.0.0.0 to 192.168.xx.xxx)
 
 * Using SSHFS to mount the remote file system (your webapp code package on Ubuntu Server) over SSH
 
