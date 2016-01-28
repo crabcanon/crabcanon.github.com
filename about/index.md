@@ -4,17 +4,21 @@ layout: post
 
 <div class="about-page">
   <p class="sidebar-title about-me">About me.</p>
-  <p class="about-p">My name is Ye Huang. Currently, I am studying in Aalto University as a Master's degree student in Geoinformatics. I am also a web developer at Solue Oy which is a software consulting firm in Finland. My interests are web deisgn, data visualisation and <a href="http://www.esri.com/what-is-gis">GIS</a>. Recently I began to enjoy playing with Github. By the way, Github API is my favourite for testing any new web technologies so far.</p>
-  <p class="about-p">Find me on:</p>
+  <p class="about-p">My name is Ye Huang. Currently, I am studying in Aalto University as a Master's degree student in Geoinformatics. I am also a web developer at Solue Oy which is a software consulting firm in Finland. My interests are web deisgn, data visualisation and <a href="http://www.esri.com/what-is-gis">GIS</a>. Recently I restarted to maintain my Github Page as I finally got a template which could arouse my desire. By the way, Github API is my favourite for testing any new web technologies so far.</p>
+  <p class="about-p">Want more?</p>
   <ul class="list">
-    <li><a href="https://github.com/crabcanon">Github</a> | <a href="https://fi.linkedin.com/pub/huang-ye/4a/668/425">Linkedin</a> | <a href="https://www.youtube.com/channel/UCglv5J7B8eSfNnB5Nb4YffQ">Youtube</a> | <a href="http://www.zhihu.com/people/ye-huang-7-35">『知乎』</a></li>
+    <li><a href="https://github.com/crabcanon">Github</a> | <a href="https://fi.linkedin.com/pub/huang-ye/4a/668/425">Linkedin</a> | <a href="http://www.zhihu.com/people/ye-huang-7-35">『知乎』</a> | <a href="/images/CV.pdf">CV</a></li>
   </ul>
 
   <div class="photos">
-    <a href="" class="p1 photo" target="_blank"><img alt="" src="/images/homepage/about-1.jpg"></a>
-    <a href="" class="p2 photo" target="_blank"><img alt="" src="/images/homepage/about-2.jpg"></a>
+    <a href="https://www.instagram.com/p/9cd5_KGmOj/?taken-by=yehuang_crabcanon" class="p1 photo" target="_blank"><img alt="" src="/images/homepage/about-1.jpg"></a>
+    <a href="https://www.instagram.com/p/BBGQEK7GmHo/?taken-by=yehuang_crabcanon" class="p2 photo" target="_blank"><img alt="" src="/images/homepage/about-2.jpg"></a>
+    <a href="https://www.instagram.com/p/BAuqIJAGmBE/?taken-by=yehuang_crabcanon" class="p3 photo" target="_blank"><img alt="" src="/images/homepage/about-4.jpg"></a>
+    <a href="https://www.instagram.com/p/_gkXcSGmIX/?taken-by=yehuang_crabcanon" class="p4 photo" target="_blank"><img alt="" src="/images/homepage/about-3.jpg"></a>
     <div class="caption c1">Woke up in the morning feeling like my shadow which was projected on the wall by a beam of light.</div>
     <div class="caption c2">Arctic Ocean under the sunset.</div>
+    <div class="caption c3">I learned a new word "LGBT" in a library of Helsinki.</div>
+    <div class="caption c4">I will use this picture as the cover if I have something to publish one day.</div>
   </div>
 </div>
 
