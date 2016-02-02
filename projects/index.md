@@ -8,18 +8,21 @@ layout: post
   <div class="mdl-card__title" style=" background: url('{{post.image}}') center / cover;">
     <h2 class="mdl-card__title-text grad">{{ post.title }}</h2>
   </div>
-  <div class="mdl-card__supporting-text">
+  <div class="mdl-card__supporting-text" style="border-top: 1px solid rgba(0,0,0,0.1);">
     {{ post.description }}
   </div>
   <div class="mdl-card__actions mdl-card--border">
-    <a href="{{ post.url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      {{ post.duration }}
+    </a>
+    <a href="{{ post.url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="float: right;">
       Check details
     </a>
   </div>
   {% if post.link %}
   <div class="mdl-card__menu">
     <a href="{{ post.link }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-      <i class="material-icons" style="color: white;">&#xE895;</i>
+      <i class="material-icons" style="color: rgba(0,0,0,0.65);">&#xE895;</i>
     </a>
   </div>
   {% endif %}
