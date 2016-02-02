@@ -24,25 +24,25 @@ As a web developer, setting up a local development environment is the first issu
 
 * Install [Git](https://git-scm.com/)
 
-{% highlight bash %}
+```bash
 $ sudo apt-get install git-core configuration
 $ git config —global user.email "your email"
 $ git config —global user.name "your username"
-{% endhighlight %}
+```
 
 * Clone the remote app repository and switch to the target branch
 
-{% highlight bash %}
+```bash
 $ mkdir repository
 $ cd repository
 $ git clone your-username@server-url.git
 $ git fetch --all
 $ git checkout -b <branch> --track <remote>/<branch>
-{% endhighlight %}
+```
 
 * Install [Ruby on Rails](http://rubyonrails.org/)
 
-{% highlight bash %}
+```bash
 $ sudo apt-get update
 $ sudo apt-get install curl
 $ \curl -L https://get.rvm.io | bash -s stable
@@ -54,37 +54,37 @@ $ rvm rubygems current
 $ sudo apt-get install build-essential
 $ sudo apt-get install ruby-dev
 $ gem install rails
-{% endhighlight %}
+```
 
 * Install [MySQL](https://www.mysql.com/) & MySQL client development libraries
 
-{% highlight bash %}
+```bash
 $ sudo apt-get install mysql-client mysql-server
 $ sudo apt-get install libmysqlclient-dev
-{% endhighlight %}
+```
 
 * Install [ZeroMQ](http://zeromq.org/) lightweight messaging kernel
 
-{% highlight bash %}
+```bash
 $ sudo apt-get install libzmq-dev
-{% endhighlight %} 
+``` 
 
 * Install [Node.js](https://nodejs.org/en/)
 
-{% highlight bash %}
+```bash
 $ sudo apt-get install nodejs
 $ sudo ln -s /usr/bin/nodejs /usr/bin/node
-{% endhighlight %} 
+``` 
 
 * Install [Emacs](https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html)
 
-{% highlight bash %}
+```bash
 $ sudo apt-get install emacs
-{% endhighlight %} 
+``` 
 
 * Install and Configure [Apache2 Web Server](https://help.ubuntu.com/lts/serverguide/httpd.html)
 
-{% highlight bash %}
+```bash
 $ sudo apt-get install apache2
 $ sudo a2enmod rewrite
 $ sudo rm /etc/apache2/sites-enabled/*
@@ -92,56 +92,56 @@ $ cd repository/your-repository-name
 $ sudo cp apache/your-apache-configure-file /etc/apache2/sites-available/
 $ sudo ln -s /etc/apache2/sites-available/your-apache-configuration-file /etc/apache2/sites-enabled/
 $ sudo /etc/init.d/apache2 restart
-{% endhighlight %} 
+``` 
 
 * Install [Nginx](http://nginx.org/) and [AWStats](http://www.awstats.org/)
 
-{% highlight bash %}
+```bash
 $ sudo apt-get install nginx
 $ sudo apt-get install awstats
-{% endhighlight %} 
+``` 
 
 * Configure Nginx
 
-{% highlight bash %}
+```bash
 $ sudo rm /etc/nginx/sites-enabled/default
 $ cd repository/your-repository-name
 $ sudo cp nginx/sites-available/* /etc/nginx/sites-available/
 $ sudo ln -s /etc/nginx/sites-available/your-nginx-configuration-file /etc/nginx/sites-enabled/
 $ sudo ln -s /etc/nginx/sites-available/awstats /etc/nginx/sites-enabled/
-{% endhighlight %}
+```
 
 * Configure AWStats
 
-{% highlight bash %}
+```bash
 $ sudo rm /etc/awstats/awstats.conf
 $ cd repository/your-repository-name
 $ sudo cp awstats/awstats.* /etc/awstats/
 $ sudo mkdir /var/www/awstats.your-app-name.com
 $ sudo htpasswd -c /etc/awstats/awstats.your-app-name.com.htpasswd Admin
-{% endhighlight %}
+```
 
 * Install gems of your Rails webapp
 
-{% highlight bash %}
+```bash
 $ gem install thin
 $ cd repository/aemdee
 $ bundle install
-{% endhighlight %}
+```
 
 * Update MySQL database by the existing database dump file
 
-{% highlight bash %}
+```bash
 $ mysql -u username -p password your-db < your-dump-file-name.sql
-{% endhighlight %}
+```
 
 * Start server
 
-{% highlight bash %}
+```bash
 $ emacs -nw config/environments/development.rb
 $ emacs -nw config/database.yml
 $ thin start --ssl
-{% endhighlight %}
+```
 
 
 ####*2.3. Part Three - Connect virtual Ubuntu Server with your Mac OS and develop/test the webapp on the local IDE/browsers based on SSH and SSHFS*
@@ -150,7 +150,7 @@ Because we are not able to develop or test the webapp in a place (Ubuntu Server)
 
 * Install SSH on Ubuntu Server and then shutdown the server
 
-{% highlight bash %}
+```bash
 $ sudo apt-get install opens
 $ sudo apt-cache ssh
 $ sudo apt-cache search ssh
@@ -158,7 +158,7 @@ $ sudo apt-cache search ssh  |  grep server
 $ sudo apt-cache search ssh  |  grep server  |  grep open
 $ sudo apt-get install opens-server
 $ sudo shutdown -h now
-{% endhighlight %}
+```
 
 * Activate the Network Adapter 2 of Ubuntu Server in VirtualBox Manager
 
@@ -170,16 +170,16 @@ $ sudo shutdown -h now
 
 * Restart Ubuntu Server, configure the "dhclient" and check IP address of the server (These need to be done on Ubuntu Server)
 
-{% highlight bash %}
+```bash
 $ sudo dhclient eth1
 $ ip a
 //You will find two IP addresses: one is 127.0.0.1 and the other is something like 192.168.xx.xxx which will be our target.
-{% endhighlight %}
+```
 
 * Connect Ubuntu Server to Mac OS via SSH and start your Ruby on Rails app in Mac Terminal
 
 Open Mac Terminal and input:
-{% highlight bash %}
+```bash
 $ ssh -l username-of-your-ubuntu-server -Y 192.168.xx.xxx
 
 // If you get this problem: "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!", you can resolve it by commands below:
@@ -198,7 +198,7 @@ $ rails s
    Thin web server (v1.5.1 codename Straight Razor)
    Maximum connections set to 1024
    Listening on 0.0.0.0:3000, CTRL+C to stop
-{% endhighlight %}
+```
 
 * Open browsers and input URL 192.168.xx.xxx:3000 to preview(please remember you actually start a remote rails app via your Mac Terminal. Though it shows "Listening on 0.0.0.0:3000, CTRL+C to stop", you still have to replace 0.0.0.0 to 192.168.xx.xxx which is a public IP address of the remote server)
 
@@ -207,18 +207,8 @@ $ rails s
     * Download and install [SSHFS](http://fuse.sourceforge.net/sshfs.html) on your Mac
     * We are going to mount the remote file system to for example ~/Desktop/mountpoint folder (PS: No need to create this folder before). Open your Mac Terminal and input command (for more detailed information, please check [here](https://github.com/osxfuse/osxfuse/wiki/SSHFS)):
     
-{% highlight bash %}
+```bash
 $ sshfs -p 22 username@host:repository/your-repository-name/ ~/Desktop/mountpoint -oauto_cache,reconnect,defer_permissions,noappledouble,negative_vncache,volname=xxx
-{% endhighlight %}
+```
 
 * Open the mountpoint (~/Desktop/mountpoint) in your favourite IDE and you can now start the amazing development journey! (PS: all changes or updates will be automatically synchronized on the virtual Ubuntu Server!)
-
-
-
-
-
-
-
-
-
-

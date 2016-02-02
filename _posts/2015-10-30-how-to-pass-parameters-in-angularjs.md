@@ -12,7 +12,7 @@ tags: [Angularjs, Javascript]
 
 （1）在AngularJS的app.js中用ui-router定义路由，比如现在有两个页面，一个页面producers.html放置了多个producers，点击其中一个目标，页面跳转到对应的producer.html页，同时将producerId这个参数传过去。
 
-{% highlight javascript %}
+```javascript
 //定义producers状态
 .state('producers', {
     url: '/producers',
@@ -25,25 +25,25 @@ tags: [Angularjs, Javascript]
     templateUrl: 'views/producer.html',
     controller: 'ProducerCtrl'
 })
-{% endhighlight %}
+```
 
 （2）在producers.html中，定义点击事件，比如ng-click="toProducer(producerId)"，在ProducersCtrl中，定义页面跳转函数 (使用ui-router的$state.go接口)：
 
-{% highlight javascript %}
+```javascript
 .controller('ProducersCtrl', function ($scope, $state) {
     $scope.toProducer = function (producerId) {
         $state.go('producer', {producerId: producerId});
     };
 });
-{% endhighlight %}
+```
 
  3. 在ProducerCtrl中，通过ui-router的$stateParams获取参数producerId，譬如：
 
-{% highlight javascript %}
+```javascript
  .controller('ProducerCtrl', function ($scope, $state, $stateParams) {
    var producerId = $stateParams.producerId;
 });
-{% endhighlight %}
+```
 
 <hr>
 
@@ -51,7 +51,7 @@ tags: [Angularjs, Javascript]
 
 举例：你有N个页面，每个页面都需要用户填选信息，最终引导用户至尾页提交，同时后一个页面要显示前一个页面所填写的信息。这个时候用factory传参是比较合理的选择（下面的代码是一个简化版，根据需求可以不同定制）：
 
-{% highlight javascript %}
+```javascript
 .factory('myFactory', function () {
     //定义factory返回对象
     var myServices = {};    
@@ -86,7 +86,7 @@ tags: [Angularjs, Javascript]
     return myServices;
   
 });
-{% endhighlight %}
+```
 
 <hr>
 
@@ -95,7 +95,7 @@ tags: [Angularjs, Javascript]
 （1）举例：在一个单页中定义了nested views，你希望让所有子作用域都监听到某个参数的变化，并且作出相应动作。比如一个地图应用，某个$state中定义元素input，输入地址后，地图要定位，同时另一个状态下的列表要显示出该位置周边商铺的信息，此时多个$scope都在监听地址变化。
 PS: $rootScope.$broadcast()可以非常方便的设置全局事件，并让所有子作用域都监听到。
 
-{% highlight javascript %}
+```javascript
 .factory('addressFactory', ['$rootScope', function ($rootScope) {
     // 定义所要返回的地址对象   
     var address = {};
@@ -113,11 +113,11 @@ PS: $rootScope.$broadcast()可以非常方便的设置全局事件，并让所�
     // 返回地址对象
     return address;
 }]);
-{% endhighlight %}
+```
 
 （2）在获取地址的controller中：
 
-{% highlight javascript %}
+```javascript
 // 动态获取地址，接口方法省略
 var component = {
     addressLongName: xxxx,
@@ -135,11 +135,11 @@ $scope.$watch('components', function () {
     // 更新addressFactory中的components
     addressFactory.updateAddress(components);
 });
-{% endhighlight %}
+```
 
 （3）在监听地址变化的controller中：
 
-{% highlight javascript %}
+```javascript
 // 通过addressFactory中定义的全局事件'AddressUpdated'监听地址变化
 $scope.$on('AddressUpdated', function () {
    // 监听地址变化并获取相应数据
@@ -155,7 +155,7 @@ $scope.$on('AddressUpdated', function () {
        }
    });
 });
-{% endhighlight %}
+```
 
 <hr>
 
@@ -165,7 +165,7 @@ $scope.$on('AddressUpdated', function () {
 
 （1）上传参数到localStorage - Controller A
 
-{% highlight javascript %}
+```javascript
 // 定义并初始化localStorage中的counter属性
 $scope.$storage = $localStorage.$default({
     counter: 0
@@ -177,14 +177,14 @@ counterFactory.updateCounter().then(function (data) {
     // 将新的counter值上传到localStorage中
     $scope.$storage.counter = data.counter;
 });
-{% endhighlight %}
+```
 
 （2）监听localStorage中的参数变化 - Controller B
 
-{% highlight javascript %}
+```javascript
 $scope.counter = $localStorage.counter;
 $scope.$watch('counter', function(newVal, oldVal) {
     // 监听变化，并获取参数的最新值
     $log.log('newVal: ', newVal);    
 });
-{% endhighlight %}
+```
