@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Palkkaaminut Recruitment Channel
-date: 2016-12-29
+date: 2015-12-29
 duration: 2015.11 - 2015.12
 image: /images/projects/palkkaaminut.jpg
 link: https://www.palkkaaminut.fi/

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grocialist Food Channel
-date: 2016-11-29
+date: 2015-11-29
 duration: 2015.06 - 2015.11
 image: /images/projects/grocialist.jpg
 link: http://www.grocialist.com
