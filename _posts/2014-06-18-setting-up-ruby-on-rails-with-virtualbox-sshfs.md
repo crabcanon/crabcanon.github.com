@@ -6,21 +6,21 @@ categories: [Development Environment]
 tags: [Ubuntu Server, Ruby on Rails, MySQL, VirtualBox, SSHFS]
 ---
 
-####1. Introduction
+**1. Introduction**
 
 As a web developer, setting up a local development environment is the first issue that needs to be done before you truly start. In many cases, we have to deal with different types of tech-stacks, such as the most popular MEAN(MongoDB, Express, AngularJS & Node.js), React-fullstack(React.js, Redux, Express, MongoDB, Babel, Webpack, etc.), LAMP(Apache, MySQL & PHP), LEMP(Nginx, MySQL & PHP-FPM), Ruby on Rails and so on. Actually, most top cloud platforms nowadays have provided very easy to use "cloud launcher" that allows you to deploy apps with just a few clicks or commands. For example, [Google Cloud Platform - Cloud Launcher](https://cloud.google.com/launcher/?cat=INFRASTRUCTURE), [AWS Marketplace - Application Development](https://aws.amazon.com/marketplace/b/2649279011/ref=gtw_navlft_node_2649279011?page=1&category=2649279011), [Heroku Platform - Buildpacks](https://elements.heroku.com/buildpacks) and [DigitalOcean - DISTROS & 1-CLICK APPS](https://www.digitalocean.com/features/one-click-apps/). However, sometimes we still have to setup everything from the beginning in our local computers. For example, if you are going to launch apps on some servers without the support of "cloud launcher". In this tutorial, I will show you how to setup a complete development environment for an existing Ruby on Rails webapp (the main tech-stack is made up of Ruby on Rails, MySQL, Apache, Nginx and Ubuntu Server) on Mac OS. 
 
 
-####2. Step by step
+**2. Step by step**
 
-####*2.1. Part One - Install and start Ubuntu Server on VirtualBox*
+*2.1. Part One - Install and start Ubuntu Server on VirtualBox*
 
 * Download and install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 * Download [Ubuntu Server](http://www.ubuntu.com/download/server)
 * Install Ubuntu Server ISO image on VirtualBox by following [video one](https://www.youtube.com/watch?v=HjuazgdyAdc) or [video two](https://www.youtube.com/watch?v=MaAqAx77COM)
 * Start Ubuntu Server on VirtualBox
 
-####*2.2. Part Two - Install dependencies on Ubuntu Server*
+*2.2. Part Two - Install dependencies on Ubuntu Server*
 
 * Install [Git](https://git-scm.com/)
 
@@ -67,20 +67,20 @@ $ sudo apt-get install libmysqlclient-dev
 
 ```bash
 $ sudo apt-get install libzmq-dev
-``` 
+```
 
 * Install [Node.js](https://nodejs.org/en/)
 
 ```bash
 $ sudo apt-get install nodejs
 $ sudo ln -s /usr/bin/nodejs /usr/bin/node
-``` 
+```
 
 * Install [Emacs](https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html)
 
 ```bash
 $ sudo apt-get install emacs
-``` 
+```
 
 * Install and Configure [Apache2 Web Server](https://help.ubuntu.com/lts/serverguide/httpd.html)
 
@@ -92,14 +92,14 @@ $ cd repository/your-repository-name
 $ sudo cp apache/your-apache-configure-file /etc/apache2/sites-available/
 $ sudo ln -s /etc/apache2/sites-available/your-apache-configuration-file /etc/apache2/sites-enabled/
 $ sudo /etc/init.d/apache2 restart
-``` 
+```
 
 * Install [Nginx](http://nginx.org/) and [AWStats](http://www.awstats.org/)
 
 ```bash
 $ sudo apt-get install nginx
 $ sudo apt-get install awstats
-``` 
+```
 
 * Configure Nginx
 
@@ -144,7 +144,7 @@ $ thin start --ssl
 ```
 
 
-####*2.3. Part Three - Connect virtual Ubuntu Server with your Mac OS and develop/test the webapp on the local IDE/browsers based on SSH and SSHFS*
+*2.3. Part Three - Connect virtual Ubuntu Server with your Mac OS and develop/test the webapp on the local IDE/browsers based on SSH and SSHFS*
 
 Because we are not able to develop or test the webapp in a place (Ubuntu Server) where IDEs and browsers don't exist, we have to connect the virtual Ubuntu Server with Mac OS so that all the resources of our computer can be utilized. For example, how to use your favourite [RubyMine](https://www.jetbrains.com/ruby/), [Sublime Text](http://www.sublimetext.com/) or [Atom](https://atom.io/) installed on your Mac to develop a webapp deployed on the virtual Ubuntu Server and meanwhile how to preview or test it on local browsers such as Safari, Chrome or Firefox? This is actually a pretty tricky issue if you don't have any experience before. But by following the instruction below, you can easily get out of the woods for sure.
 
