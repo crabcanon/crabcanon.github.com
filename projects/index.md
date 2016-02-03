@@ -15,17 +15,19 @@ layout: post
     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
       {{ post.duration }}
     </a>
-    <a href="{{ post.url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="float: right;">
-      Check details
+    {% if post.link %}
+    <a href="{{ post.link }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="float: right;">
+      Check it out
     </a>
+    {% endif %}
   </div>
-  {% if post.link %}
-  <div class="mdl-card__menu">
-    <a href="{{ post.link }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+  
+<!-- <div class="mdl-card__menu">
+     <a href="{{ post.link }}" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
       <i class="material-icons" style="color: rgba(0,0,0,0.65);">&#xE895;</i>
-    </a>
-  </div>
-  {% endif %}
+    </a> 
+</div> -->
+
 </div>
 {% endif %}
 {% endfor %}
