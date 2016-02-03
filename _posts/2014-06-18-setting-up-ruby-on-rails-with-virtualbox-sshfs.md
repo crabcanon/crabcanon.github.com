@@ -179,6 +179,7 @@ $ ip a
 * Connect Ubuntu Server to Mac OS via SSH and start your Ruby on Rails app in Mac Terminal
 
 Open Mac Terminal and input:
+
 ```bash
 $ ssh -l username-of-your-ubuntu-server -Y 192.168.xx.xxx
 
