@@ -6,9 +6,9 @@ categories: [GIS]
 tags: [Thematic Map]
 ---
 
-####1. About thematic maps
+#### 1. About thematic maps
 
-####*1.1 Visual variables of thematic maps*
+#### *1.1 Visual variables of thematic maps*
 
 According to Bertin's theory, the visual variable is commonly used to describe the various perceived differences in map symbols that are used to represent geographic phenomena. As we know, it is the difference in size which map readers perceive as a difference in numbers. All the differences imaginable between symbols can be summarized as being cases of six graphical variables. Bertin discerns, as basic graphic variables: differences in size, differences in lightness or value, difference in grain or texture, difference in colour hue, difference in orientation, difference in shape. With difference in grain or texture, Bertin referred to differences that emerge when a specific pattern is being enlarged or reduced. Differences in colour hue only work in providing qualitative defferences when they are perceived as having similar lightness. Differences in orientation refer to patterns and not to the line elements that form the base map. Therefore, we can summarize it as follow:
 
@@ -22,13 +22,13 @@ According to Bertin's theory, the visual variable is commonly used to describe t
 * Difference in arrangement: the regularity or non-regularity of the distribution of symbols.
 * Difference in focus: the clarity with which the symbols are visible, and so to their definition on the plane. 
 
-####*1.2 Categories of the metadata for thematic maps*
+#### *1.2 Categories of the metadata for thematic maps*
 
 * Unipolar data: it has no natural dividing points and do not involve two complementary phenomena.
 * Bipolar data: it's characterized by either natural or meaningful dividing points. A natural dividing point is inherent to the data and can be used intuitively to divide the data into two parts. A meaningful dividing point does not occur inherently in the data, but can logically divide the data into two parts.
 * Balanced data: it's characterized by two phenomena that coexist in a complementary fashion.
 
-####*1.3 Categories of thematic maps*
+#### *1.3 Categories of thematic maps*
 
 <mark>Chorochromatic Maps:</mark> The term of chorochromatic is a combination of the Greek words for ‘area’ (choros) and ‘colour’ (chroma). So originally this method rendered nominal values for areas through different colors. Both pattern(differences in shape) and differences in colors will give the map reader the impression of nominal, qualitative differences. Because we use different colors or patterns to represent the nominal values for areas, some principles need to be followed. Firstly, only different nominal qualities are being rendered, and that no suggestion of differences in hierarchy or order is being conveyed. Secondly, colours present extra problems because they have associative and psychological values. Therefore, we need to choose appropriate colors to render corresponding areas. It means that saturated colors should only be used for small areas, otherwise they would dominate the image too much and lead to the result that hard to discern small areas. Thirdly, if we use different patterns instead of different colours, we need to select the patterns carefully so that the patterns are comparable in dimension. Finally, when chorochromatic maps are being used for the we need to add a diagram showing the actual numbers involved. representation of non-area-related phenomena, the image presented to the map reader might be influenced too much by the actual sizes of the areas. It means that this kind of maps may mislead the readers’ perception of the relationship between the area and quantity. Therefore, we need to add a diagram showing the actual numbers involved.
 
@@ -44,9 +44,9 @@ According to Bertin's theory, the visual variable is commonly used to describe t
 
 <mark>Cartogram:</mark> A cartogram is a map in which some thematic mapping variables – such as travel time or Gross National Product – are substituted for land area or distance. The geometry or space of the map is distorted in order to convey the information of this alternate variable. There are two main types of cartograms: area and distance cartograms. An area cartogram is sometimes referred to as a value-by-area map or an isodemographic map, the latter particularly for a population cartogram, which illustrates the relative sizes of the populations of the countries of the world by scaling the area of each country in proportion to its population; the shape and relative location of each country is retained to as large an extent as possible, but inevitably a large amount of distortion results. Other synonyms in use are anamorphic map,density-equalizing map and Gastner map. A distance cartogram may also be called a central-point cartogram or isochronic cartogram. This form is typically used to show relative travel times and directions from vertices in a network.
 
-####2. Thematic Map Design
+#### 2. Thematic Map Design
 
-####*2.1 Analysis of the metadata*
+#### *2.1 Analysis of the metadata*
 
 The given data is consist of Europe data and country boundaries. Europe data was collected from [Eurostat](epp.eurostat.ec.europa.eu) which contains separate datasets of economy, life expectancy, population and employment. The country boundaries are extracted from a world-wide country dataset of ESRI. In this article, we will mainly focus on the map design for life expectancy which is the most commonly used indicator for analyzing mortality(the gradual increase in life expectancy is one of the contributing factors to the ageing of the EU-27’s population). Generally, the life expectancy dataset represents the LE of EU member countries in the year 2007 and the data is categoried by genders(male, female).
 
@@ -54,7 +54,7 @@ The given data is consist of Europe data and country boundaries. Europe data was
 
 *Figure 1 Analysing the dataset of Life expectancy*
 
-####*2.2 Map design*
+#### *2.2 Map design*
 
 Firstly, this map should integrate different statistic information in the form of graph, table and map so that people are able to perceive or receive detailed information in a more richful and intuitive way. Secondly, according to the dataset, interpretation of statistics represented with maps can be made by proportional symbols (2 circle symbols with the same center and different colors to represent male and female life expectancy in one country). Bigger circles stand for more longevous and we can therefore easily explore gaps of LE in different countries and differences of male and female LE in one country. However, we still have some limitations by using proportional symbols map: it is hard to compare the symbols on the map with the legend and users cannot distinguish the precise value of life expectancy. Therefore, adding data table to help readers enhance the capability of comprehending seems to be a wise decision.
 
@@ -85,7 +85,7 @@ The main processes can be summarized as following steps:
 * Reclassifying the datasets
 * Arranging the map layout
 
-####*2.3 The final work*
+#### *2.3 The final work*
 
 <img src="/images/blogs/20130331-5.png" width="100%"/>
 

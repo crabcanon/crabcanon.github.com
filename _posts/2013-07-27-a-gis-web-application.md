@@ -6,13 +6,13 @@ categories: [GIS]
 tags: [Geoserver, OpenLayers, Apache Tomcat]
 ---
 
-####Youtube
+#### Youtube
 
 <iframe width="100%" height="420" src="//www.youtube.com/embed/HJ3vejLnQ3g" frameborder="0" allowfullscreen></iframe>
 
-####[Youku (China)](http://v.youku.com/v_show/id_XNTcyOTA3ODEy.html?from=y1.7-1.2)
+#### [Youku (China)](http://v.youku.com/v_show/id_XNTcyOTA3ODEy.html?from=y1.7-1.2)
 
-####1. Background
+#### 1. Background
 
 This demo belongs to one of my practical experiments by which I try to learn how to make a GIS-based mockup from beginning to end. 
 

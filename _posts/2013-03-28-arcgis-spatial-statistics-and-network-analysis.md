@@ -6,19 +6,19 @@ categories: [GIS]
 tags: [ArcGIS]
 ---
 
-####1. Background study
+#### 1. Background study
 
 According to the Finnish law, the municipalities are obliged to offer day care to all children under school age. The school is usually started in the autumn of the year when the child is 7 years old. Although the right for day care is universal, the practical situation varies. Usually babies and very young children stay at home, but the age when the parents return to work and put the child in day care varies considerably. The municipalities also cooperate with neighbouring municipalities and private kindergartens in arranging the day care. Nevertheless, the most usual way for municipalities is to allocate the children in municipally operated day care centres.
 
 Arranging the day care in municipalities and areas with rapid growth of families is always a difficult task. According to the Finnish newspaper HelsinginSanomat (21.11.2012), in many areas of the city of Helsinki there are more children than day care places. The parents may have several preferences in choosing the day care centre, but the proximity to home is most likely a key factor to the majority. At least in Helsinki the closest preschool is usually the preferred one (HelsinginSanomat 3.12.2012).
 
-####2. Scenario: Day-care centers planning in Espoo, Finland
+#### 2. Scenario: Day-care centers planning in Espoo, Finland
 
 In our project work we are concentrating on the municipal day care centres in the city of Espoo. Espoo is the second biggest municipality in Finland and its population is growing over 1% yearly, mainly from birth rate (City of Espoo 2012). It’s plausible that the network of municipal day care centres has difficulties in keeping up with the growing child population. In our scenario we are going to analyse patterns of children and municipal day care centres for the use of Espoo day care administration.
 
 For practical purposes we are making some assumptions to limit our research efforts. Firstly, we are taking into account only the municipal day care centres. In practice the city of Espoo needs cooperation both with neighbouring municipalities and private kindergartens. Our analysis can spot the areas where these kinds of arrangements are most likely needed. Secondly, we assume the parents to prioritize the option closest to their home. Although this is not far from truth we are forced to make this assumption as there is no data from real choices or preferences. Finally, we assume that all children from 1 to 7 years old would apply for municipal day care. In real world many of the younger children would stay at home. But once again we lack the data to model the share of children staying at home. Our analysis also shows the potential maximum stress directed to the day care system. As the planning, decision-making and implementing takes time, we analyse the children from 0 to 6 years old, assuming them to be one year older when the planning process is over.
 
-####3. Useful cases and data
+#### 3. Useful cases and data
 
 Our research is divided into three use cases:
 
@@ -34,7 +34,7 @@ We are using data from three sources:
 
 One notable problem with the data is the gap in time perspective. We were able to use current day care centre data, but the most recent population data available for our project work is from 2008. The four year gap leads to some odd results in the analysis that must be taken into account when making conclusions.
 
-####4. Children distribution in Espoo
+#### 4. Children distribution in Espoo
 
 >Initial data: SETU Vaki - Children from 0 to 6 years old who live in all houses in Espoo. 29115 addresses and 22850 children in total.
 
@@ -44,7 +44,7 @@ One notable problem with the data is the gap in time perspective. We were able t
 
 *Figure 1 Children distribution in Espoo*
 
-####*4.1. Analysis of children distribution in Espoo*
+#### *4.1. Analysis of children distribution in Espoo*
 
 (1)Kernel Density: Demonstrates the spatial distribution of phenomena using function summing overlapping values of frequency in each point of area.
 
@@ -87,7 +87,7 @@ One notable problem with the data is the gap in time perspective. We were able t
 >Result: Red dots are clusters with high values, blue are with lowest values.
 We found that in some places in Espoo the concentration of children is very high what might be connected this higher housing density. To approve this hypothesis we applied Kernel density for housing data.
 
-####*4.2. Analysis of houses distribution in Espoo*
+#### *4.2. Analysis of houses distribution in Espoo*
 
 (1)Kernel Density of houses distribution
 
@@ -97,7 +97,7 @@ We found that in some places in Espoo the concentration of children is very high
 
 >Result : Visualization of housing density approved our hypothesis and we can definitely say that children distribution has the same pattern, as the entire population and depends only from housing factor. There were revealed no abnormal facts that would lead to a deviation from the normal distribution.
 
-####5. Day-care centers distribution in Espoo
+#### 5. Day-care centers distribution in Espoo
 
 >Initial data: Day-care centers data from the institution of Espoo day care planning, containing both the number of day care places in each centre and the number of children currently in those facilities. Three main attributes for the day care centres are collected: locations - (X,Y) coordinates and text addresses, day care centers total - 136 day care centers, day care centers occupied: (a)The theoretical or planned size of the centre (represented by the field 'Places'), (b)The real number of children currently exist in the centers (represented by the field 'Kids'), (c)The difference between the theoretical size and the real size of day-care centers (represented by the field ‘Difference’, and if 'Difference' is positive, the centre could easily take in more kids, otherwise, the centre is already overcrowded, at least according to the initial plans).
 
@@ -108,7 +108,7 @@ We found that in some places in Espoo the concentration of children is very high
 
 *Figure 10 The distribution of Day-care centers in Espoo*
 
-####*5.1 Analysis of Day-care centers distribution in Espoo*
+#### *5.1 Analysis of Day-care centers distribution in Espoo*
 
 (1) Kernel Density
 
@@ -187,7 +187,7 @@ PS: The outcome of Incremental spatial autocorrelation shows no valid peaks foun
 
 PS: If we change the distance band to a proper distance, more elements will be took into account so that we can find out some abnormal value in parts.
 
-####6. The closest day care centre by driving and walking
+#### 6. The closest day care centre by driving and walking
 
 >For the third use case we used network analysis to define the closest day care centre and the minimum walking distances. The network (or networks, as we had to take into account the vehicle restriction in different roads) was built using the Digiroad data obtained from PaITuli service. The initial data covered large parts of the Uusimaa region, so the study area had to be minimized, because the dataset is huge and heavy to calculate. The road use classes were ready in the LIIKENNE_ELEMENTTI file, but the speed limit and driving direction attributes had to be joined by reference codes from the LIIKENNE_SEGMENTTI file. In building the networks both the length and the minimum driving time calculated with the speed limit (assumed 50 km/h if no data) were used as the impedance. Road classification was used as the hierarchy and the dummy variables formed from the driving direction variable were linked to the corresponding direction to deny the possibility to drive against the flow. Initially the Closest Facility algorithm was tried but the size of the data forced us to use the OD Matrix algorithm instead. The diagram of the complete work flow is presented below.
 
@@ -223,7 +223,7 @@ Basic research idea : we built a different network for non-motorized traffic and
 
 PS : It is no surprise that in the outskirts of Espoo the day care centres are mainly off the walking distance. The sparse network of single-family houses makes the maintenance of close-by day care centres economically unviable. More could be done in the edges of bigger suburbs, where the day care centres tend to be located in the central areas, leaving many houses over 1000 metres away from the closest facility. Interestingly there is one seemingly misplaced centre in the Central Espoo: according to figure 28 it is relatively empty but there are large areas with long distances just nearby. One reason to the oddity is the time gap in the data: the day care centre data is recent, but population data from 2008. In real life the area is under major development with new houses already built after 2008. Overall in our analysis 50% of the children (44% of the houses) have a municipal day care centre less than 500 metres away, and 16% of the children (20% of the buildings) would have to walk more than 1 km.
 
-####7. Conclusion
+#### 7. Conclusion
 
 Our analysis shows that the child population is heavily concentrated to the generally densely built suburbs. The result is obvious both from visual and statistical analysis. Those suburbs are also well served with municipal day care centres. Families have usually short walk to a centre and there are many options practically next to each other.
 
