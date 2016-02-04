@@ -3,7 +3,7 @@ layout: post
 title: Setting up Ruby on Rails with VirtualBox & SSHFS
 date: 2014-06-18
 categories: [Development Environment]
-tags: [Ubuntu Server, Ruby on Rails, MySQL, VirtualBox, SSHFS]
+tags: [Ubuntu Server, Ruby, MySQL, VirtualBox, SSHFS]
 ---
 
 **1. Introduction**
