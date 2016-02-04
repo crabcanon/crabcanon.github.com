@@ -114,7 +114,7 @@ Optional tools include:
 
 - [Publish a Shapefile](http://docs.geoserver.org/stable/en/user/gettingstarted/shapefile-quickstart/index.html)
 - Run and test the application
-Place the application codes package in the directory geoserver\data\www. Restart your Apache Tomcat Service and click the link shown as following to test whether the application is successfully deployed or not (For example: http://localhost:8080/geoserver/www/GISAppDev.html). It will take a few minutes when you restart the Tomcat and reload the application. 
+Place the application codes package in the directory `geoserver/data/www`. Restart your Apache Tomcat Service and click the link shown as following to test whether the application is successfully deployed or not (For example: `http://localhost:8080/geoserver/www/yourapp.html)`. It will take a few minutes when you restart the Tomcat and reload the application. 
 
 
 
