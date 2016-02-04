@@ -77,39 +77,39 @@ Optional tools include:
 
 ```xml
 <servlet>
-        <servlet-name>cgi</servlet-name>
-        <servlet-class>org.apache.catalina.servlets.CGIServlet</servlet-class>
+    <servlet-name>cgi</servlet-name>
+    <servlet-class>org.apache.catalina.servlets.CGIServlet</servlet-class>
 
-        <init-param>
-            <param-name>debug</param-name>
-            <param-value>0</param-value>
-        </init-param>
-        <init-param>
-            <param-name>cgiPathPrefix</param-name>
-            <param-value>WEB-INF/cgi</param-value>
-        </init-param>
-        <init-param>
-            <param-name>executable</param-name>
-            <param-value>c:/Python27/python.exe</param-value>
-        </init-param>
-        <init-param>
-            <param-name>passShellEnvironment</param-name>
-            <param-value>true</param-value>
-        </init-param>
-        
-        <load-on-startup>5</load-on-startup>
-    </servlet>
+    <init-param>
+        <param-name>debug</param-name>
+        <param-value>0</param-value>
+    </init-param>
+    <init-param>
+        <param-name>cgiPathPrefix</param-name>
+        <param-value>WEB-INF/cgi</param-value>
+    </init-param>
+    <init-param>
+        <param-name>executable</param-name>
+        <param-value>c:/Python27/python.exe</param-value>
+    </init-param>
+    <init-param>
+        <param-name>passShellEnvironment</param-name>
+        <param-value>true</param-value>
+    </init-param>
+
+    <load-on-startup>5</load-on-startup>
+</servlet>
     
-    <!-- The mapping for the default servlet -->
-    <servlet-mapping>
-        <servlet-name>default</servlet-name>
-        <url-pattern>/</url-pattern>    
-    </servlet-mapping>
+<!-- The mapping for the default servlet -->
+<servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>/</url-pattern>    
+</servlet-mapping>
 
-    <servlet-mapping>
-        <servlet-name>cgi</servlet-name>
-        <url-pattern>/cgi/*</url-pattern>
-    </servlet-mapping>
+<servlet-mapping>
+    <servlet-name>cgi</servlet-name>
+    <url-pattern>/cgi/*</url-pattern>
+</servlet-mapping>
 ```
 
 - [Publish a Shapefile](http://docs.geoserver.org/stable/en/user/gettingstarted/shapefile-quickstart/index.html)
