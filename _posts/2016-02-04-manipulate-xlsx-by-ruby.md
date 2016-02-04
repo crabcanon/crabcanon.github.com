@@ -208,4 +208,4 @@ puts "--- The excel file filtered.xlsx has been generated ---"
 - Input `ruby xxx.rb` (xxx is the name of Ruby script)
 - There will be a usage message shown and you should follow the instruction
 - Example: `ruby filter.rb seed_file_column_name seed_file_column_index seed_file_end_indicator path_to_seed_file exclude_file_column_name exclude_file_column_index exclude_file_end_indicator path_to_exclude_file`
-- If the script is running correctly, a new Excel file called `filtered.xlsx` will be generated in the same directory and repeat items will be shown in the Terminal
+- If the script is running correctly, a new Excel file called `filtered.xlsx` will be generated in the same directory and repeat items will be shown in your Terminal
