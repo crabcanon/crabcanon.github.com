@@ -19,7 +19,7 @@ Because it didn't refer to a very complicated manipulation, I decided to use [ru
 
 #### 2. Ruby scripts
 
-*Compare a single Excel file with the seed Excel file and remove repeat items from the seed file*
+*2.1. Compare a single Excel file with the seed Excel file and remove repeat items from the seed file*
  
 ```ruby
 #!/usr/bin/ruby
@@ -104,7 +104,7 @@ puts '---A new Excel file called filtered.xlsx has been generated and repeat ite
 ```
 
 
-*Compare multiple Excel files with the seed Excel file and remove repeat items from the seed file* 
+*2.2. Compare multiple Excel files with the seed Excel file and remove repeat items from the seed file* 
 
 ```ruby
 #!/usr/bin/ruby
