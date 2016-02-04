@@ -6,16 +6,20 @@ categories: [Ruby]
 tags: [Ruby, Excel]
 ---
 
-Recently, I got a small task from my boss which required to find and eliminate the repeat items from 5 Excel files by Ruby. To be more clear, details are listed as following:
+#### 1. Introduction
+
+Recently, I got a small task from my boss which required me to find and eliminate the repeat items based on specific columns from 5 Excel files by Ruby. To be more clear, details are listed as following:
 
 - One seed Excel file which contains all the items
-- Other Excel files will be used to retrieve and compare with the seed Excel file
-- If there is any repeat item, eliminate it from the seed Excel file
+- Other Excel files will be used to retrieve and compare with the seed Excel file based on specific columns
+- If there is any repeat item, remove it from the seed file
 - Finally, export a new Excel file
 
 Because it didn't refer to a very complicated manipulation, I decided to use [rubyXL](https://github.com/weshatheleopard/rubyXL) to implement the task. Another good gem for manipulating Excel is [axlsx](https://github.com/randym/axlsx). 
 
-The final works are shown below:
+#### 2. Ruby scripts
+
+*Compare a single Excel file with the seed Excel file and remove repeat items from the seed file*
  
 ```ruby
 #!/usr/bin/ruby
@@ -94,12 +98,13 @@ diff_companies_index.each_with_index { |val,index|
 }
 
 # Output
-filtered_wb.write('filtered_companies.xlsx')
+filtered_wb.write('filtered.xlsx')
 puts intersections_companies_index
-puts '---A new Excel file called filtered_companies.xlsx has been generated and same companies are shown above!---'
+puts '---A new Excel file called filtered.xlsx has been generated and repeat items are shown above!---'
 ```
 
-A more advanced version which can manipulate several Excel files in one time: 
+
+*Compare multiple Excel files with the seed Excel file and remove repeat items from the seed file* 
 
 ```ruby
 #!/usr/bin/ruby
@@ -186,11 +191,21 @@ filtered_companies.each_with_index do |(key, value), row_index|
   end
 end
 ​
-filtered_wb.write('filtered_companies.xlsx')
+filtered_wb.write('filtered.xlsx')
 puts "Seed company excel: #{seed_companies.length}"
 ARGV[5..-1].each_with_index do |exclude_file_path, index|
   puts "Exclude company excel #{exclude_file_path}: #{companies_to_exclude[index].length}"
 end
-puts "Filtered companies: #{filtered_companies.length}"
-puts "--- The excel file filtered_companies.xlsx has been generated ---"
+puts "Filtered items: #{filtered.length}"
+puts "--- The excel file filtered.xlsx has been generated ---"
 ```
+
+#### 3. Run and test
+
+- Open your terminal
+- Run `gem install rubyXL` to install the dependency [rubyXL](https://github.com/weshatheleopard/rubyXL)
+- Navigate to the directory where you put our Ruby scripts
+- Input `ruby xxx.rb` (xxx is the name of Ruby script)
+- There will be a usage message shown and you should follow the instruction
+- Example: `ruby filter.rb seed_file_column_name seed_file_column_index seed_file_end_indicator path_to_seed_file exclude_file_column_name exclude_file_column_index exclude_file_end_indicator path_to_exclude_file`
+- If the script is running correctly, a new Excel file called `filtered.xlsx` will be generated in the same directory and repeat items will be shown in the Terminal
