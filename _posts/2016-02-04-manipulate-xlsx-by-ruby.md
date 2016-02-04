@@ -16,7 +16,7 @@ Recently, I got a small task from my boss which required to find and eliminate t
 Because it didn't refer to a very complicated manipulation, I decided to use [rubyXL](https://github.com/weshatheleopard/rubyXL) to implement the task. Another good gem for manipulating Excel is [axlsx](https://github.com/randym/axlsx). 
 
 The final works are shown below:
-
+ 
 ```ruby
 #!/usr/bin/ruby
 
@@ -99,7 +99,7 @@ puts intersections_companies_index
 puts '---A new Excel file called filtered_companies.xlsx has been generated and same companies are shown above!---'
 ```
 
-A more advanced version is: 
+A more advanced version which can manipulate several Excel files in one time: 
 
 ```ruby
 #!/usr/bin/ruby
