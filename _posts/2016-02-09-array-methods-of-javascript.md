@@ -683,7 +683,7 @@ Determines whether an array includes a certain element, returning true or false 
 #### References
 
 * [ECMAScript 6 入门](http://es6.ruanyifeng.com/#docs/array)
-* [JavaScript 标准参考教程（alpha](http://javascript.ruanyifeng.com/stdlib/array.html)
+* [JavaScript 标准参考教程（alpha)](http://javascript.ruanyifeng.com/stdlib/array.html)
 * [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 
