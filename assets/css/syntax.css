@@ -14,10 +14,10 @@ pre code { line-height: 1.8;}
 .n { color: #f8f8f2 } /* Name */
 .o { color: #f92672 } /* Operator */
 .p { color: #f8f8f2 } /* Punctuation */
-.cm { color: #75715e } /* Comment.Multiline */
-.cp { color: #75715e } /* Comment.Preproc */
-.c1 { color: #75715e } /* Comment.Single */
-.cs { color: #75715e } /* Comment.Special */
+.cm { color: #a2a2a2} /* Comment.Multiline */
+.cp { color: #a2a2a2 } /* Comment.Preproc */
+.c1 { color: #a2a2a2 } /* Comment.Single */
+.cs { color: #a2a2a2 } /* Comment.Special */
 .ge { font-style: italic } /* Generic.Emph */
 .gs { font-weight: bold } /* Generic.Strong */
 .kc { color: #66d9ef } /* Keyword.Constant */
