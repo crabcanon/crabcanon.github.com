@@ -6,7 +6,7 @@ categories: [Javascript]
 tags: [Javascript, ECMAScript 6]
 ---
 
-#### ECMAScript 5
+#### <mark>ECMAScript 5</mark>
 
 1.`isArray()`
 
@@ -446,8 +446,9 @@ a.lastIndexOf(7)
 // -1
 ```
 
+<hr>
 
-#### ECMAScript 6 (New Methods)
+#### <mark>ECMAScript 6 (New Methods)</mark>
 
 1.`from()`
 
@@ -679,8 +680,9 @@ Determines whether an array includes a certain element, returning true or false 
 [1, 2, NaN].includes(NaN); // true
 ```
 
+<hr>
 
-#### References
+#### <mark>References</mark>
 
 * [ECMAScript 6 入门](http://es6.ruanyifeng.com/#docs/array)
 * [JavaScript 标准参考教程（alpha)](http://javascript.ruanyifeng.com/stdlib/array.html)
