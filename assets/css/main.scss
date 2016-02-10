@@ -400,18 +400,9 @@ hr {
 }
 
 blockquote {
-  margin: 40px -20px;
-  padding: 20px 20px 20px 30px;
-  background-color: #f9f9f9;
-
-  &:before {
-    content: ": ";
-    position: absolute;
-    margin-left: -15px;
-  }
-
-  p:first-child { margin-top: 0; }
-  p:last-child { margin-bottom: 0; }
+  margin: 40px 0px;
+  padding: 10px 20px 10px 50px;
+  border-left: 4px double #ddd;
 }
 
 // projects css
