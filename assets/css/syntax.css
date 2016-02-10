@@ -1,3 +1,10 @@
+.highlight { font-size: 14px; background-color: #f8f8f8;}
+article > div.highlight pre { 
+  padding: 5px 7px; margin: 10px 0; 
+  border: 1px solid #e5e5e5;
+  overflow-x: scroll;
+  word-wrap: normal !important;
+}
 pre code { line-height: 1.8;}
 .hll { background-color: #ffffcc }
 .c { color: #228B22 } /* Comment */
