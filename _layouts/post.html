@@ -68,19 +68,19 @@
             </header>
             {{ content }}
           </article>
-          <div class="pagination">
-            <!-- {% if page.previous %}
+         <!--  <div class="pagination">
+            {% if page.previous %}
               <a class="page-nav" href="{{ page.previous.url }}" id="js-previous-post">PREV</a>
             {% else %}
               <a class="page-nav" id="js-previous-post"><del>PREV</del></a>  
-            {% endif %} -->
+            {% endif %}
               <a class="page-nav" href="{{ site.url }}" id="">Home</a>
-            <!-- {% if page.next %}
+            {% if page.next %}
               <a class="page-nav" href="{{ page.next.url }}" id="js-next-post">NEXT</a>
             {% else %}
               <a class="page-nav" id="js-next-post"><del>NEXT</del></a>              
-            {% endif %} -->
-          </div>
+            {% endif %}
+          </div> -->
         {% else %}
           {{ content }}
         {% endif %}
@@ -91,6 +91,7 @@
     </footer>
 
     <div id="flip">
+      <a href="{{ site.url }}" id="home">Home</a>
       <a href="" id="pageup">Back to top</a>
       <a href="" id="pagedown">Go to bottom</a>
     </div>
