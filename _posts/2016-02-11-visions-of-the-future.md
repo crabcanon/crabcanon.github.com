@@ -8,6 +8,7 @@ tags: [Design]
 
 >Imagination is our window into the future. As you look through these images of imaginative travel destinations, remember that you can be an architect of the future. -- by [NASA/JPL](http://www.jpl.nasa.gov/visions-of-the-future/)
 
+<hr style="margin: 70px 200px;">
 
 <div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/images/blogs/20160211-1.png" width="300px"/></div>
 
