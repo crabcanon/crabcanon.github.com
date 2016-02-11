@@ -7,5 +7,5 @@ image: /images/projects/livechat.jpg
 description: This project is a HTML5 hybrid mobile app of live chatting for both mobile and web platforms. It's originally designed for testing the real-time feature of Firebase and the performance of Ionic on mobile plateforms.
 link: https://github.com/crabcanon/angularfire-ionic-chat
 categories: [project]
-tags: [Project, Angularjs, Firebase, Ionic]
+tags: [project]
 ---

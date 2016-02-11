@@ -5,6 +5,7 @@ layout: post
 <p class="sidebar-title" style="margin-top: 0px;">Blogs by tags.</p>
 <ul class="list">
 {% for tag in site.tags %}
+  {% if tag[0] != "project" %}
   <p class="blog-title">-- {{ tag[0] }} --</p>
   {% for post in tag[1] %}
   <li class="blog-li">
@@ -14,5 +15,6 @@ layout: post
     <small>{{ post.date | date_to_string }}</small>
   </li>
   {% endfor %}
+  {% endif %}
 {% endfor %}
 </ul>
