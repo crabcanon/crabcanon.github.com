@@ -452,22 +452,13 @@ blockquote {
     width: 250px; 
     margin: 0 auto;
   }
-  
-  a {
-    &.page-nav {
-      margin-right: 10px;
-      margin-left: 10px;
-    }
-  }
-}
 
-@media (max-width: 480px) {
   #flip {
     width: 95px;
     position: fixed;
     height: 50px;
     bottom: 30px;
-    right: 20px;
+    right: 10px;
     font-size: 10px;
     text-align: center;
   }
@@ -483,6 +474,16 @@ blockquote {
     color: #fff;
     margin-bottom: 10px;
   }
+  
+  a {
+    &.page-nav {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
   .sidebar-menu {
     display: none;
   }
@@ -518,6 +519,28 @@ blockquote {
   .sidebar-title a{
     color: #FFA07B;
     line-height: 2;
+  }
+
+  #flip {
+    width: 95px;
+    position: fixed;
+    height: 50px;
+    bottom: 30px;
+    right: 20px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  #pageup, #pagedown{
+    height: 20px;
+    width: 95px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #aaa;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    margin-bottom: 10px;
   }
 
   a {
