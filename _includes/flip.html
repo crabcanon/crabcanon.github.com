@@ -1,0 +1,24 @@
+<script>
+	$("#flip").hide();
+	$(document).ready(function () {
+	  $(window).scroll(function () {
+	    if ($(this).scrollTop() > 100) {
+	      $('#flip').fadeIn();
+	    } else {
+	      $('#flip').fadeOut();
+	    }
+	  });
+	  $('#flip #pageup').click(function () {
+	    $('body,html').animate({
+	      scrollTop: 0
+	    }, 800);
+	    return false;
+	  });
+	  $('#flip #pagedown').click(function () {
+	  	$('body,html').animate({
+	      scrollTop: $(document).height()-$(window).height()
+	    }, 800);
+	    return false;
+	  });
+	});
+</script>

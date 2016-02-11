@@ -19,55 +19,6 @@ img[alt=figure] {
   width: 500px; 
 }
 
-// Github markdown style for <code>
-code, tt {
-  margin: 0 2px;
-  padding: 0 5px;
-  white-space: nowrap;
-  border: 1px solid #eaeaea;
-  background-color: #f8f8f8;
-  border-radius: 3px;
-  white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  white-space: pre-wrap;       /* css-3 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
-  white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
-  word-break: break-all;
-  white-space: normal;
-}
-
-pre code {
-  margin: 0;
-  padding: 0;
-  white-space: pre;
-  border: none;
-  background: transparent;
-}
-
-.highlight pre {
-  border: 1px solid #cccccc;
-  font-size: 13px;
-  line-height: 19px;
-  overflow-x: scroll;
-  padding: 6px 10px;
-  border-radius: 3px;
-}
-
-pre {
-  border: 1px solid #cccccc;
-  font-size: 13px;
-  line-height: 19px;
-  overflow-x: scroll;
-  padding: 6px 10px;
-  border-radius: 3px;
-}
-
-pre code, pre tt {
-  background-color: transparent;
-  border: none;
-}
-
 ::-webkit-input-placeholder {
    font-family: "Cutive Mono", "jYuMincho", monospace, serif;
 }
@@ -104,27 +55,27 @@ pre code, pre tt {
   -webkit-font-smoothing: antialiased;
 }
 
-.mdl-card__title-text{
+.mdl-card__title-text {
   font-family: "Cutive Mono", "YuMincho", monospace, serif;
 }
 
-.mdl-card__supporting-text{
+.mdl-card__supporting-text {
   width: 100%;
   font-size: 1em;
   font-family: "Cutive Mono", "YuMincho", monospace, serif;
   color: rgba(0,0,0,.87);
 }
 
-.mdl-button{
+.mdl-button {
   font-family: "Cutive Mono", "YuMincho", monospace, serif;
   color: rgba(0,0,0,.87);
 }
 
-.sidebar-menu-mobile{
+.sidebar-menu-mobile { 
   display: none;
 }
 
-.sidebar-title{
+.sidebar-title {
   font-size: 0.9em;
   font-weight: bold;
   color: #666;
@@ -134,19 +85,40 @@ pre code, pre tt {
   margin-top: 20px;
 }
 
-.blog-title{
+.blog-title {
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 1em; 
 }
 
-.blog-li{
+.blog-li {
   margin-bottom: 20px !important;
 }
 
-.search-input{
+.search-input {
   width: 200px;
   height: 25px;
+}
+
+#flip {
+  width: 200px;
+  position: fixed;
+  height: 20px;
+  bottom: 20px;
+  right: 20px;
+  font-size: 10px;
+  text-align: center;
+}
+
+#pageup, #pagedown{
+  height: 20px;
+  width: 95px;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #aaa;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
 }
 
 a {
