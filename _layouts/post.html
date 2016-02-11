@@ -68,14 +68,14 @@
             </header>
             {{ content }}
           </article>
-         <!--  <div class="pagination">
-            {% if page.previous and page.categories[0] != "project" %}
+          <!-- <div class="pagination">
+            {% if page.previous %}
               <a class="page-nav" href="{{ page.previous.url }}" id="js-previous-post">PREV</a>
             {% else %}
               <a class="page-nav" id="js-previous-post"><del>PREV</del></a>  
             {% endif %}
               <a class="page-nav" href="{{ site.url }}" id="">Home</a>
-            {% if page.next and page.categories[0] != "project" %}
+            {% if page.next %}
               <a class="page-nav" href="{{ page.next.url }}" id="js-next-post">NEXT</a>
             {% else %}
               <a class="page-nav" id="js-next-post"><del>NEXT</del></a>              
