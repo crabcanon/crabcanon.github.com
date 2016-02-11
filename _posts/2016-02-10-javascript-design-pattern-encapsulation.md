@@ -150,7 +150,6 @@ Phone.prototype = {
 };
 ```
 
-<hr>
 
 <mark>2.3. Private Members Through Closures</mark>
 
@@ -280,6 +279,8 @@ Phone.prototype = {
 };
 ```
 
+
+<hr>
 
 #### 3. Summary
 
