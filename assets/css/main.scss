@@ -101,13 +101,14 @@ img[alt=figure] {
 }
 
 #flip {
-  width: 305px;
+  width: 200px;
   position: fixed;
   height: 20px;
   bottom: 30px;
   right: 20px;
   font-size: 10px;
   text-align: center;
+  z-index: 9999;
 }
 
 #pageup, #pagedown{
