@@ -28,7 +28,7 @@ var iPhone = new Phone('35-780502-398494', 'Apple', 'iPhone 6s', 'silver');
 iPhone.display();
 ```
 
-2.1. `Fully Exposed Object`
+<mark>2.1. Fully Exposed Object</mark>
 
 ```javascript
 var Phone = function(imei, manufacture, model) {
@@ -58,14 +58,14 @@ Phone.prototype = {
 };
 ```
 
-The above codes roughly implement a Phone class which is able to verify that the IMEI is valide when the object is created, and to display the given information as well. But the problem is that we don't have any control over what another programmer will assign to the attribute directly. For example, a phone may have multiple versions, each with its own IMEI. Therefore, another coder may create a function for selecting IMEI and use it to change the imei attribute directly, which means it's possible to skip the verification process and change the value of an attribute directly. Like this:
+The above codes roughly implement a Phone class which is able to verify whether the IMEI is valide or not when the object is created, and also to display the given information. But the problem is that we don't have any control over what another programmer will assign to the attribute directly. For example, a phone may have multiple versions, each with its own IMEI, and another coder may create a function for selecting IMEI and use it to change the imei attribute directly, which means it's possible to skip the verification process and change the value of an attribute directly. Like this:
 
 ```javascript
 iPhone.imei = '123-456789';
 iPhone.display();
 ```
 
-To resolve this problem, we have to introduce Accessor and Mutator methods for each attribute. An accessor method will get the value of an attribute while a mutator method will set the value of an attribute.
+To resolve this problem, we have to introduce Accessor and Mutator methods for each attribute. An accessor method will get the value while a mutator method will set the value of an attribute.
 
 ```javascript
 var Phone = function(imei, manufacture, model) {
@@ -107,9 +107,9 @@ Phone.prototype = {
 ```
 
 
-2.2. `Private Methods Using Underscores`
+<mark>2.2. Private Methods Using Underscores</mark>
 
-By adding an underscore to the beginning of each method or attribute, other programmers will know that it's intended to be private or is used internally, and accessing or setting it directly may have unintended consequences. Though this is not a measure to get at the root of the problem, it's less likely other programmers will do something unintentionally. 
+By adding an underscore to the beginning of each method or attribute, other programmers will know that it's intended to be private, and accessing or setting it directly may have unintended consequences. Though this is not a measure to get at the root of the problem, it's less likely other programmers will do something unintentionally. 
 
 ```javascript
 var Phone = function(imei, manufacture, model) {
@@ -152,9 +152,9 @@ Phone.prototype = {
 
 <hr>
 
-2.3. `Private Members Through Closures`
+<mark>2.3. Private Members Through Closures</mark>
 
-In the beginning, let's talk a bit about clousures which is one of the most phenomenal features in Javascript and is widely used to create advanced functionalities in the large-scale applications. To understand closures, we have to introduce scope firstly. In Javascript(ECMAScript 5), there are two types of scope, global scope and function scope(the block scope is introduced in ECMAScript 6), respectively. A function can read the global variable directly:
+In the beginning, let's talk a bit about clousures which is one of the most phenomenal features in Javascript and is widely used to create advanced functionalities in large-scale applications. To understand closures, we have to introduce `Scope`. In Javascript(ECMAScript 5), there are two types of scope, global scope and function scope(the block scope is introduced in ECMAScript 6), respectively. A function can read the global variable directly:
 
 ```javascript
 var a = 1;
@@ -190,7 +190,7 @@ var result = f1();
 result(); // 1
 ```
 
-The reason we can do it in this way is because Javascript has a feature called "Chain Scope", which defines a principle that variables of father objects can be accessed by children objects and children objects will find all the father variables level by level. In the above case, function f2() is the closures. Simply put, closures is to define another function inside a function and the most important feature of closures is it's able to store the environment where it "borns". 
+The reason we can do it in this way is because Javascript has a feature called `Chain Scope`, which defines a principle that variables of father objects can be accessed by children objects and children objects will find all the father variables level by level. In the above case, function f2() is the closures. Simply put, closures is to define another function inside a function and the most important feature of closures is it's able to store the environment where it "borns". 
 
 You can use closures to, for example, read a variable inside a function from outside, keep the variable in the memory and encapsulate private attributes or methods of an object:
 
@@ -281,8 +281,27 @@ Phone.prototype = {
 ```
 
 
+#### 3. Summary
+
+<mark>3.1. Benefits of using encapsulation</mark>
+
+- Protects the integrity of the internal data.
+- You have complete control over what gets saved and returned by using accessor and mutator methods.
+- Reduces the amount of error-checking code you need in other functions.
+- Allows easier refactoring of your objects.
+- You are able to change data structures and algorithms in midstream without anyone knowing or caring.
+- Promotes loosely coupled modules.
+- Keeps objects as independent as possible, and improves reusability and allows objects to be swapped out if needed.
+- Protects you from having to worry about namespace collisions.
+- Changing internal object details will not affect other pieces of code.
 
 
+<mark>3.2. Drawbacks of using encapsulation</mark>
+
+- Hard to unit test private methods because they are hidden. The best solution is to only unit test the public methods because this should provide complete coverage of the private methods.
+- Debugging errors becomes more difficult.
+- Hard to predict how people will use your code because encapsulation could make your classes so inflexible that it's impossible to reuse them to achieve a purpose you hadn't anticipated.
+- The biggest one: hard to implement encapsulation in Javascript.
 
 
 
