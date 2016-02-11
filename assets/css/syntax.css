@@ -5,13 +5,9 @@
 	padding: 6px 10px;
   	border: 1px solid #cccccc;
   	border-radius: 3px;
-}
-
-.highlight pre {
-  font-size: 13px;
-  line-height: 19px;
-  overflow-x: scroll;
-  word-wrap: normal !important;
+  	line-height: 19px;
+  	overflow-x: scroll;
+  	word-wrap: normal !important;
 }
 
 pre code {
