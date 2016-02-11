@@ -109,6 +109,201 @@ Phone.prototype = {
 
 2.2. `Private Methods Using Underscores`
 
+By adding an underscore to the beginning of each method or attribute, other programmers will know that it's intended to be private or is used internally, and accessing or setting it directly may have unintended consequences. Though this is not a measure to get at the root of the problem, it's less likely other programmers will do something unintentionally. 
+
+```javascript
+var Phone = function(imei, manufacture, model) {
+    this.setImei(imei);
+    this.setManufacture(manufacture);
+    this.setModel(model);
+}
+
+Phone.prototype = {
+    _checkImei: function(imei) {
+        //...
+    },
+    getImei: function() {
+        return this._imei;
+    },
+    setImei: function(imei) {
+        if(!this.checkImei(imei)) throw new Error('Invalid IMEI.');
+        this._imei = imei;
+    },
+
+    getManufacture: function() {
+        return this._manufacture;
+    },
+    setManufacture: function(manufacture) {
+        this._manufacture = manufacture || 'No manufacture specified';
+    },
+
+    getModel: function() {
+        return this._model;
+    },
+    setModel: function(model) {
+        this._model = model || 'No model specified';
+    },
+
+    display: function() {
+        //...
+    }
+};
+```
+
 <hr>
 
 2.3. `Private Members Through Closures`
+
+In the beginning, let's talk a bit about clousures which is one of the most phenomenal features in Javascript and is widely used to create advanced functionalities in the large-scale applications. To understand closures, we have to introduce scope firstly. In Javascript(ECMAScript 5), there are two types of scope, global scope and function scope(the block scope is introduced in ECMAScript 6), respectively. A function can read the global variable directly:
+
+```javascript
+var a = 1;
+
+(function f1() {
+    console.log(a);
+})(); // 1
+```
+
+But cannot read a variable inside a function from outside:
+
+```javascript
+function f1() {
+    var a = 1;
+}
+
+console.log(a);
+// Uncaught ReferenceError: a is not defined
+```
+
+Therefore, if you want to get the value of a variable inside a function scope from outside, how will you do that? A smart method is to define another function inside the original function and return that function:
+
+```javascript
+function f1() {
+  var a = 1;
+  function f2() {
+    console.log(a);
+  }
+  return f2;
+}
+
+var result = f1();
+result(); // 1
+```
+
+The reason we can do it in this way is because Javascript has a feature called "Chain Scope", which defines a principle that variables of father objects can be accessed by children objects and children objects will find all the father variables level by level. In the above case, function f2() is the closures. Simply put, closures is to define another function inside a function and the most important feature of closures is it's able to store the environment where it "borns". 
+
+You can use closures to, for example, read a variable inside a function from outside, keep the variable in the memory and encapsulate private attributes or methods of an object:
+
+```javascript
+// Example 1
+function createIncrementor(start) {
+  return function () {
+    return start++;
+  };
+}
+
+var inc = createIncrementor(5);
+
+inc() // 5
+inc() // 6
+inc() // 7
+
+// Example 2
+function Person(name) {
+  var _age;
+  function setAge(n) {
+    _age = n;
+  }
+  function getAge() {
+    return _age;
+  }
+
+  return {
+    name: name,
+    getAge: getAge,
+    setAge: setAge
+  };
+}
+
+var p1 = person('YeHuang');
+p1.setAge(26);
+p1.getAge() // 26
+```
+
+Back to the original problem: you need to create a variable that can only accessed internally. A closures seems to be a perfect fit! To create private attributes, you define variables in the scope of your constructor function. These attributes can be accessed by all functions defined within this scope, including privileged methods:
+
+```javascript
+var Phone = function(newImei, newManufacture, newModel) {
+    
+    // Private attributes
+    var imei, manufacture, model;
+
+    // Private method
+    function checkImei(imei) {
+        // ...
+    }
+
+    // Privileged methods
+    this.getImei: function() {
+        return imei;
+    },
+    this.setImei: function(newImei) {
+        if(!this.checkImei(imei)) throw new Error('Invalid IMEI.');
+        imei = newImei;
+    },
+
+    this.getManufacture: function() {
+        return manufacture;
+    },
+    this.setManufacture: function(newManufacture) {
+        manufacture = newManufacture || 'No manufacture specified';
+    },
+
+    this.getModel: function() {
+        return model;
+    },
+    this.setModel: function(newModel) {
+        model = model || 'No model specified';
+    };
+
+    // Constructor code
+    this.setImei(newImei);
+    this.setManufacture(newManufacture);
+    this.setModel(newModel);
+};
+
+// Public, non-privileged methods
+Phone.prototype = {
+    display: function() {
+        //...
+    }
+};
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
