@@ -153,7 +153,7 @@ Phone.prototype = {
 
 <mark>2.3. Private Members Through Closures</mark>
 
-In the beginning, let's talk a bit about clousures which is one of the most phenomenal features in Javascript and is widely used to create advanced functionalities in large-scale applications. To understand closures, we have to introduce `Scope`. In Javascript(ECMAScript 5), there are two types of scope, global scope and function scope(the block scope is introduced in ECMAScript 6), respectively. A function can read the global variable directly:
+In the beginning, let's talk a bit about closures which is one of the most phenomenal features in Javascript and is widely used to create advanced functionalities in large-scale applications. To understand closures, we have to firstly introduce `Scope`. In Javascript(ECMAScript 5), there are two types of scope, global scope and function scope(the block scope is introduced in ECMAScript 6), respectively. A function can read the global variable directly:
 
 ```javascript
 var a = 1;
@@ -174,7 +174,7 @@ console.log(a);
 // Uncaught ReferenceError: a is not defined
 ```
 
-Therefore, if you want to get the value of a variable inside a function scope from outside, how will you do that? A smart method is to define another function inside the original function and return that function:
+Therefore, if you want to get the value of a variable inside a function scope from outside, how will you do that? A smart way is to define another function inside the original function and return that function:
 
 ```javascript
 function f1() {

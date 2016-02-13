@@ -1,13 +1,13 @@
 .highlight { 
-	font-size: 14px; 
-	background-color: #f0f0f0; 
-	color: black;
-	padding: 6px 10px;
-  	border: 1px solid #cccccc;
-  	border-radius: 3px;
-  	line-height: 19px;
-  	overflow-x: scroll;
-  	word-wrap: normal !important;
+  font-size: 14px; 
+  background-color: #f0f0f0; 
+  color: black;
+  padding: 6px 10px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  line-height: 19px;
+  overflow-x: scroll;
+  word-wrap: normal !important;
 }
 
 pre code {
