@@ -125,11 +125,17 @@ You may notice that there is a function called `clone()`. It's actually the key 
 
 ```javascript
 /* Clone function */
-
 function clone(object) {
-    function F() {} // Create a new and empty function F.
-    F.prototype = object; // Set the prototype attribute of F to the prototype object, which means point prototype attribute to the prototype object and it will provide links to all the inherited members through prototype chain.
-    return new F; // Return a completely empty cloned object, except for the prototype attribute.
+    // Create a new and empty function F.
+    function F() {} 
+
+    // Set the prototype attribute of F to the prototype object, which means 
+    // point prototype attribute to the prototype object and it will provide
+    // links to all the inherited members through prototype chain.
+    F.prototype = object; 
+
+    // Return a completely empty cloned object, except for the prototype attribute.
+    return new F; 
 }
 ```
 
