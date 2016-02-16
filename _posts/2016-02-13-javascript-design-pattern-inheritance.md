@@ -134,7 +134,8 @@ function clone(object) {
     // links to all the inherited members through prototype chain.
     F.prototype = object; 
 
-    // Return a completely empty cloned object, except for the prototype attribute.
+    // Return a completely empty cloned object,
+    // except for the prototype attribute.
     return new F; 
 }
 ```
