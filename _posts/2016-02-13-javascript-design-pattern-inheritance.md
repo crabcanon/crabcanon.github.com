@@ -10,7 +10,7 @@ tags: [Javascript]
 
 Suppose you define several classes and each of them need to have a method called "toString". How do you implement it? The most straight way is to copy and paste a toString method declaration into each class, but then each time you need to change how the method works, you would have to make the change to every class. In OO programming, we cannot tolerate duplicated code or tightly coupled code! Therefore, if instead you create a ToStringProvider class and make other classes inherit from it, this method would be declared once in only one place.
 
-There are 3 ways to create Inheritance in Javascript, `Classical Inheritance`, `Prototypal Inheritance` and `Mixin Classes`, respectively. We will introduce them one by one as following.
+There are 2 ways to create Inheritance in Javascript, `Classical Inheritance` and `Prototypal Inheritance`, respectively. We will introduce them one by one as following.
 
 #### 2. Classical Inheritance
 
@@ -57,6 +57,8 @@ The logic of above codes can be described as:
 - Because you point the Javascript.prototype to an instance of Language, the constructor attribute is wiped out. Therefore, you have to set the constructor attribute of subclass back to subclass itself.
 - Finally, add new methods to the subclass.
 
+[Here is a jsfiddle file by which you could see what will happen when you instantiate Language or Javascript Class(PS: open the javascript console of your browser to check the results).](https://jsfiddle.net/wLag0fwb/)
+
 Actually, in order to make things easier, you can wrap the whole process in a function, called `extend`:
 
 ```javascript
@@ -86,9 +88,50 @@ Javascript.prototype.getFrameworks = function() {
 ```
 
 
-*To be continued...*
+#### 3. Prototypal Inheritance
 
+The classical approach of inheritance is trying to structure an object with a couple of steps - (a) define a class, and (b) instantiate that class to create a new object which has its own copies of all instance attributes and a link to the single copy of each of the instance methods.
 
+In prototypal inheritance, benefiting from the Javascript Prototype Chain, we only need to simply create an object and then reuse it to create the inheritance:
+
+```javascript
+/* Language Prototype Object */
+var Language = {
+    name: 'default name',
+    getName: function() {
+        return this.name;
+    }
+};
+
+/* Javascript Prototype Object */
+var Javascript = clone(Language);
+Javascript.frameworks = []; // Default value.
+Javascript.getFrameworks = function() {
+    return this.frameworks;
+}
+
+// How to use it?
+var a = [];
+a[0] = clone(Javascript);
+a[0].name = 'Javascript';
+a[0].frameworks = 'AngularJS';
+
+a[1] = clone(Javascript);
+a[1].name = 'Javascript';
+a[1].frameworks = 'React';
+```
+
+You may notice that there is a function called `clone()`. It's actually the key point of prototypal inheritance, which looks like this:
+
+```javascript
+/* Clone function */
+
+function clone(object) {
+    function F() {} // Create a new and empty function F.
+    F.prototype = object; // Set the prototype attribute of F to the prototype object, which means point prototype attribute to the prototype object and it will provide links to all the inherited members through prototype chain.
+    return new F; // Return a completely empty cloned object, except for the prototype attribute.
+}
+```
 
 
 

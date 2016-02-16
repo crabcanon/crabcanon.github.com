@@ -126,7 +126,7 @@ Phone.prototype = {
         return this._imei;
     },
     setImei: function(imei) {
-        if(!this.checkImei(imei)) throw new Error('Invalid IMEI.');
+        if(!this._checkImei(imei)) throw new Error('Invalid IMEI.');
         this._imei = imei;
     },
 
