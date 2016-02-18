@@ -114,7 +114,7 @@ d3_selectionPrototype.append = function(name) {
 };
 ```
 
-If you run [this SFiddle file](https://jsfiddle.net/knk07rbj/), you can see under the '__proto__' object, all the chainable methods will be shown.
+If you run [this JSFiddle file](https://jsfiddle.net/knk07rbj/), you can see under the '__proto__' object, all the chainable methods will be shown.
 
 #### 3. Summary
 
