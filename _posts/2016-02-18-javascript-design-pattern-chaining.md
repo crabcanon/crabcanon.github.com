@@ -21,7 +21,7 @@ function capitalize(str) {
 }
 ```
 
-Assume we use it with other string methods to complete a specific task: remove all the delimiters of a string, then get the second element of the new string and finally capitalize this element. 
+Assume we use it with other string methods to achieve a specific task: remove all the delimiters of a string, then get the second element of the new string and finally capitalize this element. 
 
 ```javascript
 // Initialize variable 'a'
