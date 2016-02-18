@@ -47,7 +47,7 @@ console.log(result); // B
 
 You can play with the above code [here](https://jsfiddle.net/ygodpva6/).
 
-It's really easy to find something from this line `var b = a.replace(/,/g, '').slice(1,2);`. "string.slice()"" is chaining with "string.replace()" by a dot in between them, which means you don't have to assign the result of "string.replace()" to a new variable and apply "string.slice()" on it anymore. Therefore, we start wondering is it possible to make our capitalize() method chainable? The answer of course is YES.
+It's really easy to find something from this line `var b = a.replace(/,/g, '').slice(1,2);`. "string.slice()" is chaining with "string.replace()" by a dot in between them, which means you don't have to assign the result of "string.replace()" to a new variable and apply "string.slice()" on it anymore. Therefore, we start wondering is it possible to make our capitalize() method chainable? The answer of course is YES.
 
 Actually, if we modify the function to act as a constructor, store the elements as an array in an instance property, then return a reference to the instance in all prototype methods, you can give it the ability to chain. In this case, we only need to extend the String.prototype(add a new method called capitalize to the prototype of String class), it will work.
 
