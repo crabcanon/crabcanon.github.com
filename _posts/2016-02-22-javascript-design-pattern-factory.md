@@ -96,7 +96,7 @@ console.log(myTruck instanceof Truck); // true
 console.log(myTruck);
 ```
 
-[You can play with the code here.](https://jsfiddle.net/2tjdx863/)
+[You can play with the code here.](https://jsfiddle.net/2tjdx863/1/)
 
 Everything looks good until you want to make some changes. What if you want to add a new vehicle type to your lineup? This would require you to modify the VehicleShop constructor. The basic logic of VehicleShop doesn't change, but you still have to add some duplicated-like codes in the switch-case part. It's not a good style as VehicleShop class seems to be tightly coupled with other classes. 
 
