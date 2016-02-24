@@ -43,13 +43,13 @@ function Car(options) {
 };
 Car.prototype = {
     inspect: function() {
-       return console.log('This car has passed the inspection. Detailed car information: Manufacturer - ' + this.brand + ', Gearbox - ' + this.gearbox + ', Fuel Type - ' + this.fuelType + '.');
+       return console.log('This car has passed the inspection!');
     },
     wash: function() {
        return console.log('This car has been washed!');
     },
     transfer: function() {
-       return console.log('The ownership of this car has been successfully updated! It is now registered under your name.');
+       return console.log('This car has been registered under your name.');
     }
 };
 
@@ -63,13 +63,13 @@ function Truck(options) {
 };
 Truck.prototype = {
     inspect: function() {
-        return console.log('This truck has passed the inspection. Detailed truck information: Manufacturer - ' + this.brand + ', Gearbox - ' + this.gearbox + ', Fuel Type - ' + this.fuelType + ', Wheel Size: ' + this.wheelSize + '.');
+        return console.log('This truck has passed the inspection!');
     },
     wash: function() {
         return console.log('This truck has been washed!');
     },
     transfer: function() {
-        return console.log('The ownership of this truck has been successfully updated! It is now registered under your name.');
+        return console.log('This truck has been registered under your name!');
     }
 };
 
@@ -98,7 +98,57 @@ console.log(myTruck);
 
 [You can play with the code here.](https://jsfiddle.net/2tjdx863/1/)
 
-Everything looks good until you want to make some changes. What if you want to add a new vehicle type to your lineup? This would require you to modify the VehicleShop constructor. The basic logic of VehicleShop doesn't change, but you still have to add some duplicated-like codes in the switch-case part. It's not a good style as VehicleShop class seems to be tightly coupled with other classes. 
+Everything looks good until you want to make some changes. What if you want to add a new vehicle type to your lineup? This would require you to modify the VehicleShop constructor. The basic logic of VehicleShop doesn't change, but you still have to add some duplicated-like codes in the switch-case part. It's not a good style as the VehicleShop class seems to be tightly coupled with other classes. Therefore, we are going to introduce the `Simple Factory` and `The Factory Pattern` to resolve those problems.
+
+#### 2. Simple Factory
+
+The basic idea of Simple Factory is actually as same as a Singleton, which means creating a namespace(object) to contain the method. Put simply, pass off the "create a new instance" part of the method to a simple factory object:
+
+```javascript
+/* VehicleFactory namespace */
+var VehicleFactory = {
+    createVehicle: function(options) {
+        var vehicle;
+
+        switch(options.vehicleType) {
+            case 'Car':
+                vehicle = new Car(options);
+                break;
+            case 'Truck':
+                vehicle = new Truck(options);
+                break;
+            case 'Minibus':
+                vehicle = new Minibus(options);
+                break;
+            case 'Van':
+                vehicle = new Van(options);
+                break;
+        }
+
+        vehicle.inspect();
+        vehicle.wash();
+        vehicle.transfer();
+
+        return vehicle;
+    }
+}
+
+/* A constructor for defining new vehicle shops, improved */
+var VehicleShop = function() {};
+VehicleShop.prototype = {
+    sellVehicles: function(options) {
+        var vehicle = VehicleFactory.createVehicle(options);
+
+        vehicle.inspect();
+        vehicle.wash();
+        vehicle.transfer();
+
+        return vehicle;
+    }
+};
+```
+
+
 
 
 
