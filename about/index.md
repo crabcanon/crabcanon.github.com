@@ -37,7 +37,7 @@ layout: post
   <ul class="list">
     <li>Front-end MVC frameworks: <a href="https://angularjs.org/">AngularJS</a>, <a href="https://www.sencha.com/products/extjs/#overview">ExtJS</a></li>
     <li>Back-end MVC frameworks: <a href="http://rubyonrails.org/">Rails</a>, <a href="http://sailsjs.org/">Sails</a></li>
-    <li>Data visualisation: <a href="http://d3js.org/">D3.js</a>, <a href="https://cartodb.com/">CartoDB</a>, <a href="http://www.esri.com/software/arcgis">ArcGIS</a>, <a href="http://boundlessgeo.com/">OpenGeo</a></li>
+    <li>Data visualisation: <a href="http://d3js.org/">D3.js</a>, <a href="https://cartodb.com/">CartoDB</a>, <a href="https://www.mapbox.com/">Mapbox</a>, <a href="http://www.esri.com/software/arcgis">ArcGIS</a>, <a href="http://boundlessgeo.com/">OpenGeo</a></li>
     <li>Others that I am learning: <a href="https://facebook.github.io/react/">React</a>, <a href="https://www.polymer-project.org/1.0/">Polymer</a></li>
   </ul>
 </div>
