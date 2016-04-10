@@ -27,7 +27,7 @@ layout: post
   <p class="about-p">Please feel free to <mark>fork and contribute your codes</mark>. Let's make some amazing demos together!</p>
   <ul class="list">
     <li><a href="https://github.com/crabcanon/AngularFire-Chat">Real-time chat channel by AngularFire and Ionic</a></li>
-    <li><a href="https://github.com/crabcanon/3d-city-model">3D-city-model by Cesium and D3.js</a>
+    <li><a href="https://github.com/crabcanon/kiosked-assignment">ES6 + SystemJS + JSPM + Gulp + Babel + AngularJS + Sass + Travis CI + Heroku</a>
     </li>
   </ul>
 </div>
