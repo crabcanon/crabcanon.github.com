@@ -266,6 +266,6 @@ The logic of above codes can be described as:
 
 <mark>4.3. Drawbacks of the Factory Pattern</mark>
 
-- It's easy to make us use it everywhere. However, you can make code simpler and easier to follow if most class instantiation is done in the open, with the `new` keyword and a constructor, instead of having a large amount of subclasses.
+- It's tempting to try to use it everywhere instead of normal constructors. However, you can make code simpler and easier to follow if most class instantiations are done in the open, with the `new` keyword and a constructor, instead of having a large amount of subclasses to track down.
 
 
