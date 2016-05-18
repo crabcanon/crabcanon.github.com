@@ -15,10 +15,10 @@ layout: post
     <a href="https://www.instagram.com/p/BBGQEK7GmHo/?taken-by=yehuang_crabcanon" class="p2 photo" target="_blank"><img alt="" src="/images/homepage/about-2.jpg"></a>
     <a href="https://www.instagram.com/p/BAuqIJAGmBE/?taken-by=yehuang_crabcanon" class="p3 photo" target="_blank"><img alt="" src="/images/homepage/about-4.jpg"></a>
     <a href="https://www.instagram.com/p/_gkXcSGmIX/?taken-by=yehuang_crabcanon" class="p4 photo" target="_blank"><img alt="" src="/images/homepage/about-3.jpg"></a>
-    <div class="caption c1">Woke up in the morning feeling like my shadow which was projected on the wall by a beam of light.</div>
-    <div class="caption c2">Arctic Ocean under the sunset.</div>
-    <div class="caption c3">I learned a new word "LGBT" in a library of Helsinki.</div>
-    <div class="caption c4">I will use this picture as the cover if I have something to publish one day.</div>
+    <div class="caption t1">Woke up in the morning feeling like my shadow which was projected on the wall by a beam of light.</div>
+    <div class="caption t2">Arctic Ocean under the sunset.</div>
+    <div class="caption t3">I learned a new word "LGBT" in a library of Helsinki.</div>
+    <div class="caption t4">I will use this picture as the cover if I have something to publish one day.</div>
   </div>
 </div>
 

@@ -195,10 +195,6 @@ div {
   padding: 30px 0;
 }
 
-.align-text{
-  
-}
-
 .wrapper {
   max-width: 960px;
 
@@ -313,10 +309,10 @@ article {
     height: 50px;
   }
 
-  &.p1:hover ~ .c1,
-  &.p2:hover ~ .c2,
-  &.p3:hover ~ .c3,
-  &.p4:hover ~ .c4 {
+  &.p1:hover ~ .t1,
+  &.p2:hover ~ .t2,
+  &.p3:hover ~ .t3,
+  &.p4:hover ~ .t4 {
     display: block;
   }
 }
