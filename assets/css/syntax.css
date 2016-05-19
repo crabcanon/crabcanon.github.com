@@ -6,7 +6,7 @@
   border: 1px solid #cccccc;
   border-radius: 3px;
   line-height: 19px;
-  overflow-x: scroll;
+  overflow: auto;
   word-wrap: normal !important;
 }
 
