@@ -179,17 +179,21 @@ VehicleShop.prototype.createVehicle = function(options) {
     var vehicle;
 
     switch(options.vehicleType) {
+        // Second-hand cars in Helsinki.
         case 'Car':
-            vehicle = new HelsinkiCar(options); // Second-hand cars in Helsinki.
+            vehicle = new HelsinkiCar(options); 
             break;
+        // Second-hand trucks in Helsinki.
         case 'Truck':
-            vehicle = new HelsinkiTruck(options); // Second-hand trucks in Helsinki.
+            vehicle = new HelsinkiTruck(options); 
             break;
+        // Second-hand minibuses in Helsinki.
         case 'Minibus':
-            vehicle = new HelsinkiMinibus(options); // Second-hand minibuses in Helsinki.
+            vehicle = new HelsinkiMinibus(options);
             break;
+        // Second-hand vans in Helsinki.
         case 'Van':
-            vehicle = new HelsinkiVan(options); // Second-hand vans in Helsinki.
+            vehicle = new HelsinkiVan(options);
             break;
     }
 
@@ -203,17 +207,21 @@ VehicleShop.prototype.createVehicle = function(options) {
     var vehicle;
 
     switch(options.vehicleType) {
+        // Second-hand cars in Espoo.
         case 'Car':
-            vehicle = new EspooCar(options); // Second-hand cars in Espoo.
+            vehicle = new EspooCar(options);
             break;
+        // Second-hand trucks in Espoo.
         case 'Truck':
-            vehicle = new EspooTruck(options); // Second-hand trucks in Espoo.
+            vehicle = new EspooTruck(options);
             break;
+        // Second-hand minibuses in Espoo.
         case 'Minibus':
-            vehicle = new EspooMinibus(options); // Second-hand minibuses in Espoo.
+            vehicle = new EspooMinibus(options);
             break;
+        // Second-hand vans in Espoo.
         case 'Van':
-            vehicle = new EspooVan(options); // Second-hand vans in Espoo.
+            vehicle = new EspooVan(options);
             break;
     }
 

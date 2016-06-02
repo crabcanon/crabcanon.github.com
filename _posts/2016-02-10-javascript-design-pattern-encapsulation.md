@@ -243,25 +243,25 @@ var Phone = function(newImei, newManufacture, newModel) {
     }
 
     // Privileged methods
-    this.getImei: function() {
+    this.getImei = function() {
         return imei;
     },
-    this.setImei: function(newImei) {
+    this.setImei = function(newImei) {
         if(!this.checkImei(imei)) throw new Error('Invalid IMEI.');
         imei = newImei;
     },
 
-    this.getManufacture: function() {
+    this.getManufacture = function() {
         return manufacture;
     },
-    this.setManufacture: function(newManufacture) {
+    this.setManufacture = function(newManufacture) {
         manufacture = newManufacture || 'No manufacture specified';
     },
 
-    this.getModel: function() {
+    this.getModel = function() {
         return model;
     },
-    this.setModel: function(newModel) {
+    this.setModel = function(newModel) {
         model = model || 'No model specified';
     };
 
