@@ -4,7 +4,7 @@ layout: post
 
 <div class="about-page">
   <p class="sidebar-title about-me">About me.</p>
-  <p class="about-p">My name is Ye Huang. Currently, I am studying in Aalto University as a Master's degree student in Geoinformatics. I am also a web developer at Solue Oy which is a software consulting firm in Finland. My interests are web deisgn, data visualisation and <a href="http://www.esri.com/what-is-gis">GIS</a>. Recently I restarted to maintain my Github Page as I finally got a template which could arouse my desire. By the way, Github API is my favourite for testing any new web technologies so far.</p>
+  <p class="about-p">My name is Ye Huang. Currently, I am studying in Aalto University as a Master's degree student in Geoinformatics. I am also a front-end developer at <a href="http://google.tieto.com/">Tieto - Google for Work</a>. My interests are web deisgn, data visualisation and <a href="http://www.esri.com/what-is-gis">GIS</a>. Recently I restarted to maintain my Github Page as I finally got a template which could arouse my desire. By the way, Github API is my favourite for testing any new web technologies so far.</p>
   <p class="about-p">Want more?</p>
   <ul class="list">
     <li><a href="https://github.com/crabcanon">Github</a> | <a href="https://fi.linkedin.com/pub/huang-ye/4a/668/425">Linkedin</a> | <a href="http://www.zhihu.com/people/ye-huang-7-35">『知乎』</a> | <a href="/images/CV.pdf">CV</a></li>
