@@ -23,7 +23,7 @@ Below is a list of all available snippets and the triggers of each one. The → 
 <mark>Import and export</mark>
 
 Trigger | Target
------------- | -------------
+------- | ------
 imp→ | `import fs from 'fs';`
 imd→ | `import {rename} from 'fs';`
 ime→ | ` import * as localAlias from 'fs';`
@@ -36,7 +36,7 @@ ece→ | `export default class Calculator extends BaseClass { };`
 <mark>Class helpers</mark>
 
 Trigger | Target
------------- | -------------
+------- | ------
 con→ | `constructor() {}`
 met→ | `add() {}`
 pge→ | `get propertyName() {return value;}`
@@ -45,7 +45,7 @@ pse→ | `set propertyName(value) {}`
 <mark>Various methods</mark>
 
 Trigger | Target
------------- | -------------
+------- | ------
 fre→ | `array.forEach(currentItem => {})`
 fof→ | `for(let item of object) {}`
 fin→ | `for(let item in object) {}`
@@ -59,7 +59,7 @@ sto→ | `setTimeout(() => {});`
 <mark>Console methods</mark>
 
 Trigger | Target
------------- | -------------
+------- | ------
 cas→ | `console.assert(expression, object)`
 ccl→ | `console.clear()`
 cco→ | `console.count(label)`
@@ -85,6 +85,7 @@ Launch VS Code Quick Open (⌘+P), paste the following command, and type enter.
 2.2. Snippets
 
 ![ReactJS code snippets](/images/blogs/20160603-1.gif)
+
 ![ReactJS code snippets](/images/blogs/20160603-2.gif)
 
 Below is a list of all available snippets and the triggers of each one. The -> means the TAB key.
@@ -92,7 +93,7 @@ Below is a list of all available snippets and the triggers of each one. The -> m
 <mark>Main methods</mark>
 
 Trigger | Target
------------- | -------------
+------- | ------
 rcc→ | class component skeleton
 rccp→ | class component skeleton with prop types after the class
 rcjc→ | class component skeleton without import and default export lines
@@ -118,7 +119,7 @@ bnd→ | binds the this of method inside the constructor
 <mark>PropTypes methods</mark>
 
 Trigger | Content
------------- | -------------
+------- | -------
 pta→ | PropTypes.array,
 ptar→ | PropTypes.array.isRequired,
 ptb→ | PropTypes.bool,
@@ -168,7 +169,7 @@ Launch VS Code Quick Open (⌘+P), paste the following command, and type enter.
 <mark>TypeScript Snippets</mark>
 
 Trigger | Target
------------- | -------------
+------- | ------
 ng2-component-root→ | Angular 2 root App component
 ng2-bootstrap→ | `Angular 2 bootstraping, for main.ts
 ng2-component→ | Angular 2 component
@@ -181,7 +182,7 @@ ng2-subscribe→ | Angular 2 observable subscription
 <mark>HTML Snippets</mark>
 
 Trigger | Target
------------- | -------------
+------- | ------
 ng2-ngClass→ | ngClass
 ng2-ngFor→ | ngFor
 ng2-ngIf→ | ngIf
