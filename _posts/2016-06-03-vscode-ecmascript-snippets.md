@@ -160,7 +160,7 @@ Launch VS Code Quick Open (⌘+P), paste the following command, and type enter.
 > ext install Angular2
 ```
 
-![Angular code snippets](/images/blogs/20160603-3.gif)
+![Angular code snippets](/images/blogs/20160603-4.gif)
 
 3.2. Snippets
 
