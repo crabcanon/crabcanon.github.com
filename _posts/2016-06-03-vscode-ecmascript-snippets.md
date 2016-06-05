@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ECMAScript Snippets for VS Code
+title: Javascript(ECMAScript) Snippets for VS Code
 date: 2016-06-03
 categories: [Development Environment]
 tags: [Visual Studio Code]
