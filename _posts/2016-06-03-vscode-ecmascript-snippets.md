@@ -300,7 +300,7 @@ Launch VS Code Quick Open (⌘+P), paste the following command, and type enter.
 > ext install ReactSnippets
 ```
 
-2.2. Snippets
+2.2. [Snippets](https://github.com/xabikos/vscode-react/blob/master/snippets/snippets.json)
 
 ![ReactJS code snippets](/images/blogs/20160603-1.gif)
 
