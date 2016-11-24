@@ -6,7 +6,7 @@ categories: [angularjs]
 tags: [Angularjs, Javascript]
 ---
 
-这篇博客源于一个[知乎问题: angularjs项目需要从一个页面跳转到另一个页面，同时需要传递一个参数。通过什么实现？](http://www.zhihu.com/question/33565135/answer/69651500)。我因此总结了4种最常见方法供大家参考。
+这篇博客源于一个[知乎问题: angularjs项目需要从一个页面跳转到另一个页面，同时需要传递一个参数。通过什么实现？](http://www.zhihu.com/question/33565135/answer/69651500)。我因此总结了5种最常见方法供大家参考。
 
 **1. 基于ui-router的页面跳转传参**
 
@@ -52,39 +52,36 @@ tags: [Angularjs, Javascript]
 举例：你有N个页面，每个页面都需要用户填选信息，最终引导用户至尾页提交，同时后一个页面要显示前一个页面所填写的信息。这个时候用factory传参是比较合理的选择（下面的代码是一个简化版，根据需求可以不同定制）：
 
 ```javascript
-.factory('myFactory', function () {
-    //定义factory返回对象
-    var myServices = {};    
+.factory('myFactory', function() {   
     //定义参数对象
     var myObject = {};
     
     /**
-     * 定义传递数据的set函数
-     * param {type} xxx
-     * returns {*}
-     * private
+     * 定义传递数据的setter函数
+     * @param {type} xxx
+     * @returns {*}
+     * @private
      */
-    var _set = function (data) {
+    var _setter = function(data) {
        myObject = data;     
     };
 
     /**
-     * 定义获取数据的get函数
-     * param {type} xxx
-     * returns {*}
-     * private
+     * 定义获取数据的getter函数
+     * @param {type} xxx
+     * @returns {*}
+     * @private
      */
-    var _get = function () {
+    var _getter = function() {
         return myObject;
     };
 
     // Public APIs
-    myServices.set = _set;
-    myServices.get = _get;
-    
-    // 在controller中通过调set()和get()方法可实现提交或获取参数的功能
-    return myServices;
-  
+    // 在controller中通过调setter()和getter()方法可实现提交或获取参数的功能
+    return {
+        setter: _setter,
+        getter: _getter
+    };
 });
 ```
 
@@ -106,8 +103,8 @@ PS: $rootScope.$broadcast()可以非常方便的设置全局事件，并让所�
     // 定义更新地址函数，通过$rootScope.$broadcast()设置全局事件'AddressUpdated'
     // 所有子作用域都能监听到该事件
     address.updateAddress = function (value) {
-	this.components = value.slice();
-	$rootScope.$broadcast('AddressUpdated');
+    this.components = angular.copy(value);
+    $rootScope.$broadcast('AddressUpdated');
     };
     
     // 返回地址对象
@@ -121,9 +118,12 @@ PS: $rootScope.$broadcast()可以非常方便的设置全局事件，并让所�
 // 动态获取地址，接口方法省略
 var component = {
     addressLongName: xxxx,
-    addressShortName: xxxx,
+    addressShortName: xx,
     cityLongName: xxxx,
-    cityShortName: xxxx         
+    cityShortName: xx,
+    countryLongName: xxxx,
+    countryShortName: xx,
+    postCode: xxxxx         
 };
 
 // 定义地址数组
@@ -147,7 +147,7 @@ $scope.$on('AddressUpdated', function () {
    var city = address.components[0].cityLongName;
 
    // 通过获取的地址数据可以做相关操作，譬如获取该地址周边的商铺，下面代码为本人虚构
-   shopFactory.getShops(street, city).then(function (data) {
+   shopFactory.getShops(street, city).then(function(data) {
        if(data.status === 200){
           $scope.shops = data.shops;  
        }else{
@@ -187,4 +187,230 @@ $scope.$watch('counter', function(newVal, oldVal) {
     // 监听变化，并获取参数的最新值
     $log.log('newVal: ', newVal);    
 });
+```
+
+<hr>
+
+**5. 基于localStorage/sessionStorage和Factory的页面传参**
+
+由于传参出现的不同的需求，将不同方式组合起来可帮助你构建低耦合便于扩展和维护的代码。
+举例：应用的Authentication（授权）。用户登录后，后端传回一个时限性的token，该用户下次访问应用，通过检测token和相关参数，可获取用户权限，因而无须再次登录即可进入相应页面（Automatically Login）。其次所有的APIs都需要在HTTP header里注入token才能与服务器传输数据。此时我们看到token扮演一个重要角色：（a）用于检测用户权限，（b）保证前后端数据传输安全性。以下实例中使用了依赖ngStorage和angular-permission.
+
+(1）定义一个名为auth.service.js的factory，用于处理和authentication相关的业务逻辑，比如login，logout，checkAuthentication，getAuthenticationParams等。此处略去其他业务，只专注Authentication的部分。
+
+```javascript
+(function() {
+'use strict';
+
+    angular
+      .module('myApp')
+      .factory('authService', authService);
+
+    /** @ngInject */
+    function authService($http, $log, $q, $localStorage, PermissionStore, ENV) {
+      var apiUserPermission = ENV.baseUrl + 'user/permission';
+
+      var authServices = {
+        login: login,
+        logout: logout,
+        getAuthenticationParams: getAuthenticationParams,
+        checkAuthentication: checkAuthentication
+      };
+      
+      return authServices;
+
+      ////////////////
+
+      /**
+       * 定义处理错误函数，私有函数。
+       * @param {type} xxx
+       * @returns {*}
+       * @private
+       */
+      function handleError(name, error) {
+        return $log.error('XHR Failed for ' + name + '.\n', angular.toJson(error, true));
+      }
+      
+      /**
+       * 定义login函数，公有函数。
+       * 若登录成功，把服务器返回的token存入localStorage。
+       * @param {type} xxx
+       * @returns {*}
+       * @public
+       */
+      function login(loginData) {
+        var apiLoginUrl = ENV.baseUrl + 'user/login'; 
+          
+        return $http({
+          method: 'POST',
+          url: apiLoginUrl,
+          params: {
+            username: loginData.username,
+            password: loginData.password
+          }
+        })
+        .then(loginComplete)
+        .catch(loginFailed);
+          
+        function loginComplete(response) {
+          if (response.status === 200 && _.includes(response.data.authorities, 'admin')) {
+            // 将token存入localStorage。
+            $localStorage.authtoken = response.headers().authtoken;
+            setAuthenticationParams(true);
+          } else {
+            $localStorage.authtoken = '';
+            setAuthenticationParams(false);
+          }
+        }
+          
+        function loginFailed(error) {
+          handleError('login()', error);
+        }
+      }
+      
+      /**
+       * 定义logout函数，公有函数。
+       * 清除localStorage和PermissionStore中的数据。
+       * @public
+       */
+      function logout() {
+        $localStorage.$reset();
+        PermissionStore.clearStore();
+      }
+
+      /**
+       * 定义传递数据的setter函数，私有函数。
+       * 用于设置isAuth参数。
+       * @param {type} xxx
+       * @returns {*}
+       * @private
+       */
+      function setAuthenticationParams(param) {
+        $localStorage.isAuth = param;
+      }
+      
+      /**
+       * 定义获取数据的getter函数，公有函数。
+       * 用于获取isAuth和token参数。
+       * 通过setter和getter函数，可以避免使用第四种方法所提到的$watch变量。
+       * @param {type} xxx
+       * @returns {*}
+       * @public
+       */      
+      function getAuthenticationParams() {
+        var authParams = {
+          isAuth: $localStorage.isAuth,
+          authtoken: $localStorage.authtoken
+        };
+        return authParams;
+      }    
+     
+      /* 
+       * 第一步: 检测token是否有效.
+       * 若token有效，进入第二步。
+       *
+       * 第二步: 检测用户是否依旧属于admin权限.
+       *
+       * 只有满足上述两个条件，函数才会返回true，否则返回false。 
+       * 请参看angular-permission文档了解其工作原理https://github.com/Narzerus/angular-permission/wiki/Managing-permissions
+       */
+      function checkAuthentication() {
+        var deferred = $q.defer();
+        
+        $http.get(apiUserPermission).success(function(response) {
+          if (_.includes(response.authorities, 'admin')) {
+            deferred.resolve(true);
+          } else {
+            deferred.reject(false);
+          }
+        }).error(function(error) {
+          handleError('checkAuthentication()', error);
+          deferred.reject(false);
+        });
+          
+        return deferred.promise;
+      }
+    }
+})();
+```
+
+（2）定义名为index.run.js的文件，用于在应用载入时自动运行权限检测代码。
+
+```javascript
+(function() {
+  'use strict';
+
+  angular
+    .module('myApp')
+    .run(checkPermission);
+
+  /** @ngInject */
+  
+  /**
+   * angular-permission version 3.0.x.
+   * https://github.com/Narzerus/angular-permission/wiki/Managing-permissions.
+   * 
+   * 第一步: 运行authService.getAuthenticationParams()函数.
+   * 返回true：用户之前成功登陆过。因而localStorage中已储存isAuth和authtoken两个参数。 
+   * 返回false：用户或许已logout，或是首次访问应用。因而强制用户至登录页输入用户名密码登录。
+   *
+   * 第二步: 运行authService.checkAuthentication()函数.
+   * 返回true：用户的token依旧有效，同时用户依然拥有admin权限。因而无需手动登录，页面将自动重定向到admin页面。
+   * 返回false：要么用户token已经过期，或用户不再属于admin权限。因而强制用户至登录页输入用户名密码登录。
+   */
+  function checkPermission(PermissionStore, authService) {
+    PermissionStore
+      .definePermission('ADMIN', function() {
+        var authParams = authService.getAuthenticationParams();
+        if (authParams.isAuth) {
+          return authService.checkAuthentication();
+        } else {
+          return false;
+        }
+      });
+  }
+})();
+```
+
+（3）定义名为authInterceptor.service.js的文件，用于在所有该应用请求的HTTP requests的header中注入token。
+
+```javascript
+(function() {
+'use strict';
+
+    angular
+      .module('myApp')
+      .factory('authInterceptorService', authInterceptorService);
+
+    /** @ngInject */
+    function authInterceptorService($q, $injector, $location) {
+      var authService = $injector.get('authService');  
+    
+      var authInterceptorServices = {
+        request: request,
+        responseError: responseError
+      };
+      
+      return authInterceptorServices;
+      
+      ////////////////
+      
+      // 将token注入所有HTTP requests的headers。
+      function request(config) {
+        var authParams = authService.getAuthenticationParams();
+        config.headers = config.headers || {};
+        if (authParams.authtoken) config.headers.authtoken = authParams.authtoken;
+      
+        return config || $q.when(config);
+      }
+      
+      function responseError(rejection) {
+        if (rejection.status === 401) {
+          authService.logout();
+          $location.path('/login');
+        }
+        return $q.reject(rejection);  
+      }
+    }
+})();
 ```
