@@ -3,7 +3,7 @@ layout: post
 title: How to install Craft CMS on Mac OS using MAMP
 date: 2015-11-05
 categories: [Development Environment]
-tags: [Craft CMS, MAMP, Sequel Pro]
+tags: [Craft CMS, MAMP, Sequel Pro, 中文]
 ---
 
 Recently, I got a project which required me to set up Craft CMS on my local environment(Macbook Pro) in order for the further development of a web portal. Fortunately, because I had the experience with Wordpress(another very wildly used CMS as similar as Craft), it didn't take long to get everything ready. But still, I hope to provide a detailed instruction about how to set up Craft CMS on Mac OS by using MAMP and Sequel Pro.
