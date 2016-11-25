@@ -27,9 +27,8 @@ pre tt {
 code, tt {
   margin: 3px;
   padding: 3px;
-  font-size: 13px;
+  font-size: 0.9em;
   white-space: nowrap;
-  color: #cd3b60;
   border: 1px solid #cca5a5;
   background-color: #fbf9f9;
   border-radius: 3px;
