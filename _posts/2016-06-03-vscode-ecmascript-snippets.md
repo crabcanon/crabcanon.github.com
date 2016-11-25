@@ -56,36 +56,28 @@ import {originalName as alias } from 'module';
 
 ```javascript
 // Export named function in ES6 syntax.
-export const functionName = (params) =>  {
-    
-};
+export const functionName = (params) =>  {};
 ```
 
 `edf→`: exportDefaultFunction
 
 ```javascript
 // Export default function in ES6 syntax.
-export default (params) =>  {
-    
-};
+export default (params) =>  {};
 ```
 
 `ecl→`: exportClass
 
 ```javascript
 // Export default class in ES6 syntax.
-export default class className {
-    
-};
+export default class className {};
 ```
 
 `ece→`: exportClassExtends
 
 ```javascript
 // Export default class which extends a base one in ES6 syntax.
-export default class className extends baseclassName {
-    
-};
+export default class className extends baseclassName {};
 ```
 
 <hr>
@@ -96,18 +88,14 @@ export default class className extends baseclassName {
 
 ```javascript
 // Add default constructor in a class in ES6 syntax.
-constructor(params) {
-    
-}
+constructor(params) {}
 ```
 
 `met→`: method
 
 ```javascript
 // Creates a mehtod inside a class in ES6 syntax.
-methodName(params) {
-    
-}
+methodName(params) {}
 ```
 
 `pge→`: propertyGet
@@ -123,9 +111,7 @@ get propertyName() {
 
 ```javascript
 // Creates a setter property inside a class in ES6 syntax.
-set propertyName(value) {
-    ;
-}
+set propertyName(value) {}
 ```
 
 <hr>
@@ -136,45 +122,35 @@ set propertyName(value) {
 
 ```javascript
 // Creates a forEach statement in ES6 syntax.
-array.forEach(currentItem => {
-    
-});
+array.forEach(currentItem => {});
 ```
 
 `fof→`: forOf
 
 ```javascript
 // Iterating over property names of iterable objects.
-for(let item of object) {
-    
-}
+for(let item of object) {}
 ```
 
 `fin→`: forIn
 
 ```javascript
 // Iterating over property values of iterable objects.
-for(let item in object) {
-    
-}
+for(let item in object) {}
 ```
 
 `afn→`: anonymousFunction
 
 ```javascript
 // Creates an anonymous function in ES6 syntax.
-(params) => {
-    
-}
+(params) => {}
 ```
 
 `nfn→`: namedFunction
 
 ```javascript
 // Creates a named function in ES6 syntax.
-const name = (params) => {
-    
-}
+const name = (params) => {}
 ```
 
 `dob→`: destructingObject
@@ -195,18 +171,14 @@ const [propertyName] = arrayToDestruct;
 
 ```javascript
 // Executes the given function at specified intervals in ES6 syntax.
-setInterval(() => {
-    
-}, intervalInms);
+setInterval(() => {}, intervalInms);
 ```
 
 `sto→`: setTimeOut
 
 ```javascript
 // Executes the given function after the specified delay in ES6 syntax.
-setTimeout(() => {
-    
-}, delayInms);
+setTimeout(() => {}, delayInms);
 ```
 
 
@@ -320,9 +292,7 @@ import React, {Component} from 'react';
 
 class componentName extends Component {
     render() {
-        return (
-
-        );
+        return ();
     }
 }
 
@@ -337,15 +307,11 @@ import React, {Component, PropTypes} from 'react';
 
 class componentName extends Component {
     render() {
-        return (
-            
-        );
+        return ();
     }
 }
 
-componentName.propTypes = {
-
-};
+componentName.propTypes = {};
 
 export default componentName;
 ```
@@ -356,9 +322,7 @@ export default componentName;
 // Creates a React component class with ES6 module system.
 class componentName extends Component {
     render() {
-        return (
-            
-        );
+        return ();
     }
 }
 ```
@@ -372,47 +336,28 @@ import React, {Component, PropTypes} from 'react';
 class componentName extends Component {
     constructor(props) {
         super(props);
-
     }
 
-    componentWillMount() {
+    componentWillMount() {}
 
-    }
+    componentDidMount() {}
 
-    componentDidMount() {
+    componentWillReceiveProps(nextProps) {}
 
-    }
+    shouldComponentUpdate(nextProps, nextState) {}
 
-    componentWillReceiveProps(nextProps) {
+    componentWillUpdate(nextProps, nextState) {}
 
-    }
+    componentDidUpdate(prevProps, prevState) {}
 
-    shouldComponentUpdate(nextProps, nextState) {
-
-    }
-
-    componentWillUpdate(nextProps, nextState) {
-
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-
-    }
-
-    componentWillUnmount() {
-
-    }
+    componentWillUnmount() {}
 
     render() {
-        return (
-        
-        );
+        return ();
     }
 }
 
-componentName.propTypes = {
-
-};
+componentName.propTypes = {};
 
 export default componentName;
 ```
@@ -424,9 +369,7 @@ export default componentName;
 import React from 'react';
 
 const componentName = () => {
-    return (
-       
-    );
+    return ();
 };
 
 export default componentName;
@@ -439,14 +382,10 @@ export default componentName;
 import React, {PropTypes} from 'react';
 
 const componentName = props => {
-    return (
-        
-    );
+    return ();
 };
 
-componentName.propTypes = {
-    
-};
+componentName.propTypes = {};
 
 export default componentName;
 ```
@@ -455,9 +394,7 @@ export default componentName;
 
 ```javascript
 // Adds a default construcotr for the class that contains props as arguments.
-constructor(params) {
-    
-}
+constructor(params) {}
 ```
 
 `conc→`: classConstructorContext
@@ -465,8 +402,7 @@ constructor(params) {
 ```javascript
 // Adds a default construcotr for the class that contains props and context as arguments.
 constructor(props, context) {
-    super(props, context);
-    
+    super(props, context); 
 }
 ```
 
@@ -474,63 +410,49 @@ constructor(props, context) {
 
 ```javascript
 // Invoked once, both on the client and server, immediately before the initial rendering occurs. 
-componentWillMount() {
-    
-}
+componentWillMount() {}
 ```
 
 `cdm→`: componentDidMount
 
 ```javascript
 // Invoked once, only on the client (not on the server), immediately after the initial rendering occurs.
-componentDidMount() {
-    
-}
+componentDidMount() {}
 ```
 
 `cwr→`: componentWillReceiveProps
 
 ```javascript
 // Invoked when a component is receiving new props. This method is not called for the initial render.
-componentWillReceiveProps(nextProps) {
-    
-}
+componentWillReceiveProps(nextProps) {}
 ```
 
 `scu→`: shouldComponentUpdate
 
 ```javascript
 // Invoked before rendering when new props or state are being received.
-shouldComponentUpdate(nextProps, nextState) {
-    
-}
+shouldComponentUpdate(nextProps, nextState) {}
 ```
 
 `cwup→`: componentWillUpdate
 
 ```javascript
 // Invoked immediately before rendering when new props or state are being received.
-componentWillUpdate(nextProps, nextState) {
-    
-}
+componentWillUpdate(nextProps, nextState) {}
 ```
 
 `cdup→`: componentDidUpdate
 
 ```javascript
 // Invoked immediately after the component's updates are flushed to the DOM.
-componentDidUpdate(prevProps, prevState) {
-    
-}
+componentDidUpdate(prevProps, prevState) {}
 ```
 
 `cwun→`: componentWillUnmount
 
 ```javascript
 // Invoked immediately before a component is unmounted from the DOM.
-componentWillUnmount() {
-    
-}
+componentWillUnmount() {}
 ```
 
 `ren→`: componentRender
@@ -538,9 +460,7 @@ componentWillUnmount() {
 ```javascript
 // When called, it should examine this.props and this.state and return a single child element.
 render() {
-    return (
-       
-    );
+    return ();
 }
 ```
 
@@ -727,9 +647,7 @@ PropTypes.oneOf(['']).isRequired,
 
 ```javascript
 // An object that could be one of many type.
-PropTypes.oneOfType([
-    
-]),
+PropTypes.oneOfType([]),
 ```
 
 `ptao→`: propTypeArrayOf
@@ -764,18 +682,14 @@ PropTypes.objectOf().isRequired,
 
 ```javascript
 // An object taking on a particular shape.
-PropTypes.shape({
-    
-}),
+PropTypes.shape({}),
 ```
 
 `ptshr→`: propTypeShapeRequired
 
 ```javascript
 // An object taking on a particular shape required.
-PropTypes.shape({
-    
-}).isRequired,
+PropTypes.shape({}).isRequired,
 ```
 
 #### 3. [Angular 2(TypeScript) Code Snippets](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2)
@@ -944,11 +858,3 @@ this.service.function
     <div *ngSwitchDefault>output2</div>
 </div>
 ```
-
-
-
-
-
-
-
-
