@@ -49,7 +49,7 @@ tags: [中文]
 
 <br>
 
-英国脱欧，川普当选，是今年最大的两个新闻。听说明年意大利也要效仿英国举行公投，如果成功，欧盟将面临解散。前天看新闻，川普说：我不再追究希拉里的邮件门，我们都应该向前看，要感激希拉里为国家做出的贡献。我到维基解密看看希拉里的邮件专题。这个专题搜索框旁边的指南是这样写的：
+英国脱欧，川普当选，是今年最大的两个新闻。听说明年意大利也要效仿英国举行公投，如果成功，欧盟将面临解散。前天看新闻，川普说：我不再追究希拉里的邮件门，我们都应该向前看，要感激希拉里为国家做出的贡献。奇怪的是，川普在大选辩论上说：Cause you'd be jail. 我到维基解密看看希拉里的邮件专题。这个专题搜索框旁边的指南是这样写的：
 
 >You can use boolean operators to search emails.
 (Example: syria libya will show results containing both words. syria | libya will show results with either words, while syria !libya will show results containing "syria" and not "libya".) To search an exact phrase use quotes around it like in "sensitive source". 
@@ -60,6 +60,6 @@ tags: [中文]
 
 耗时两个月终于完成项目中一个基于地图的功能，设计、开发、测试和部署，每个细节都精雕细琢。今晚最后一个commit写的是`Rearrange code structures and add comments.`。晚上回到家，煮了个面，和一锅混有鹌鹑蛋、胡萝卜、黄瓜、香菇和芋头的汤。
 
-再过10年，我会怎么看今年？那句话怎么说来着？
+如果我还能再活10年，10年后，我会怎么看今年？那句话怎么说来着？
 
 >总之，那时跟现在非常相象，某些最喧嚣的权威坚持要用形容词的最高级来形容它。说它好，是最高级的；说它不好，也是最高级的。 
