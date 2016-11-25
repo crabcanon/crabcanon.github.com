@@ -393,7 +393,7 @@ hr {
 
 blockquote {
   margin: 40px 0px;
-  padding: 10px 20px 10px 50px;
+  padding: 0px 20px;
   border-left: 4px double #ddd;
 }
 
@@ -408,7 +408,7 @@ blockquote {
   color: #fff;
   height: 250px;
 }
-.grad{
+.grad {
   background: -webkit-linear-gradient(rgba(0 , 0, 0, 0.65) 0%, rgba(0,0,0, 0.65) 100%); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%); /* For Firefox 3.6 to 15 */
@@ -422,19 +422,19 @@ blockquote {
 }
 
 // about css
-.about-page{
+.about-page {
   margin-bottom: 50px;
 }
-.about-page .about-me{
+.about-page .about-me {
   color: #555; 
   margin-top: 0px; 
   margin-bottom: 20px;
 }
-.about-page .about-others{
+.about-page .about-others {
   color: #555; 
   margin-bottom: 20px;  
 }
-.about-p{
+.about-p {
   font-size: 0.9em;
 }
 
