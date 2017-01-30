@@ -1,6 +1,10 @@
 title:            "黄野 | @crabcanon"
 url:              https://yehuang.me
 permalink:        pretty
+markdown:         kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 highlighter:      rouge
 google_analytics: UA-45466555-1
 timezone:         Europe/Helsinki
