@@ -54,11 +54,8 @@ images/
 
 * All other directories and files are [MIT Licensed](http://choosealicense.com/licenses/mit/).
 
-## Me
+---
 
-* :email: sysuhuangye@gmail.com
-* WeChat/微信: @huangye_sysu
-* [Linkedin](https://fi.linkedin.com/pub/huang-ye/4a/668/425) 
-* [知乎](http://www.zhihu.com/people/ye-huang-7-35)
-
-
+> [yehuang.me](https://yehuang.me) &nbsp;&middot;&nbsp;
+> GitHub [@crabcanon](https://github.com/crabcanon) &nbsp;&middot;&nbsp;
+> Gmail [@sysuhuangye](<mailto:sysuhuangye@gmail.com>)
