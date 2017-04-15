@@ -10,7 +10,7 @@
 * This website is powered by [jekyll](https://jekyllrb.com/) on [Github Pages](https://pages.github.com/).
 * The theme is forked from [Monospace](https://github.com/muan/muan.github.com/releases/tag/v5.0.1-monospace), originally designed by [@muan](https://github.com/muan).
 * I re-constructed parts of the original functionalities and added more features, including search/sort blogs (by date, categories or tags) and independent pages for "About me" and "Projects" in order to satisfy my personal demands. Also, I changed the original design a little bit to provide a better UX for a technical blog on both desktop and mobile platforms.
-* Finally, I really appreciate @muan's work and I would say this is one of the best themes I have ever seen in the past two years. 
+* Finally, I really appreciate [@muan](https://github.com/muan)'s work and I would say this is one of the best themes I have ever seen in the past two years. 
 
 ## Features
 
