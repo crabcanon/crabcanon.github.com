@@ -55,14 +55,14 @@ tags: [中文]
 英国脱欧，川普当选，是今年最大的两个新闻。听说明年意大利也要效仿英国举行公投，如果成功，欧盟将面临解散。前天看新闻，川普谈到：我不再追究希拉里的邮件门，我们都应该向前看，要感激希拉里为国家做出的贡献。奇怪的是，川普在大选辩论上说：Cause you'd be jail. 我到维基解密看看希拉里的邮件门。这个专题搜索框旁边的指南是这样写的：
 
 >You can use boolean operators to search emails.
-(Example: syria libya will show results containing both words. syria | libya will show results with either words, while syria !libya will show results containing "syria" and not "libya".) To search an exact phrase use quotes around it like in "sensitive source". 
+(Example: syria libya will show results containing both words. syria | libya will show results with either words, while syria !libya will show results containing "syria" and not "libya".) To search an exact phrase use quotes around it like in "sensitive source".
 
-搜索关键词`syria | libya`, 得到2338个结果。昨天看新闻，川普表示一上任，第一件事就是退出TPP。有分析指出，这或许会为中国带来超过1000亿美金的效益和获得对全球贸易规则的掌控。安倍晋三发言：如果没有美国，TPP就没有了意义，针对川普总统的方针，我还不方便回应。今天看新闻，有人怀疑是黑客修改了美国大选的数据，导致希拉里落败。相信明天看新闻，依旧尽是关于川普，奇怪的是，当全世界在叫骂川普时，世界又给了川普女儿最高的赞誉。
+搜索关键词`syria | libya`, 得到2338个结果。昨天看新闻，川普表示一上任，第一件事就是退出TPP。有分析指出，这或许会为中国带来超过1000亿美金的效益和获得对全球贸易规则的掌控。安倍晋三发言：如果没有美国，TPP就没有了意义，针对川普总统的方针，我还不方便回应。今天看新闻，有人怀疑是黑客修改了美国大选的数据，导致希拉里落败。相信明天看新闻，依旧尽是关于川普和希拉里，奇怪的是，当全世界在叫骂川普时，世界又给了川普女儿最高的赞誉。
 
 今年Helsinki不停的搞基建，是不是响应那句老话『经济不好就搞内部建设』。前几天下了第一场雪，在结满冰的高速路上我把车撞到护栏，保险、年检、修车检车费用，就像消不下去的欲望。
 
 耗时两个月终于完成项目一个模块的设计、开发、测试和部署，每个细节都精雕细琢。今晚最后一个commit写的是`Re-arrange code structures and add comments`。晚上回到家，煮了个面，和一锅混有鹌鹑蛋、胡萝卜、黄瓜、香菇和芋头的汤。
 
-10年后，我会怎么看今年？那句话怎么说来着？
+10年后，我会怎么看今年？那句话怎么说的？
 
->总之，那时跟现在非常相象，某些最喧嚣的权威坚持要用形容词的最高级来形容它。说它好，是最高级的；说它不好，也是最高级的。 
+>总之，那时跟现在非常相象，某些最喧嚣的权威坚持要用形容词的最高级来形容它。说它好，是最高级的；说它不好，也是最高级的。
