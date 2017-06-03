@@ -116,7 +116,7 @@ table tr:nth-child(2n) {
   font-size: 0.9em;
   font-weight: bold;
   color: #666;
-  background: url("/images/homepage/fun-line.png") 0 100% no-repeat;
+  background: url("/assets/img/homepage/fun-line.png") 0 100% no-repeat;
   background-size: 20px;
   margin-bottom: 8px;
   margin-top: 20px;
@@ -256,7 +256,7 @@ div {
   &:after {
     display: block;
     content: "";
-    background: url('/images/homepage/fun-line.png') no-repeat;
+    background: url('/assets/img/homepage/fun-line.png') no-repeat;
     height: 5px;
     width: 20px;
     background-size: 100%;
@@ -540,18 +540,12 @@ blockquote {
   }
 
   .list a {
-    color: #1D75AB;
     font-size: 0.9em;
     font-weight: bold;
     text-decoration: none;
-    background-color: white;
   }
 
-  .sidebar-title {
-    color: #FFA07B;
-  }
   .sidebar-title a {
-    color: #FFA07B;
     line-height: 2;
   }
 

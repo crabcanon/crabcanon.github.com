@@ -40,7 +40,7 @@ One notable problem with the data is the gap in time perspective. We were able t
 
 >The goal of analysis: To find some patterns of children distribution in Espoo – clustering, density or if spatial autocorrelation in their distribution exists.
 
-![figure](/images/blogs/20130328-1.png)
+![figure](/assets/img/blogs/20130328-1.png)
 
 *Figure 1 Children distribution in Espoo*
 
@@ -48,39 +48,39 @@ One notable problem with the data is the gap in time perspective. We were able t
 
 (1)Kernel Density: Demonstrates the spatial distribution of phenomena using function summing overlapping values of frequency in each point of area.
 
-![figure](/images/blogs/20130328-2.png)
+![figure](/assets/img/blogs/20130328-2.png)
 
 *Figure 2 Kernel Density of the children distribution in Espoo. Output cell – 76,3 (default), Search radius – 636 (default) sq km*
 
-![figure](/images/blogs/20130328-3.png)
+![figure](/assets/img/blogs/20130328-3.png)
 
 *Figure 3 Output cell – 100, Search radius – 636 (default) sq km*
 
-![figure](/images/blogs/20130328-4.png)
+![figure](/assets/img/blogs/20130328-4.png)
 
 *Figure 4 Output cell – 100, Search radius – 800 sq km*
 
 >Result: Visualization if children density allowed us to define several parts of Espoo with very high density of children population:
 
-![figure](/images/blogs/20130328-5.png)
+![figure](/assets/img/blogs/20130328-5.png)
 
 *Figure 5 Several parts of Espoo with very high density of children population*
 
 (2)Nearest Neighbor Clustering : Method allows to find clusters in the pattern of phenomena distribution.
 
-![figure](/images/blogs/20130328-6.png)
+![figure](/assets/img/blogs/20130328-6.png)
 
 *Figure 6 The summary of average nearest neighbor shows the distribution of children population is significantly clustered, which statistically approves our initial hypothesis about the clustering of children distribution*
 
 (3)Spatial Autocorrelation (Global Moran's I) : Tool measures spatial autocorrelation based on both feature locations and feature values simultaneously. Given a set of features and an associated attribute, it evaluates whether the pattern expressed is clustered, dispersed, or random.
 
-![figure](/images/blogs/20130328-7.png)
+![figure](/assets/img/blogs/20130328-7.png)
 
 *Figure 7 The report of spatial autocorrelation shows that our point pattern is significantly clustered (p-value << 0.01 and z-score >> 2.58). It means that we may reject our null hypothesis. The children population spatial distribution of high values and/or low values (The number of children in each building) in the dataset is more spatially clustered than would be expected if underlying spatial processes were random*
 
 (4)Hot Spot Analysis (Getis-Ord Gi) : Given a set of weighted features, identifies statistically significant hot spots and cold spots using the Getis-Ord Gi* statistic
 
-![figure](/images/blogs/20130328-8.png)
+![figure](/assets/img/blogs/20130328-8.png)
 
 *Figure 8 The region of red color represents the statistically significant spatial clusters of high children population density while the blue color identifies the significant spatial clusters of low children population density*
 
@@ -91,7 +91,7 @@ We found that in some places in Espoo the concentration of children is very high
 
 (1)Kernel Density of houses distribution
 
-![figure](/images/blogs/20130328-9.png)
+![figure](/assets/img/blogs/20130328-9.png)
 
 *Figure 9 Kernel Density of houses distribution*
 
@@ -104,7 +104,7 @@ We found that in some places in Espoo the concentration of children is very high
 >The goal of analysis: Analyze the distribution(clustered or dispersed) of day-care centres and the distribution of children in those day-care centers by using the spatial statistics tools. And because of the limitation of data, we just evaluate two kinds of value in each analysis. One is regarded the number of children in every day-care center as the input value, the aim is to find some abnormal values of the children distribution based on the day-care-center-unit(for example, the number of children in one care center is obviously more than the number of children in other care centers which are around it). The other is regarded the number of day-care center as the input values, the aim is to find some abnormal values of the care centers distribution(for example, find the cluster regions of day-care center).
 
 
-![figure](/images/blogs/20130328-10.png)
+![figure](/assets/img/blogs/20130328-10.png)
 
 *Figure 10 The distribution of Day-care centers in Espoo*
 
@@ -115,23 +115,23 @@ We found that in some places in Espoo the concentration of children is very high
 Basic research idea: the syntax of Kernel Density in ArcGIS is
 `Kernel Density(in_features, population_field, {cell_size}, {search_radius},{area_unit_scale_factor})`. The last 3 items are optional. In terms of care centers, the parameter in_features is the point feature class of care centers and the parameter population_field shold be set as NULL so that the volume under the surface equals the Population field value for the point (here is 1, and means each point represents just one care center).However, in terms of children’s population, as the number of children in each location aggregate in building level(each point reprents a building and there must be a field in the attributes table showing the chirdren’s total population of each building), we need to set the parameter population_field as the number of children in each building so that times that each point will be counted are the number of children in this point.
 
-![figure](/images/blogs/20130328-11.png)
+![figure](/assets/img/blogs/20130328-11.png)
 
 *Figure 11 The workflow of kernel density of the day-care centers*
 
-![figure](/images/blogs/20130328-12.png)
+![figure](/assets/img/blogs/20130328-12.png)
 
 *Figure 12 The outcome of the analysis. Blue parts show that the number of day-care centers in those regions present peaks*
 
-![figure](/images/blogs/20130328-13.png)
+![figure](/assets/img/blogs/20130328-13.png)
 
 *Figure 13 The workflow of kernel density of children distribution in day-care centers. The steps of "Add field" and "Calculate field" are used to define the "Population" field in ArcGIS as the total number of children in each day-care center*
 
-![figure](/images/blogs/20130328-14.png)
+![figure](/assets/img/blogs/20130328-14.png)
 
 *Figure 14 Blue parts show that the number of children in those day-care centers present peaks*
 
-![figure](/images/blogs/20130328-15.png)
+![figure](/assets/img/blogs/20130328-15.png)
 
 *Figure 15 Combined with the distribution of care centers, we can find that some of the cluster areas of care centers are not the cluster regions of children*
 
@@ -139,49 +139,49 @@ Basic research idea: the syntax of Kernel Density in ArcGIS is
 
 Basic research idea: firstly, we are going to integrate care centers by specifying range constraint (The "Integrate Tool" provides this function) and then use the "Collect Events Tool" to calculate how many care centers in each point so that differences of the number of day-care centers between those points on the map can be defined as the high/low value. Finally, I will apply the High/Low Clustering to analyze the spatial distribution of those points by using Getis-Ord General G method.
 
-![figure](/images/blogs/20130328-16.png)
+![figure](/assets/img/blogs/20130328-16.png)
 
 *Figure 16 The workflow of High/Low Clustering of day-care centers distribution*
 
-![figure](/images/blogs/20130328-17.png)
+![figure](/assets/img/blogs/20130328-17.png)
 
 *Figure 17 The outcome of steps of "Integrate" and "Collect events". The X,Y tolerance is 500 meters. Bigger circles mean more day-care centers are integrated in those regions, while smaller circles mean less day-care centers are located in those regions. It's easy to observe that the high-value point repels other high-value points while the low-value points also present a situation of random distribution*
 
-![figure](/images/blogs/20130328-18.png)
+![figure](/assets/img/blogs/20130328-18.png)
 
 *Figure 18 The report shows that the high value or the low value of the number of care centers are randomly distributed, which means the observed spatial pattern could very well be one of many possible versions of complete spatial randomness (CSR). Therefore, I cannot find any potential information, such as "some day-care centers are more competitive because of their better teaching facilities or high quality of teachers" or "some day-care centers are more popular because the population there is more dense", through this analysis*
 
 (3) Hot Spot Analysis
 
-![figure](/images/blogs/20130328-19.png)
+![figure](/assets/img/blogs/20130328-19.png)
 
 *Figure 19 The workflow of Hot Spot Analysis of children pattern which uses the "fishnet" and "sptial join" to integrate the number of chilren in day-care centers falling within each grid polygon*
 
-![figure](/images/blogs/20130328-20.png)
+![figure](/assets/img/blogs/20130328-20.png)
 
 *Figure 20 The "fishnet" is created as the traget feature class of the "spatial join"*
 
-![figure](/images/blogs/20130328-21.png)
+![figure](/assets/img/blogs/20130328-21.png)
 
 *Figure 21 The final result of Hot Spot Analysis, some significantly clustered region of high value (blue part) and low value (yellow part) can be explicitly identified*
 
 PS: It makes sense that the blue part is located in that specific place because lots of day-care centers and more children are gathered there. However, I do find a abnormal value (a purple grid) which exists right at the lower-left side. Actually, there is only one day-care center falling in that grid, but why it shows a sort of high-value trend? Therefore, I think my next plan is tring to dig out the background information of that day-care center, and maybe I can find the reason why this day-care center is so popular.
 
-![figure](/images/blogs/20130328-22.png)
+![figure](/assets/img/blogs/20130328-22.png)
 
 *Figure 22 The workflow of Hot Spot Analysis of care centers pattern*
 
 PS: The outcome of Incremental spatial autocorrelation shows no valid peaks found at the specified distances because of the significant peak z-scores are not found. So here I tried to use 4000 meters (default), 8000 meters and 10000 meters as the distance thresolds of fixed_distance_band. Due to we have no enough data, here the conceptualization of spatial relationships which is set as "fixed_distance_band" is proper. Because the parents will not choice far day-care centers for their children, those centers out of a fixed distance will not influence each other. However, if we have enough data, each kind of data is regarded as a factor that will influence the decision-making of the parents, maybe it will lead to the change of conceptualization of spatial relationships.
 
-![figure](/images/blogs/20130328-23.png)
+![figure](/assets/img/blogs/20130328-23.png)
 
 *Figure 23 The distance band was set as 4000 meters. No abnormal values was found*
 
-![figure](/images/blogs/20130328-24.png)
+![figure](/assets/img/blogs/20130328-24.png)
 
 *Figure 24 The distance band was set as 8000 meters, and 2 significant spatial clusters of high value were identified*
 
-![figure](/images/blogs/20130328-25.png)
+![figure](/assets/img/blogs/20130328-25.png)
 
 *Figure 25 the distance band was set as 10000 meters, and another 2 significant spatial clusters of high value were identified.*
 
@@ -191,13 +191,13 @@ PS: If we change the distance band to a proper distance, more elements will be t
 
 >For the third use case we used network analysis to define the closest day care centre and the minimum walking distances. The network (or networks, as we had to take into account the vehicle restriction in different roads) was built using the Digiroad data obtained from PaITuli service. The initial data covered large parts of the Uusimaa region, so the study area had to be minimized, because the dataset is huge and heavy to calculate. The road use classes were ready in the LIIKENNE_ELEMENTTI file, but the speed limit and driving direction attributes had to be joined by reference codes from the LIIKENNE_SEGMENTTI file. In building the networks both the length and the minimum driving time calculated with the speed limit (assumed 50 km/h if no data) were used as the impedance. Road classification was used as the hierarchy and the dummy variables formed from the driving direction variable were linked to the corresponding direction to deny the possibility to drive against the flow. Initially the Closest Facility algorithm was tried but the size of the data forced us to use the OD Matrix algorithm instead. The diagram of the complete work flow is presented below.
 
-![figure](/images/blogs/20130328-26.png)
+![figure](/assets/img/blogs/20130328-26.png)
 
 (1) The closest facility (Day-care centers)
 
 Basic research idea : we can calculate the driving times from the residential buildings to the day care centres. The closest options with the shortest driving time are selected from the complete matrix and the allocation of the houses with child population to the closest day care centres is visualized below.
 
-![figure](/images/blogs/20130328-27.png)
+![figure](/assets/img/blogs/20130328-27.png)
 
 *Figure 27 The closest day care centre by the driving time*
 
@@ -207,7 +207,7 @@ PS: Overall the driving times were short, although the estimation is not fully r
 
 Basic research idea : the allocation of buildings to the closest day care centre was used to model the potential stress directed to the existing day care centre network. The number of 0-6 year old child population from the buildings were first joined by location to the OD Matrix lines and subsequently summed to the day care centres in the other end of the line. The number of children, whose closest option the day care centre was, was compared to the official size of the centre. The same comparison was made to the actual current number of children and the official size. The differences were categorized into deciles and visualized with the same colour scale.
 
-![figure](/images/blogs/20130328-28.png)
+![figure](/assets/img/blogs/20130328-28.png)
 
 *Figure 28 The actual crowdedness and the potential stress to day-care centres*
 
@@ -217,7 +217,7 @@ PS: It is very clear that the municipal day care cannot cope without the help of
 
 Basic research idea : we built a different network for non-motorized traffic and analysed the walking distances. The shortest distances obtained from the OD Matrix tool were classified in three bands: less than 500 m, 500-1000 m, and over 1 km. The buildings were color-coded by the classification and the resulting map is shown in the figure 29 below.
 
-![figure](/images/blogs/20130328-29.png)
+![figure](/assets/img/blogs/20130328-29.png)
 
 *Figure 29 Walking distance to the closest day care centre*
 

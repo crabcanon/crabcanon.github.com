@@ -274,9 +274,9 @@ Launch VS Code Quick Open (⌘+P), paste the following command, and type enter.
 
 2.2. [Snippets](https://github.com/xabikos/vscode-react/blob/master/snippets/snippets.json)
 
-![ReactJS code snippets](/images/blogs/20160603-1.gif)
+![ReactJS code snippets](/assets/img/blogs/20160603-1.gif)
 
-![ReactJS code snippets](/images/blogs/20160603-2.gif)
+![ReactJS code snippets](/assets/img/blogs/20160603-2.gif)
 
 Below is a list of all available snippets and the triggers of each one. The -> means the TAB key.
 
@@ -702,11 +702,11 @@ Launch VS Code Quick Open (⌘+P), paste the following command, and type enter.
 > ext install Angular2
 ```
 
-![Angular code snippets](/images/blogs/20160603-4.gif)
+![Angular code snippets](/assets/img/blogs/20160603-4.gif)
 
 3.2. [Snippets](https://github.com/johnpapa/vscode-angular2-snippets/tree/master/snippets)
 
-![Angular code snippets](/images/blogs/20160603-3.gif)
+![Angular code snippets](/assets/img/blogs/20160603-3.gif)
 
 <hr>
 <mark>TypeScript Snippets</mark>

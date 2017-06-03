@@ -10,58 +10,58 @@ tags: [Design]
 
 <hr style="margin: 70px 200px;">
 
-<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/images/blogs/20160211-1.png" width="300px"/></div>
+<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/assets/img/blogs/20160211-1.png" width="300px"/></div>
 
 <br>
 
-<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/images/blogs/20160211-2.png" width="300px"/></div>
+<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/assets/img/blogs/20160211-2.png" width="300px"/></div>
 
 <br>
 
-<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/images/blogs/20160211-3.png" width="300px"/></div>
+<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/assets/img/blogs/20160211-3.png" width="300px"/></div>
 
 <br>
 
-<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/images/blogs/20160211-4.png" width="300px"/></div>
+<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/assets/img/blogs/20160211-4.png" width="300px"/></div>
 
 <br>
 
-<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/images/blogs/20160211-5.png" width="300px"/></div>
+<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/assets/img/blogs/20160211-5.png" width="300px"/></div>
 
 <br>
 
-<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/images/blogs/20160211-6.png" width="300px"/></div>
+<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/assets/img/blogs/20160211-6.png" width="300px"/></div>
 
 <br>
 
-<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/images/blogs/20160211-7.png" width="300px"/></div>
+<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/assets/img/blogs/20160211-7.png" width="300px"/></div>
 
 <br>
 
-<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/images/blogs/20160211-8.png" width="300px"/></div>
+<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/assets/img/blogs/20160211-8.png" width="300px"/></div>
 
 <br>
 
-<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/images/blogs/20160211-9.png" width="300px"/></div>
+<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/assets/img/blogs/20160211-9.png" width="300px"/></div>
 
 <br>
 
-<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/images/blogs/20160211-10.png" width="300px"/></div>
+<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/assets/img/blogs/20160211-10.png" width="300px"/></div>
 
 <br>
 
-<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/images/blogs/20160211-11.png" width="300px"/></div>
+<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/assets/img/blogs/20160211-11.png" width="300px"/></div>
 
 <br>
 
-<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/images/blogs/20160211-12.png" width="300px"/></div>
+<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/assets/img/blogs/20160211-12.png" width="300px"/></div>
 
 <br>
 
-<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/images/blogs/20160211-13.png" width="300px"/></div>
+<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/assets/img/blogs/20160211-13.png" width="300px"/></div>
 
 <br>
 
-<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/images/blogs/20160211-14.png" width="300px"/></div>
+<div style="width: 300px; margin-left: auto; margin-right: auto;"><img href="http://www.jpl.nasa.gov/visions-of-the-future/" src="/assets/img/blogs/20160211-14.png" width="300px"/></div>
 
 <br>

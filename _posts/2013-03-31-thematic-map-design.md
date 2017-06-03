@@ -50,7 +50,7 @@ According to Bertin's theory, the visual variable is commonly used to describe t
 
 The given data is consist of Europe data and country boundaries. Europe data was collected from [Eurostat](epp.eurostat.ec.europa.eu) which contains separate datasets of economy, life expectancy, population and employment. The country boundaries are extracted from a world-wide country dataset of ESRI. In this article, we will mainly focus on the map design for life expectancy which is the most commonly used indicator for analyzing mortality(the gradual increase in life expectancy is one of the contributing factors to the ageing of the EU-27’s population). Generally, the life expectancy dataset represents the LE of EU member countries in the year 2007 and the data is categoried by genders(male, female).
 
-![figure](/images/blogs/20130331-1.png)
+![figure](/assets/img/blogs/20130331-1.png)
 
 *Figure 1 Analysing the dataset of Life expectancy*
 
@@ -60,13 +60,13 @@ Firstly, this map should integrate different statistic information in the form o
 
 There are a variety of templates for arranging layouts in ArcGIS, so we choose one of them called Landscape Modern Inset to organize the map(main data frame, central part of the template), table(secondary data frame, bottom right corner), graph(upper-right corner) and title(blue mask with white words, top part of the template). As the background color of the template applies the Turquoise tone, I need choose the harmonious colors of the map and the legend graph. As the result, I find a sequence of color based on a color scheme called the square color scheme which uses four colors arranged into two complementary pairs and all four colors space evenly around the color circle: yellow, light green, light cyan , blue and peach.As this scheme works best if we let one color be dominant.Thus, here the dominant color is the blue-green.And other two complementary colors represent the life expectancy circles so that they can pop-up. Finally, all of the elements (proportional symbols map, table, legend graph, north arrow, coordinate system, scale bar, title and description) will be aesthetically arranged.
 
-<img src="/images/blogs/20130331-2.png" width="270"/>
+<img src="/assets/img/blogs/20130331-2.png" width="270"/>
 
-<img src="/images/blogs/20130331-3.png" width="270"/>
+<img src="/assets/img/blogs/20130331-3.png" width="270"/>
 
 *Figure 2 The square color scheme*
 
-![figure](/images/blogs/20130331-4.png)
+![figure](/assets/img/blogs/20130331-4.png)
 
 *Figure 3 Using the COLORBREWER Tool to define the color value of each classified patch based on the thoery of harmonious colors*
 
@@ -87,7 +87,7 @@ The main processes can be summarized as following steps:
 
 #### *2.3 The final work*
 
-<img src="/images/blogs/20130331-5.png" width="100%"/>
+<img src="/assets/img/blogs/20130331-5.png" width="100%"/>
 
 *Figure 4 Life Expectancy of European Countries in 2007*
 
