@@ -17,7 +17,7 @@ layout: post
     </a>
     {% if post.link %}
     <a href="{{ post.link }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="float: right;">
-      Check it out
+      Check
     </a>
     {% endif %}
   </div>
