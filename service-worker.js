@@ -4,7 +4,7 @@ var CACHE_VERSION = 1;
 var CURRENT_CACHES = {
   offline: 'offline-v' + CACHE_VERSION
 };
-var OFFLINE_URL = '503.html';
+var OFFLINE_URL = 'offline.html';
 
 function createCacheBustedRequest(url) {
   var request = new Request(url, {cache: 'reload'});
