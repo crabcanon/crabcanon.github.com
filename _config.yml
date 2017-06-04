@@ -1,9 +1,9 @@
-title:            "黄野 | @crabcanon"
-url:              https://yehuang.me
-permalink:        pretty
-highlighter:      rouge
+title: "黄野 | @crabcanon"
+url: https://yehuang.me
+permalink: pretty
+highlighter: rouge
 google_analytics: UA-45466555-1
-timezone:         Europe/Helsinki
+timezone: Europe/Helsinki
 exclude_from_search: true
 lunr_search:
   min_length: 5
@@ -12,8 +12,11 @@ lunr_search:
 sass:
   sass_dir: assets
   style: :compressed
+offline:
+  strategy: cache-then-network
 gems:
   - jemoji
   - jekyll-mentions
   - jekyll-lunr-js-search
   - jekyll-sitemap
+  - jekyll-offline
