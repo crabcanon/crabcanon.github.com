@@ -1,5 +1,18 @@
 title: "黄野 | @crabcanon"
+description: "Ye Huang's Blog"
 url: https://yehuang.me
+author: "Ye Huang"
+author_email: sysuhuangye@gmail.com
+twitter: 
+  username: sysuhuangye
+logo: /assets/img/touch/app_icon_256.png
+social: 
+  name: Ye Huang
+  links:
+    - https://twitter.com/sysuhuangye
+    - https://www.linkedin.com/in/huang-ye-4256684a/
+    - https://github.com/crabcanon
+    - https://www.codewars.com/users/crabcanon
 permalink: pretty
 highlighter: rouge
 google_analytics: UA-45466555-1
@@ -19,3 +32,4 @@ gems:
   - jekyll-mentions
   - jekyll-lunr-js-search
   - jekyll-sitemap
+  - jekyll-seo-tag
