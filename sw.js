@@ -6,7 +6,8 @@ var CACHE_VERSION = 1;
 var CURRENT_CACHES = {
   offline: '{{ site.title | slugify }}-cache-' + CACHE_VERSION
 };
-var CACHE_URLS = [];
+var OFFLINE_URL = 'offline.html';
+var CACHE_URLS = [OFFLINE_URL];
 
 {% for file in site.static_files %}
   CACHE_URLS.push('{{ file.path }}');
@@ -66,6 +67,7 @@ function onFetch(event) {
           return response;
         }).catch(function(err) {
           console.error('Fetch caches error: ', err);
+          return caches.match(OFFLINE_URL);
         })
       });
     })
