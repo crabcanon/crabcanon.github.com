@@ -1,30 +1,37 @@
-<meta content='width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0' name='viewport'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0'>
 <meta name="theme-color" content="#FFEB3B">
+<meta name="apple-mobile-web-app-status-bar-style" content="#FFEB3B">
+<meta name="msapplication-TileColor" content="#FFEB3B">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <meta content='text/html; charset=utf-8' http-equiv='content-type' />
+<meta name="msapplication-TileImage" content="/assets/img/touch/app_icon_144.png">
 <meta content="http://yehuang.me/assets/img/home-screenshot.png" property="og:image" />
 {% if page.date %}
   <meta content='{{ site.url }}{{ page.url }}' property='og:url' />
   <meta content="{{ page.content | strip_html | strip_newlines | truncate: 120 }}" property='og:description' />
   <meta content="article" property="og:type" />
   <meta content='{{ page.title }} - {{ site.title }}' property='og:title' />
+  <meta name="apple-mobile-web-app-title" content='{{ page.title }} - {{ site.title }}'>
   <title>{{ page.title }} | {{ site.title }}</title>
 {% else %}
   <title>{{ site.title }}</title>
   <meta content='{{ site.title }}' property='og:title' />
+  <meta name="apple-mobile-web-app-title" content='{{ site.title }}'>
   <meta content='{{ site.url }}' property='og:url' />
   <meta content="{{ site.description }}" property='og:description' />
   <meta content="blog" property="og:type" />
 {% endif %}
 
-<link rel="manifest" href="/manifest.json">
 <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/assets/img/touch/app_icon_144.png">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cutive+Mono' type='text/css'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Economica&amp;text=Crab%20Canon%20!!' type='text/css'>
 <link rel='stylesheet' href="https://fonts.googleapis.com/icon?family=Material+Icons" type='text/css'>
 <link rel='stylesheet' href="/assets/css/material.min.css" type='text/css'>
 <link rel='stylesheet' href='/assets/css/syntax.css' type='text/css'>
 <link rel='stylesheet' href='/assets/css/main.css' type='text/css'>
+<link rel="manifest" href="/manifest.json">
 
 <script src="/assets/js/search.min.js" type="text/javascript" charset="utf-8"></script>
 <script src='/assets/js/stuff.js' type='text/javascript'></script>
