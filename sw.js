@@ -66,7 +66,7 @@ function onFetch(event) {
           cache.put(event.request, response.clone());
           return response;
         }).catch(function(err) {
-          console.error('Fetch caches error: ', err);
+          console.log('Fetch caches error: ', err);
           return caches.match(OFFLINE_URL);
         })
       });
