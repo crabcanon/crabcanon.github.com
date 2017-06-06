@@ -126,7 +126,7 @@ $ serverless deploy
 
 * Test online
 
-![Test FaaS Online](http://g.recordit.co/TJwnNIEYoy.gif)
+![Test FaaS Online](/assets/img/blogs/20170130-1.gif)
 
 
      
