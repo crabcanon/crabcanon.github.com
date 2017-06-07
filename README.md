@@ -16,9 +16,9 @@
 
 ##### New features (V2.0)
 
-- PWA(Progressive Web Apps) support. For more information, please check :point_right: [this report](/assets/others/yehuang.me_2017-06-05_16-17-54.html).
+- PWA(Progressive Web Apps) support. For more information, please check :point_right: [this report](http://htmlpreview.github.io/?https://github.com/crabcanon/crabcanon.github.com/blob/master/assets/others/yehuang.me_2017-06-05_16-17-54.html).
 - SEO optimization by [jkeyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag).
-- Performance optimizations. Compare :point_right: [old report](/assets/others/yehuang.me_2017-05-10_18-27-13.html) with [new report](/assets/others/yehuang.me_2017-06-05_16-17-54.html). 
+- Performance optimizations. Compare :x: [old report](http://htmlpreview.github.io/?https://github.com/crabcanon/crabcanon.github.com/blob/master/assets/others/yehuang.me_2017-05-10_18-27-13.html) with :white_check_mark: [new report](http://htmlpreview.github.io/?https://github.com/crabcanon/crabcanon.github.com/blob/master/assets/others/yehuang.me_2017-06-05_16-17-54.html). 
 
 ##### New features (V1.0)
 
