@@ -35,7 +35,7 @@ function onInstall(event) {
   event.waitUntil(caches.open(CURRENT_CACHES.offline).then(function(cache) {
     return cache.addAll(CACHE_URLS);
   }).catch(function(err) {
-    console.log('Install sw error: ', err);
+    console.log('Error in install handler: ', err);
   }));
 }
 
@@ -62,13 +62,31 @@ function onFetch(event) {
   event.respondWith(
     caches.open(CURRENT_CACHES.offline).then(function(cache) {
       return cache.match(event.request).then(function(response) {
-        return response || fetch(event.request).then(function(response) {
-          cache.put(event.request, response.clone());
+        if (response) {
+          console.log('Found response in cache: ', response);
           return response;
-        }).catch(function(err) {
-          console.log('Fetch caches error: ', err);
-          return caches.match(OFFLINE_URL);
+        }
+        console.log('No response for %s found in cache. About to fetch from network...', event.request.url);
+
+        return fetch(event.request.clone()).then(function(response) {
+          console.log('Response for %s from network is: %0', event.request.url, response);
+          if (response.status < 400) {
+            console.log('Caching the response to: ', event.request.url);
+            cache.put(event.request, response.clone());
+          } else {
+            console.log('The response status code is not under 400, not caching the response to', event.request.url);
+          }
+          return response;
+        }).catch(function(error) {
+          console.log('Error in fetch handler: ', error);
         })
+        // return response || fetch(event.request).then(function(response) {
+        //   cache.put(event.request, response.clone());
+        //   return response;
+        // }).catch(function(err) {
+        //   console.log('Fetch caches error: ', err);
+        //   return caches.match(OFFLINE_URL);
+        // })
       });
     })
   )
