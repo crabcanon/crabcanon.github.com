@@ -6,7 +6,7 @@ categories: [Life]
 tags: [中文]
 ---
 
-最近，我翻译了一篇文章。原文链接：[Technical interviews at Futurice — Futurice](http://futurice.com/careers/technical-interviews-at-futurice)。
+前两天，我翻译了一篇文章。原文链接：[Technical interviews at Futurice — Futurice](http://futurice.com/careers/technical-interviews-at-futurice)。
 
 它是[André Staltz(Andre Medeiros)](https://staltz.com/about.html)在Futurice工作时期代表公司写的一篇关于技术招聘的博客。Adnre是业内响应式、函数式编程、交互设计等领域专家。被人熟知的身份是[ReactiveX](http://reactivex.io/)的核心开发者和[Cycle.js](https://cycle.js.org/)的作者。
 

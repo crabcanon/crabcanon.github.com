@@ -8,13 +8,13 @@ tags: [AWS Lambda, Serverless]
 
 #### 1. Introduction
 
-Recently, I read a very nice article about 'Serverless Architectures' :point_right: [link](https://martinfowler.com/articles/serverless.html). This concept has became much hotter than ever before. Almost like a moment, the whole world starts to promote it :point_right: [check](https://github.com/JustServerless/awesome-serverless). As I am a long-term user of BaaS services(Firebase, Auth0, etc.), it doesn't feel like any panic for me. However, there is one thing that beyonds my anticipation: [FaaS(Function as a Service)](https://en.wikipedia.org/wiki/Function_as_a_Service) is suddenly booming even though [BaaS(Backend as a Service)](https://en.wikipedia.org/wiki/Mobile_backend_as_a_service) is still robustly growing. It turns out that they are complementary to each other rather than a pair of competitors. Everyone is dreaming to create something high performance, while cost effective(for both operational and development cost) and extremely easy to integrate, maintain and extend. Most important, they hope that every penny spent is completely under control. That's why serverless is so welcome.
+Recently, I read a very nice article about 'Serverless Architectures' :point_right: [link](https://martinfowler.com/articles/serverless.html). This concept has became much hotter than ever before. Almost like a moment, the whole world starts to promote it :point_right: [check](https://github.com/JustServerless/awesome-serverless). As I am a long-term user of BaaS services(Firebase, Auth0, etc.), it doesn't feel like any panic for me. However, there is one thing that beyonds my anticipation: [FaaS(Function as a Service)](https://en.wikipedia.org/wiki/Function_as_a_Service) is suddenly booming even though [BaaS(Backend as a Service)](https://en.wikipedia.org/wiki/Mobile_backend_as_a_service) is still robustly growing. It turns out that they are complementary to each other rather than a pair of competitors. Everyone dreams to create something high performance, while cost effective(for both operational and development cost) and extremely easy to integrate, maintain and extend. Most important, they hope that every penny spent is completely under control. That's why serverless is so welcome.
 
 > If your PaaS can efficiently start instances in 20ms that run for half a second, then call it serverless. - [Adrian Cockcroft](https://twitter.com/adrianco)
 
-#### 2. My first FaaS 
+#### 2. My first FaaS
 
-As FaaS is a natural born killer for microservices, it's a good idea to implement something combined by a series of modules and has potential to chain workflows together. If you've heard about [GIS](http://www.esri.com/what-is-gis), you may come up with the same point of view as what I have: cloud microservices will play a big role in GIS-based analysis or even eliminate most of the works done by today's GIS-based desktop softwares soon. Therefore, my first FaaS will refer to a simple GIS analysis module powered by [Serverless Framework](https://serverless.com/), [AWS Lambda](https://aws.amazon.com/lambda/) and [Turf.js](https://github.com/Turfjs/turf).
+As FaaS is a nature-born killer for micro-services, it's a good idea to implement something combined by a series of modules and has the potential to chain workflows together. If you've heard about [GIS](http://www.esri.com/what-is-gis), you may come up with the same point of view as what I have: cloud micro-services will play a big role in GIS industry or even eliminate most of the works done by today's GIS-based desktop softwares soon. Therefore, my first FaaS will refer to a simple GIS analysis module powered by [Serverless Framework](https://serverless.com/), [AWS Lambda](https://aws.amazon.com/lambda/) and [Turf.js](https://github.com/Turfjs/turf).
 
 <hr>
 <mark>Step by step</mark>
@@ -25,7 +25,7 @@ As FaaS is a natural born killer for microservices, it's a good idea to implemen
 ```bash
 $ npm install -g serverless
 $ mkdir turf-area && cd $_
-$ serverless create --template aws-nodejs 
+$ serverless create --template aws-nodejs
 $ npm init
 $ npm install --save @mapbox/geojsonhint @turf/area
 $ mkdir lib && cd $_
@@ -39,8 +39,8 @@ Project structure should look like this:
 *  [Setup AWS credentials]((https://serverless.com/framework/docs/providers/aws/guide/credentials/))
 
 ```bash
-$ serverless config credentials --provider aws --key YOUR-AWS-KEY --secret YOUR-AWS-SECRET 
-``` 
+$ serverless config credentials --provider aws --key YOUR-AWS-KEY --secret YOUR-AWS-SECRET
+```
 
 * Config serverless.yml
 
@@ -124,7 +124,7 @@ module.exports.area = (event, context, callback) => {
 };
 ```
 
-* Publish to AWS Lambda and expose corresponding AWS Gateway API 
+* Publish to AWS Lambda and expose the corresponding AWS Gateway API
 
 ```bash
 $ serverless deploy
@@ -133,9 +133,3 @@ $ serverless deploy
 * Test online
 
 ![Test FaaS Online](/assets/img/blogs/20170130-1.gif)
-
-
-     
-
-
-
