@@ -16,7 +16,7 @@
 
 ##### New features (V2.0)
 
-- PWA(Progressive Web Apps) support. For more information, please check :point_right: [this report](http://htmlpreview.github.io/?https://github.com/crabcanon/crabcanon.github.com/blob/master/assets/others/yehuang.me_2017-06-05_16-17-54.html).
+- [PWA(Progressive Web Apps)](https://developers.google.com/web/progressive-web-apps/checklist) support. For more information, please check :point_right: [this report](http://htmlpreview.github.io/?https://github.com/crabcanon/crabcanon.github.com/blob/master/assets/others/yehuang.me_2017-06-05_16-17-54.html).
 - SEO optimization by [jkeyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag).
 - Performance optimizations. Compare :x: [old report](http://htmlpreview.github.io/?https://github.com/crabcanon/crabcanon.github.com/blob/master/assets/others/yehuang.me_2017-05-10_18-27-13.html) with :white_check_mark: [new report](http://htmlpreview.github.io/?https://github.com/crabcanon/crabcanon.github.com/blob/master/assets/others/yehuang.me_2017-06-05_16-17-54.html). 
 
@@ -28,11 +28,11 @@
 - Full-text search functionality for blogs
 - Independent page for "My projects" by [material-design-lite](https://github.com/google/material-design-lite)
 - Independent page for "About me"
-- Style of **code snippet highlighting** optimization
-- **Mobile first** user experience optimization
+- Style of code snippet highlighting optimization
+- Mobile first user experience optimization
 - ~~Network optimization for China, using [360网站卫士常用前端公共库CDN服务](http://libs.useso.com/) for webfonts~~
 - Network and security optimizations by [CloudFlare](https://www.cloudflare.com/)
-- **"https" instead of "http"**
+- "https" instead of "http"
 
 ## Get started
 
@@ -43,9 +43,9 @@
 
 ## Todo
 
-- [ ] Search for other languages
-- [ ] Support for more Chinese fonts
-- [ ] Comment system or share functionality are not necessary for now, but if you have good recommendations which could fit this theme together, please let me know. Thanks!
+- [ ] Search with other languages.
+- [ ] Support for more Chinese fonts.
+- [ ] Support for a nice comment system. If you have good recommendations which could fit this theme, please let me know. Thanks!
 
 ## License
 
