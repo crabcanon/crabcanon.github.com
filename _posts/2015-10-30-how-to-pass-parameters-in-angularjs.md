@@ -2,8 +2,8 @@
 layout: post
 title: AngularJS - 页面跳转传参
 date: 2015-11-01
-categories: [angularjs]
-tags: [Angularjs, Javascript, 中文]
+categories: [AngularJS]
+tags: [AngularJS, Javascript, 中文]
 ---
 
 这篇博客源于一个[知乎问题: angularjs项目需要从一个页面跳转到另一个页面，同时需要传递一个参数。通过什么实现？](http://www.zhihu.com/question/33565135/answer/69651500)。我因此总结了5种最常见方法供大家参考。
@@ -55,7 +55,7 @@ tags: [Angularjs, Javascript, 中文]
 .factory('myFactory', function() {   
     //定义参数对象
     var myObject = {};
-    
+
     /**
      * 定义传递数据的setter函数
      * @param {type} xxx
@@ -96,7 +96,7 @@ PS: $rootScope.$broadcast()可以非常方便的设置全局事件，并让所�
 .factory('addressFactory', ['$rootScope', function ($rootScope) {
     // 定义所要返回的地址对象   
     var address = {};
-    
+
     // 定义components数组，数组包括街道，城市，国家等
     address.components = [];
 
@@ -106,7 +106,7 @@ PS: $rootScope.$broadcast()可以非常方便的设置全局事件，并让所�
     this.components = angular.copy(value);
     $rootScope.$broadcast('AddressUpdated');
     };
-    
+
     // 返回地址对象
     return address;
 }]);
@@ -216,7 +216,7 @@ $scope.$watch('counter', function(newVal, oldVal) {
         getAuthenticationParams: getAuthenticationParams,
         checkAuthentication: checkAuthentication
       };
-      
+
       return authServices;
 
       ////////////////
@@ -230,7 +230,7 @@ $scope.$watch('counter', function(newVal, oldVal) {
       function handleError(name, error) {
         return $log.error('XHR Failed for ' + name + '.\n', angular.toJson(error, true));
       }
-      
+
       /**
        * 定义login函数，公有函数。
        * 若登录成功，把服务器返回的token存入localStorage。
@@ -239,8 +239,8 @@ $scope.$watch('counter', function(newVal, oldVal) {
        * @public
        */
       function login(loginData) {
-        var apiLoginUrl = ENV.baseUrl + 'user/login'; 
-          
+        var apiLoginUrl = ENV.baseUrl + 'user/login';
+
         return $http({
           method: 'POST',
           url: apiLoginUrl,
@@ -251,7 +251,7 @@ $scope.$watch('counter', function(newVal, oldVal) {
         })
         .then(loginComplete)
         .catch(loginFailed);
-          
+
         function loginComplete(response) {
           if (response.status === 200 && _.includes(response.data.authorities, 'admin')) {
             // 将token存入localStorage。
@@ -262,12 +262,12 @@ $scope.$watch('counter', function(newVal, oldVal) {
             setAuthenticationParams(false);
           }
         }
-          
+
         function loginFailed(error) {
           handleError('login()', error);
         }
       }
-      
+
       /**
        * 定义logout函数，公有函数。
        * 清除localStorage和PermissionStore中的数据。
@@ -288,7 +288,7 @@ $scope.$watch('counter', function(newVal, oldVal) {
       function setAuthenticationParams(param) {
         $localStorage.isAuth = param;
       }
-      
+
       /**
        * 定义获取数据的getter函数，公有函数。
        * 用于获取isAuth和token参数。
@@ -304,19 +304,19 @@ $scope.$watch('counter', function(newVal, oldVal) {
         };
         return authParams;
       }    
-     
-      /* 
+
+      /*
        * 第一步: 检测token是否有效.
        * 若token有效，进入第二步。
        *
        * 第二步: 检测用户是否依旧属于admin权限.
        *
-       * 只有满足上述两个条件，函数才会返回true，否则返回false。 
+       * 只有满足上述两个条件，函数才会返回true，否则返回false。
        * 请参看angular-permission文档了解其工作原理https://github.com/Narzerus/angular-permission/wiki/Managing-permissions
        */
       function checkAuthentication() {
         var deferred = $q.defer();
-        
+
         $http.get(apiUserPermission).success(function(response) {
           if (_.includes(response.authorities, 'admin')) {
             deferred.resolve(true);
@@ -327,7 +327,7 @@ $scope.$watch('counter', function(newVal, oldVal) {
           handleError('checkAuthentication()', error);
           deferred.reject(false);
         });
-          
+
         return deferred.promise;
       }
     }
@@ -345,13 +345,13 @@ $scope.$watch('counter', function(newVal, oldVal) {
     .run(checkPermission);
 
   /** @ngInject */
-  
+
   /**
    * angular-permission version 3.0.x.
    * https://github.com/Narzerus/angular-permission/wiki/Managing-permissions.
-   * 
+   *
    * 第一步: 运行authService.getAuthenticationParams()函数.
-   * 返回true：用户之前成功登陆过。因而localStorage中已储存isAuth和authtoken两个参数。 
+   * 返回true：用户之前成功登陆过。因而localStorage中已储存isAuth和authtoken两个参数。
    * 返回false：用户或许已logout，或是首次访问应用。因而强制用户至登录页输入用户名密码登录。
    *
    * 第二步: 运行authService.checkAuthentication()函数.
@@ -385,25 +385,25 @@ $scope.$watch('counter', function(newVal, oldVal) {
     /** @ngInject */
     function authInterceptorService($q, $injector, $location) {
       var authService = $injector.get('authService');  
-    
+
       var authInterceptorServices = {
         request: request,
         responseError: responseError
       };
-      
+
       return authInterceptorServices;
-      
+
       ////////////////
-      
+
       // 将token注入所有HTTP requests的headers。
       function request(config) {
         var authParams = authService.getAuthenticationParams();
         config.headers = config.headers || {};
         if (authParams.authtoken) config.headers.authtoken = authParams.authtoken;
-      
+
         return config || $q.when(config);
       }
-      
+
       function responseError(rejection) {
         if (rejection.status === 401) {
           authService.logout();
