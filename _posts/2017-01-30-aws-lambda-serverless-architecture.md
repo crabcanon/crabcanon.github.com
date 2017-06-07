@@ -14,7 +14,7 @@ Recently, I read a very nice article about 'Serverless Architectures' :point_rig
 
 #### 2. My first FaaS 
 
-As FaaS is a natural born killer for microservices, it's a good idea to implement something combined by a series of modules and has potential to chain workflows together. If you've heard about [GIS](http://www.esri.com/what-is-gis), you may come up with the same point of view as what I have: cloud microservices will play a big role in GIS-based analysis or even eliminate most of the works done by those tranditional GIS-based desktop softwares. Therefore, my first FaaS will refer to a simple GIS analysis module powered by [Serverless Framework](https://serverless.com/), [AWS Lambda](https://aws.amazon.com/lambda/) and [Turf.js](https://github.com/Turfjs/turf).
+As FaaS is a natural born killer for microservices, it's a good idea to implement something combined by a series of modules and has potential to chain workflows together. If you've heard about [GIS](http://www.esri.com/what-is-gis), you may come up with the same point of view as what I have: cloud microservices will play a big role in GIS-based analysis or even eliminate most of the works done by today's GIS-based desktop softwares soon. Therefore, my first FaaS will refer to a simple GIS analysis module powered by [Serverless Framework](https://serverless.com/), [AWS Lambda](https://aws.amazon.com/lambda/) and [Turf.js](https://github.com/Turfjs/turf).
 
 <hr>
 <mark>Step by step</mark>
