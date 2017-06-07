@@ -8,11 +8,13 @@ tags: [AWS Lambda, Serverless]
 
 #### 1. Introduction
 
-Recently, I read a very nice article about 'Serverless Architectures' - [click here](https://martinfowler.com/articles/serverless.html). This concept has became much hotter than ever before. Almost like a moment, the whole world starts to promote it - [click here](https://github.com/JustServerless/awesome-serverless). As I am a long-term user of BaaS services(Firebase, Auth0, etc.), it doesn't feel like any panic for me. However, there is one thing that dramatically beyonds my anticipation: FaaS(Function as a Service) is suddenly booming even though BaaS(Backend as a Service) is still robustly growing. It turns out that they are complementary to each other rather than a pair of competitors. That's because everyone is dreaming to create something cost effective(for both operational and development cost) and to be able to control every penny they spend. Meanwhile, it should be extremely easy to integrate, maintain and extend. 
+Recently, I read a very nice article about 'Serverless Architectures' - [click here](https://martinfowler.com/articles/serverless.html). This concept has became much hotter than ever before. Almost like a moment, the whole world starts to promote it - [click here](https://github.com/JustServerless/awesome-serverless). As I am a long-term user of BaaS services(Firebase, Auth0, etc.), it doesn't feel like any panic for me. However, there is one thing that beyonds my anticipation: FaaS(Function as a Service) is suddenly booming even though BaaS(Backend as a Service) is still robustly growing. It turns out that they are complementary to each other rather than a pair of competitors. That's because everyone is dreaming to create something high performance, while cost effective(for both operational and development cost) and extremely easy to integrate, maintain and extend. Most important, they hope that every penny spent is completely under control.
+
+> If your PaaS can efficiently start instances in 20ms that run for half a second, then call it serverless. - Adrian Cockcroft
 
 #### 2. My first FaaS 
 
-As FaaS naturally borns for microservices, it's a good idea to implement something that combined with a bunch of packages or modules. If you've heard about [GIS](http://www.esri.com/what-is-gis) before, you may have the same point of view as what I have: cloud microservices will finally eliminate the tranditional GIS-based desktop softwares. Therefore, my first FaaS will be a simple GIS analysis function powered by [Serverless Framework](https://serverless.com/), [AWS Lambda](https://aws.amazon.com/lambda/) and [Turf.js](https://github.com/Turfjs/turf).
+As FaaS is a natural born killer for microservices, it's a good idea to implement something combined by a series of modules and has potential to chain workflows together. If you've heard about [GIS](http://www.esri.com/what-is-gis), you may come up with the same point of view as what I have: cloud microservices will play a big role in GIS-based analysis or even eliminate most of the works done by those tranditional GIS-based desktop softwares. Therefore, my first FaaS will refer to a simple GIS analysis module powered by [Serverless Framework](https://serverless.com/), [AWS Lambda](https://aws.amazon.com/lambda/) and [Turf.js](https://github.com/Turfjs/turf).
 
 <hr>
 <mark>Step by step</mark>
@@ -29,6 +31,10 @@ $ npm install --save @mapbox/geojsonhint @turf/area
 $ mkdir lib && cd $_
 $ touch area.js lint.js
 ```
+
+Project structure should look like this:
+
+![Project structure](/assets/img/blogs/20170130-2.png)
 
 *  [Setup AWS credentials]((https://serverless.com/framework/docs/providers/aws/guide/credentials/))
 
@@ -118,7 +124,7 @@ module.exports.area = (event, context, callback) => {
 };
 ```
 
-* Publish to AWS
+* Publish to AWS Lambda and expose corresponding AWS Gateway API 
 
 ```bash
 $ serverless deploy

@@ -9,15 +9,15 @@ tags: [Progressive Web Apps, Github Pages, Service Workers]
 Recently, I optimised my personal website by following the [Progressive Web App Checklist](https://developers.google.com/web/progressive-web-apps/checklist).
 
 <hr>
-<mark>Before optimizations</mark><br>
-:point_right: [old report](https://cdn.rawgit.com/crabcanon/crabcanon.github.com/672cb066/assets/others/yehuang.me_2017-05-10_18-27-13.html)
+<mark>Before optimizations</mark><br><br>
+:point_right: [Old performance report](https://cdn.rawgit.com/crabcanon/crabcanon.github.com/672cb066/assets/others/yehuang.me_2017-05-10_18-27-13.html) - by [Lighthouse v1.6.5](https://developers.google.com/web/tools/lighthouse/)
 <hr>
 
 <iframe src="https://cdn.rawgit.com/crabcanon/crabcanon.github.com/db200461/assets/others/yehuang.me_2017-05-10_18-27-13.html" width="100%" height="800px" frameborder="0" scrolling="yes"></iframe>
 
 <hr>
-<mark>After optimizations</mark><br>
-:point_right: [new report](https://cdn.rawgit.com/crabcanon/crabcanon.github.com/db200461/assets/others/yehuang.me_2017-06-05_16-17-54.html)
+<mark>After optimizations</mark><br><br>
+:point_right: [New performance report](https://cdn.rawgit.com/crabcanon/crabcanon.github.com/db200461/assets/others/yehuang.me_2017-06-05_16-17-54.html) - by [Lighthouse v2.0.0](https://developers.google.com/web/tools/lighthouse/)
 <hr>
 
 <iframe src="https://cdn.rawgit.com/crabcanon/crabcanon.github.com/db200461/assets/others/yehuang.me_2017-06-05_16-17-54.html" width="100%" height="800px" frameborder="0" scrolling="yes"></iframe>
