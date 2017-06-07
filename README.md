@@ -9,10 +9,16 @@
 
 * This website is powered by [jekyll](https://jekyllrb.com/) on [Github Pages](https://pages.github.com/).
 * The theme is forked from [Monospace](https://github.com/muan/muan.github.com/releases/tag/v5.0.1-monospace), originally designed by [@muan](https://github.com/muan).
-* I re-constructed parts of the original functionalities and added more features, including search/sort blogs (by date, categories or tags) and independent pages for "About me" and "Projects" in order to satisfy my personal demands. Also, I changed the original design a little bit to provide a better UX for a technical blog on both desktop and mobile platforms.
+* I re-constructed parts of the original functionalities, including search/sort blogs(by date, categories or tags), independent pages for "About" & "Projects" and code highlighter to satisfy my personal demands.
 * Finally, I really appreciate [@muan](https://github.com/muan)'s work and I would say this is one of the best themes I have ever seen in the past two years. 
 
 ## Features
+
+##### New features (V2.0)
+
+- PWA(Progressive Web Apps) support. For more information, please check :point_right: [this report](/assets/others/yehuang.me_2017-06-05_16-17-54.html).
+- SEO optimization by [jkeyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag).
+- Performance optimizations. Compare :point_right: [old report](/assets/others/yehuang.me_2017-05-10_18-27-13.html) with [new report](/assets/others/yehuang.me_2017-06-05_16-17-54.html). 
 
 ##### New features (V1.0)
 
@@ -38,8 +44,6 @@
 ## Todo
 
 - [ ] Search for other languages
-- [ ] Search for categories/tags/title of blogs
-- [ ] [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)
 - [ ] Support for more Chinese fonts
 - [ ] Comment system or share functionality are not necessary for now, but if you have good recommendations which could fit this theme together, please let me know. Thanks!
 
