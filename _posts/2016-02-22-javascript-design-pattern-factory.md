@@ -76,18 +76,18 @@ Truck.prototype = {
 // How to use?
 var helsinkiShop = new VehicleShop();
 var myCar = helsinkiShop.sellVehicle({
-                vehicleType: 'Car',
-                brand: 'Volkswagen',
-                gearbox: 'Manual',
-                fuelType: 'Petrol'
-            });
+    vehicleType: 'Car',
+    brand: 'Volkswagen',
+    gearbox: 'Manual',
+    fuelType: 'Petrol'
+});
 var myTruck = helsinkiShop.sellVehicle({
-                vehicleType: 'Truck',
-                brand: 'Ford',
-                gearbox: 'Manual',
-                fuelType: 'Petrol',
-                wheelSize: '24'
-            });
+    vehicleType: 'Truck',
+    brand: 'Ford',
+    gearbox: 'Manual',
+    fuelType: 'Petrol',
+    wheelSize: '24'
+});
                         
 console.log(myCar instanceof Car); // true
 console.log(myCar);
@@ -175,7 +175,7 @@ Then we create two subclasses `HelsinkiVehicleShop` and `EspooVehicleShop`, whic
 /* HelsinkiVehicleShop class (subclass) */
 var HelsinkiVehicleShop = function() {};
 extend(HelsinkiVehicleShop, VehicleShop); // We ignore the inheritance codes here.
-VehicleShop.prototype.createVehicle = function(options) {
+HelsinkiVehicleShop.prototype.createVehicle = function(options) {
     var vehicle;
 
     switch(options.vehicleType) {
@@ -203,7 +203,7 @@ VehicleShop.prototype.createVehicle = function(options) {
 /* EspooVehicleShop class (subclass) */
 var EspooVehicleShop = function() {};
 extend(EspooVehicleShop, VehicleShop); // We ignore the inheritance codes here.
-VehicleShop.prototype.createVehicle = function(options) {
+EspooVehicleShop.prototype.createVehicle = function(options) {
     var vehicle;
 
     switch(options.vehicleType) {
@@ -237,20 +237,20 @@ Now you are able to buy a second-hand vehicle in a very flexible way(from both H
 // Buy a second-hand Volkswagen car from Helsinki Shop.
 var helsinkiShop = new HelsinkiVehicleShop();
 var myCarFromHelsinki = helsinkiShop.sellVehicle({
-                vehicleType: 'Car',
-                brand: 'Volkswagen',
-                gearbox: 'Manual',
-                fuelType: 'Petrol'
-            });
+    vehicleType: 'Car',
+    brand: 'Volkswagen',
+    gearbox: 'Manual',
+    fuelType: 'Petrol'
+});
 
 // Buy a second-hand Volkswagen car from Espoo Shop.            
 var espooShop = new EspooVehicleShop();
 var myCarFromEspoo = espooShop.sellVehicle({
-                vehicleType: 'Car',
-                brand: 'Volkswagen',
-                gearbox: 'Manual',
-                fuelType: 'Petrol'
-            });
+    vehicleType: 'Car',
+    brand: 'Volkswagen',
+    gearbox: 'Manual',
+    fuelType: 'Petrol'
+});
 
 ```
 
