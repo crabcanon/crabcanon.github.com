@@ -174,5 +174,35 @@ constructIconLayer(iconLayerTwo, areaLayerTwo, iconFeatureTwoProps, iconLayerTwo
 
 <mark>3.2. Drawbacks of the Facade Pattern</mark>
 
-- You may use too much to do too little!
+- You may use too much to do too little! According to my experience, if Facade layers are more than 3, it will become quite hard for other developers to maintain or extend the codes.
+
+```javascript
+// Layer 1
+function parentTask() {
+  childA();
+  childB();
+}
+
+// Layer 2
+function childA() {
+  childA1();
+  childA2();
+}
+
+// Layer 3
+function childA1(){}
+function childA2(){}
+
+// Layer 2
+function childB() {
+  childB1();
+  childB2();
+}
+
+// Layer 3
+function childB1() {}
+function childB2() {}
+
+```
+
 - You may not need an entire Facade-aimed library to just implement a very simple task.
