@@ -14,9 +14,7 @@ Simply put, you could achieve the same task without using the Facade pattern. Ho
 
 #### 2. Example
 
-<hr>
-<mark>Requirements</mark>
-<hr>
+<mark>2.1. Requirements</mark>
 
 I was involved into a project of developing a GIS-based map application in using [OpenLayers](https://openlayers.org/) before. One task was to create clustered icon layers([ol.source.Cluster](https://openlayers.org/en/latest/apidoc/ol.source.Cluster.html)) for multiple vector area layers, which contained a couple of sub-tasks:
 
@@ -24,9 +22,7 @@ I was involved into a project of developing a GIS-based map application in using
 - Set values provided by the corresponding area layer to each icon layer's properties.
 - Set style for each icon layer.
 
-<hr>
-<mark>In theory</mark>
-<hr>
+<mark>2.2. In theory</mark>
 
 The basic coding logic could be:
 
@@ -48,9 +44,7 @@ A bunch of primitive OpenLayers APIs would be utilized, including but not limite
 - [ol.Feature::get](https://openlayers.org/en/latest/apidoc/ol.Feature.html#get)
 - [ol.Feature::setStyle](https://openlayers.org/en/latest/apidoc/ol.Feature.html#setStyle)
 
-<hr>
-<mark>In practice</mark>
-<hr>
+<mark>2.3. In practice</mark>
 
 First, let's check how does `Function A` look like without applying Facade?
 
