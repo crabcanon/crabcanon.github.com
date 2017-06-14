@@ -20,12 +20,12 @@ I was involved into a project to develop a GIS-based map application in using [O
 - Set values provided by the corresponding area layer to each icon layer's properties.
 - Set style for each icon layer.
 
-The basic coding logic behind could be:
+<mark>The basic coding logic behind could be:</mark>
 
 - `Function A`: generate&add centroid point features to each icon layer and set its properties.
 - `Function B`: set style for each icon layer.
 
-A bunch of complex APIs were utilized, including but not limited to:
+<mark>A bunch of complex APIs were utilized, including but not limited to:</mark>
 
 - [ol.geom.Point](https://openlayers.org/en/latest/apidoc/ol.geom.Point.html)
 - [ol.geom.Geometry::getExtent](https://openlayers.org/en/latest/apidoc/ol.geom.Geometry.html#getExtent)
@@ -39,6 +39,10 @@ A bunch of complex APIs were utilized, including but not limited to:
 - [ol.Feature::set](https://openlayers.org/en/latest/apidoc/ol.Feature.html#set)
 - [ol.Feature::get](https://openlayers.org/en/latest/apidoc/ol.Feature.html#get)
 - [ol.Feature::setStyle](https://openlayers.org/en/latest/apidoc/ol.Feature.html#setStyle)
+
+<hr>
+<mark>In practice</mark>
+<hr>
 
 First, let's check how does `Function A` look like without using Facade?
 
@@ -83,9 +87,10 @@ areaLayerOneSource.getFeatures().forEach(function(feature) {
   iconFeatures.push(newFeature); // Push this generated feature to iconFeatures array.
 });
 iconLayerTwoSource.addFeatures(iconFeatures);
+
 ```
 
-We could easily find that the only difference is the part of setting feature's properties. Actually, it's a very bad practice to create duplications, especially the amount of icon layers are dynamic. Therefore, let's introduce our `first Facade`, which could (1)avoid duplications (2)wrap up complex interfaces.
+We could easily find that the only difference is the part of setting feature's properties. Actually, it's a very bad practice to create duplications, especially the amount of icon layers are dynamic. Therefore, let's introduce our `first Facade`, which could (1)avoid duplications & (2)wrap up complex interfaces.
 
 ```javascript
 // First Facade
@@ -110,6 +115,7 @@ function createCentroidPointFeaturesForIconLayer(iconLayerSource, areaLayerSourc
 // Usage
 createCentroidPointFeaturesForIconLayer(iconLayerOneSource, areaLayerOneSource, ['prop1', 'prop2', 'prop3']);
 createCentroidPointFeaturesForIconLayer(iconLayerTwoSource, areaLayerTwoSource, ['prop4', 'prop5']);
+
 ```
 
 Same principle to `Function B`, we could implement our `second Facade` shown as following:
@@ -127,6 +133,7 @@ var styleOneFn = iconLayerOneStyle();
 var styleTwoFn = iconLayerTwoStyle();
 setStyleForIconLayer(iconLayerOne, styleOneFn);
 setStyleForIconLayer(iconLayerTwo, styleTwoFn);
+
 ```
 
 Finally, we could make the interface even better by using our `third Facade` which construct a combined function, known as `convenience function` based on Function A and Function B.
@@ -154,6 +161,7 @@ var iconLayerTwoStyleFn = iconLayerTwoStyle();
 
 constructIconLayer(iconLayerOne, areaLayerOne, iconFeatureOneProps, iconLayerOneStyleFn);
 constructIconLayer(iconLayerTwo, areaLayerTwo, iconFeatureTwoProps, iconLayerTwoStyleFn);
+
 ```
 
 #### 3. Summary
