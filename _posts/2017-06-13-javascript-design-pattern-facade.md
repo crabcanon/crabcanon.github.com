@@ -138,7 +138,7 @@ setStyleForIconLayer(iconLayerTwo, styleTwoFn);
 
 ```
 
-Finally, let's make the interface even simpler by applying our `third Facade` which construct a combined function, known as `convenience function`, based on Function A and Function B.
+Finally, let's make the interface even simpler by applying our `third Facade` which constructs a combined function, known as `convenience function`, based on Function A and Function B.
 
 ```javascript
 // Third Facade
