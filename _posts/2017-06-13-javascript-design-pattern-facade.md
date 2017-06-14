@@ -190,8 +190,8 @@ function childA() {
 }
 
 // Layer 3
-function childA1(){}
-function childA2(){}
+function childA1() {}
+function childA2() {}
 
 // Layer 2
 function childB() {
