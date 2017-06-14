@@ -92,11 +92,11 @@ iconLayerTwoSource.addFeatures(iconFeatures);
 
 ```
 
-We could easily find that the only difference is the part of setting feature's properties. Actually, it's a very bad practice to have duplicated code, especially when the amount of icon layers are dynamic. Therefore, let's introduce our `first Facade` to refactor codes, which could (1)avoid duplications & (2)wrap up complex interfaces.
+We could easily find that the only difference is the part of setting feature's properties. Actually, it's a very bad practice to have duplicated code, especially when the amount of icon layers are dynamic. Therefore, let's introduce our `first Facade`, which could (1)avoid duplications and (2)wrap up complex interfaces.
 
 ```javascript
 // First Facade
-function createCentroidPointFeaturesForIconLayer(iconLayerSource, areaLayerSource, featureProps) {
+function createFeaturesForIconLayer(iconLayerSource, areaLayerSource, featureProps) {
   var iconFeatures = [];
 
   areaLayerSource.getFeatures().forEach(function(feature) {
@@ -115,8 +115,8 @@ function createCentroidPointFeaturesForIconLayer(iconLayerSource, areaLayerSourc
 }
 
 // Usage
-createCentroidPointFeaturesForIconLayer(iconLayerOneSource, areaLayerOneSource, ['prop1', 'prop2', 'prop3']);
-createCentroidPointFeaturesForIconLayer(iconLayerTwoSource, areaLayerTwoSource, ['prop4', 'prop5']);
+createFeaturesForIconLayer(iconLayerOneSource, areaLayerOneSource, ['prop1', 'prop2', 'prop3']);
+createFeaturesForIconLayer(iconLayerTwoSource, areaLayerTwoSource, ['prop4', 'prop5']);
 
 ```
 
@@ -124,7 +124,7 @@ Same principle to `Function B`, we could implement our `second Facade` shown as 
 
 ```javascript
 // Second Facade
-function setStyleForIconLayer(iconLayer, styleFn) {
+function setStylesForIconLayer(iconLayer, styleFn) {
   iconLayer.setStyle(function(feature) {
     return styleFn.getStyleForIconLayer(feature);
   });
@@ -133,8 +133,8 @@ function setStyleForIconLayer(iconLayer, styleFn) {
 // Usage
 var styleOneFn = iconLayerOneStyle();
 var styleTwoFn = iconLayerTwoStyle();
-setStyleForIconLayer(iconLayerOne, styleOneFn);
-setStyleForIconLayer(iconLayerTwo, styleTwoFn);
+setStylesForIconLayer(iconLayerOne, styleOneFn);
+setStylesForIconLayer(iconLayerTwo, styleTwoFn);
 
 ```
 
@@ -146,8 +146,8 @@ function constructIconLayer(iconLayer, areaLayer, iconFeatureProps, styleFn) {
   var iconLayerSource = iconLayer.getSource().getSource();
   var areaLayerSource = areaLayer.getSource();
 
-  createCentroidPointFeaturesForIconLayer(iconLayerSource, areaLayerSource, iconFeatureProps);
-  setStyleForIconLayer(iconLayer, styleFn);
+  createFeaturesForIconLayer(iconLayerSource, areaLayerSource, iconFeatureProps);
+  setStylesForIconLayer(iconLayer, styleFn);
 }
 
 // Usage
