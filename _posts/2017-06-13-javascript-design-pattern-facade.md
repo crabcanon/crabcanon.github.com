@@ -8,24 +8,32 @@ tags: [Javascript]
 
 #### 1. Introduction
 
-As one of the most widely used design patterns, Facade simplifies complex interfaces and decouples the abstract workflow from a client's real implementation. Just like you, I hate the general principle, so what does that exactly mean:dizzy_face:? I will explain this way: let's compare how people design a framework with how people use a framework. In order to fulfill all the pre-defined requirements, designers will usually break down a big system into a series of independent micro modules, and each module will be only responsible for one task. This is where those primitive interfaces come from. By contrast, in order to achieve a huge task, users have to integrate different modules together to form a complete logic workflow. This is why libraries such as [three.js](https://threejs.org/) and [jQuery](https://jquery.com/) exist. For example, you don't have to end up with one 3D scene rendering function that's hundreds of lines of WebGL if you use three.js instead, which is only one line code! It means three.js actually wraps up the whole logic behind and simplifies complex interfaces provided by WebGL in order to achieve rendering tasks which contain a same abstract logic.
+As one of the most widely used design patterns, Facade simplifies complex interfaces and decouples the abstract workflow from a client's real implementation. Just like you, I hate the general principle, so what does that exactly mean:dizzy_face:? I will explain this way: let's compare how people design a framework with how people use a framework. In order to fulfill all the pre-defined requirements, designers will usually break down a big system into a series of independent micro modules, and each module will be only responsible for one task. This is where those primitive interfaces come from. By contrast, in order to achieve a huge task, users have to integrate different modules together to form a complete logic workflow. This is why libraries such as [three.js](https://threejs.org/) and [jQuery](https://jquery.com/) exist. For example, you don't have to end up with one 3D scene rendering function that's hundreds of lines of [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) if you use three.js instead, which is only one line code! It means three.js actually wraps up the whole logic behind and simplifies complex interfaces provided by WebGL in order to achieve rendering tasks which contain a same abstract logic.
 
 Simply put, you could achieve the same task without using the Facade pattern. However, as an organizational pattern, it will make your life easier and more manageable.
 
 #### 2. Example
 
-I was involved into a project to develop a GIS-based map application in using [OpenLayers](https://openlayers.org/) before. One task was to create clustered icon layers([ol.source.Cluster](https://openlayers.org/en/latest/apidoc/ol.source.Cluster.html)) for multiple vector area layers, which contains a couple of sub-tasks:
+<hr>
+<mark>Requirements</mark>
+<hr>
 
-- Generate and add centroid point features to each icon layer.
+I was involved into a project of developing a GIS-based map application in using [OpenLayers](https://openlayers.org/) before. One task was to create clustered icon layers([ol.source.Cluster](https://openlayers.org/en/latest/apidoc/ol.source.Cluster.html)) for multiple vector area layers, which contained a couple of sub-tasks:
+
+- Generate and add centroid point features for each icon layer.
 - Set values provided by the corresponding area layer to each icon layer's properties.
 - Set style for each icon layer.
 
-<mark>The basic coding logic behind could be:</mark>
+<hr>
+<mark>In theory</mark>
+<hr>
 
-- `Function A`: generate&add centroid point features to each icon layer and set its properties.
-- `Function B`: set style for each icon layer.
+The basic coding logic could be:
 
-A bunch of complex APIs were utilized, including but not limited to:
+- `Function A`: generate and add centroid point features with specific properties to each icon layer.
+- `Function B`: set styles for each icon layer.
+
+A bunch of primitive OpenLayers APIs would be utilized, including but not limited to:
 
 - [ol.geom.Point](https://openlayers.org/en/latest/apidoc/ol.geom.Point.html)
 - [ol.geom.Geometry::getExtent](https://openlayers.org/en/latest/apidoc/ol.geom.Geometry.html#getExtent)
@@ -44,7 +52,7 @@ A bunch of complex APIs were utilized, including but not limited to:
 <mark>In practice</mark>
 <hr>
 
-First, let's check how does `Function A` look like without using Facade?
+First, let's check how does `Function A` look like without applying Facade?
 
 ```javascript
 var areaLayerOneSource = getLayer('areaLayerOne').getSource(); // Vector data
@@ -90,7 +98,7 @@ iconLayerTwoSource.addFeatures(iconFeatures);
 
 ```
 
-We could easily find that the only difference is the part of setting feature's properties. Actually, it's a very bad practice to create duplications, especially the amount of icon layers are dynamic. Therefore, let's introduce our `first Facade`, which could (1)avoid duplications & (2)wrap up complex interfaces.
+We could easily find that the only difference is the part of setting feature's properties. Actually, it's a very bad practice to have duplicated code, especially when the amount of icon layers are dynamic. Therefore, let's introduce our `first Facade` to refactor codes, which could (1)avoid duplications & (2)wrap up complex interfaces.
 
 ```javascript
 // First Facade
@@ -136,13 +144,13 @@ setStyleForIconLayer(iconLayerTwo, styleTwoFn);
 
 ```
 
-Finally, we could make the interface even better by using our `third Facade` which construct a combined function, known as `convenience function` based on Function A and Function B.
+Finally, let's make the interface even simpler by applying our `third Facade` which construct a combined function, known as `convenience function`, based on Function A and Function B.
 
 ```javascript
 // Third Facade
 function constructIconLayer(iconLayer, areaLayer, iconFeatureProps, styleFn) {
-  var iconLayerSource = iconLayer.source().source();
-  var areaLayerSource = areaLayer.source();
+  var iconLayerSource = iconLayer.getSource().getSource();
+  var areaLayerSource = areaLayer.getSource();
 
   createCentroidPointFeaturesForIconLayer(iconLayerSource, areaLayerSource, iconFeatureProps);
   setStyleForIconLayer(iconLayer, styleFn);
@@ -174,7 +182,7 @@ constructIconLayer(iconLayerTwo, areaLayerTwo, iconFeatureTwoProps, iconLayerTwo
 
 <mark>3.2. Drawbacks of the Facade Pattern</mark>
 
-- You may use too much to do too little! According to my experience, if Facade layers are more than 3, it will become quite hard for other developers to maintain or extend the codes.
+- You may use too much to do too little! For example, according to my experience, if a convenience function's hierarchical layers are more than 3, it will become quite hard for other developers to maintain or extend the codes.
 
 ```javascript
 // Layer 1
@@ -205,4 +213,4 @@ function childB2() {}
 
 ```
 
-- You may not need an entire Facade-aimed library to just implement a very simple task.
+- You may not need an entire Facade-driven library to just implement a very simple task.
