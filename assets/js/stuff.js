@@ -11,7 +11,7 @@ $(document).on("click", "a:not([id])", function (e) {
 })
 
 $(document).on("ready pjax:end", function () {
-  var heads = ["👋", "🍉", "🐝", "💥", "🌵", "🎈", "🐧", "👓", "💎", "🐞", "🐬", "🐈", "🌳", "👻", "🍟", "🍅", "🍐", "⚓", "️🏡", "🚷"]
+  var heads = ["👋", "🐝", "💥", "🌵", "🐧", "👓", "🐞", "👻", "⚓", "🚷"]
   $(".js-head").text(heads[Math.floor(Math.random() * heads.length)])
   $(".wrapper").toggleClass("post-layout", Boolean($("article").length))
   _gaq.push(['_trackPageview']);
