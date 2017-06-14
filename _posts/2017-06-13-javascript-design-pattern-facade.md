@@ -8,7 +8,7 @@ tags: [Javascript]
 
 #### 1. Introduction
 
-As one of the most widely used design patterns, Facade simplifies complex interfaces and decouples the abstract workflow from a client's real implementation. Just like you, I hate the general principle, so what does that exactly mean:dizzy_face:? I will explain this way: let's compare how people design a framework with how people use a framework. In order to fulfill all the pre-defined requirements, designers will usually break down a big system into a series of independent micro modules, and each module will be only responsible for one task. This is where those primitive interfaces come from. By contrast, in order to achieve a huge task, users have to integrate different modules together to form a complete logic workflow. This is why libraries such as [three.js](https://threejs.org/) and [jQuery](https://jquery.com/) exist. For example, you don't have to end up with one 3D scene rendering function that's hundreds of lines WebGL if you use three.js instead, which is only one line code! It means three.js actually wraps up the whole logic behind and simplifies complex interfaces provided by WebGL in order to achieve a rendering task which has the same abstract logic.
+As one of the most widely used design patterns, Facade simplifies complex interfaces and decouples the abstract workflow from a client's real implementation. Just like you, I hate the general principle, so what does that exactly mean:dizzy_face:? I will explain this way: let's compare how people design a framework with how people use a framework. In order to fulfill all the pre-defined requirements, designers will usually break down a big system into a series of independent micro modules, and each module will be only responsible for one task. This is where those primitive interfaces come from. By contrast, in order to achieve a huge task, users have to integrate different modules together to form a complete logic workflow. This is why libraries such as [three.js](https://threejs.org/) and [jQuery](https://jquery.com/) exist. For example, you don't have to end up with one 3D scene rendering function that's hundreds of lines WebGL by using three.js instead, which is only one line code! It means three.js actually wraps up the whole logic behind and simplifies complex interfaces provided by WebGL in order to achieve rendering tasks which contain a same abstract logic.
 
 Simply put, you could achieve the same task without using the Facade pattern. However, as an organizational pattern, it will make your life easier and more manageable.
 
@@ -25,7 +25,7 @@ I was involved into a project to develop a GIS-based map application in using [O
 - `Function A`: generate&add centroid point features to each icon layer and set its properties.
 - `Function B`: set style for each icon layer.
 
-<mark>A bunch of complex APIs were utilized, including but not limited to:</mark>
+A bunch of complex APIs were utilized, including but not limited to:
 
 - [ol.geom.Point](https://openlayers.org/en/latest/apidoc/ol.geom.Point.html)
 - [ol.geom.Geometry::getExtent](https://openlayers.org/en/latest/apidoc/ol.geom.Geometry.html#getExtent)
