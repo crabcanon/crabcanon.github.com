@@ -54,6 +54,7 @@ provider:
 functions:
   area:
     handler: handler.area
+    description: Takes one or more features and returns their area in square meters.
     events:
       - http:
           path: turf/area
@@ -84,12 +85,12 @@ const geojsonhint = require('@mapbox/geojsonhint');
 
 function lint(polygon) {
   const geometryTypes = ['Feature', 'FeatureCollection'];
-  const geometryTypeError = {'message': 'GeoJSON must be either Feature or FeatureCollection.', 'line': null};
+  const geometryTypeError = {'message': 'GeoJSON must be either Feature or FeatureCollection.'};
   const hintErrors = geojsonhint.hint(polygon);
   let errors = [];
 
   if (geometryTypes.indexOf(polygon.type) === -1) errors.push(geometryTypeError);
-  if (hintErrors.length !== 0) errors.concat(hintErrors);
+  if (hintErrors.length !== 0) errors.push(...hintErrors);
 
   return errors;
 }
@@ -107,21 +108,26 @@ const measureArea = require('./lib/area').measureArea;
 
 module.exports.area = (event, context, callback) => {
   const errors = lint(event.geojson);
-  const result = measureArea(event.geojson);
+  let result = null;
   const response = {
     statusCode: null,
     body: null,
   };
 
   if (errors.length !== 0) {
-    Object.assign(response, {statusCode: 400, body: JSON.stringify(errors)});
+    Object.assign(response, {statusCode: 400, body: errors});
     callback(null, response);
     return;
   }
 
+  result = measureArea(event.geojson);
   Object.assign(response, {statusCode: 200, body: JSON.stringify(result)});
   callback(null, response);
+
+  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
+  // callback(null, { message: 'Go Serverless v1.0! Your function executed successfully!', event });
 };
+
 ```
 
 * Publish to AWS Lambda and expose the corresponding AWS Gateway API
