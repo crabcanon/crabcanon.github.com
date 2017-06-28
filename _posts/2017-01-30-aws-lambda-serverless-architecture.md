@@ -34,7 +34,7 @@ $ touch area.js lint.js
 
 Project structure should look like this:
 
-![Project structure](/assets/img/blogs/20170130-2.png)
+![Project structure](/assets/img/blogs/20170130-1.png)
 
 *  [Setup AWS credentials]((https://serverless.com/framework/docs/providers/aws/guide/credentials/))
 
@@ -138,4 +138,4 @@ $ serverless deploy
 
 * Test online
 
-![Test FaaS Online](/assets/img/blogs/20170130-1.gif)
+![Test FaaS Online](/assets/img/blogs/20170130-2.gif)
