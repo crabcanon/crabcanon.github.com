@@ -14,7 +14,7 @@ Recently, I optimised my personal website by following the [Progressive Web App 
 <hr>
 
 <!--<iframe src="https://cdn.rawgit.com/crabcanon/crabcanon.github.com/fee8154b/assets/others/yehuang.me_2017-05-10_18-27-13.html" width="100%" height="800px" frameborder="0" scrolling="yes"></iframe>-->
-![Report screenshot - before optimizations](/assets/img/blogs/20170607-1.png)
+![Report screenshot - before optimizations](/assets/img/blogs/20170607-01.png)
 
 <hr>
 <mark>After optimizations</mark><br><br>
@@ -22,10 +22,10 @@ Recently, I optimised my personal website by following the [Progressive Web App 
 <hr>
 
 <!--<iframe src="https://cdn.rawgit.com/crabcanon/crabcanon.github.com/fee8154b/assets/others/yehuang.me_2017-06-05_16-17-54.html" width="100%" height="800px" frameborder="0" scrolling="yes"></iframe>-->
-![Report screenshot - after optimizations](/assets/img/blogs/20170607-2.png)
+![Report screenshot - after optimizations](/assets/img/blogs/20170607-02.png)
 
 <hr>
 <mark>Test Video - Promote a homescreen shortcut and work offline on Android</mark>
 <hr>
 
-![Test GIF](/assets/img/blogs/20170607-3.gif)
+![Test GIF](/assets/img/blogs/20170607-03.gif)
