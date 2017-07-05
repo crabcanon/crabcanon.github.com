@@ -25,7 +25,8 @@ Recently, I optimised my personal website by following the [Progressive Web App 
 ![Report screenshot - after optimizations](/assets/img/blogs/20170607-02.png)
 
 <hr>
-<mark>Test Video - Promote a homescreen shortcut and work offline on Android</mark>
+<mark>Test Video - Android</mark><br><br>
+:cactus: Promote a homescreen shortcut && Work offline 
 <hr>
 
 ![Test GIF](/assets/img/blogs/20170607-03.gif)
