@@ -8,7 +8,15 @@ tags: [中文]
 
 没有写过关于自己的故事，不知道此时这篇谁在看，而我应从何开始呢？
 
-最近在一本关于达利的书，看到一句：『One should always proceed by accumulation, and never by selection, because time and space would take care of ordering everything else』，我发现这句话说的挺好，虽然之前没想到，但如果要给芬兰几年一句总结，有可能就是『proceeded by accumulation, while time and space have already taken care of ordering everything else』。抱歉，我不翻译了，这种句子，每个人理解不一样，不愿破坏你心中的想法。
+最近在一本关于达利的书，看到一句：
+
+> One should always proceed by accumulation, and never by selection, because time and space would take care of ordering everything else.
+
+我发现这句话说的挺好，虽然之前没想到，但如果要给芬兰几年一句总结，有可能就是:
+
+> Proceeded by accumulation, while time and space have already taken care of ordering everything else.
+
+抱歉，我不翻译了，这种句子，每个人理解不一样，不愿破坏你心中的想法。
 
 2012年秋来芬，我也许是学生里不太专业的，学校在哪个片区还不清楚，更不要说提前数月在国内加入芬兰的论坛社群，与这边深入沟通，对芬兰知之甚详了。那时，我对北欧的印象就是『神秘』。当然，神秘的事物总是让人充满向往。上飞机时，已经注意到同行旅客大约一半是去入学的新生，下机后，找到一位询问，对方也热情，邀我同行。初来乍到，那种拘谨是现在无法体会的，能找到同伴，双方都轻松不少。按照邮件指示地址，一路来到校区『Design Factory』附近，以为那就是宿舍，傻傻的对着厂房敲门，恰巧周末，街区空无一人，虽然午后艳阳高照，心中却默默打鼓：『北欧果然不一样，既没有人，连宿舍都显得另类而神秘』……这就是到芬兰的初始。如今，多年过去，我要由衷感激身边的朋友，他们一路给了我很大帮助，让我快速融入周遭环境以及学会了在芬兰生活的种种方式方法。
 
