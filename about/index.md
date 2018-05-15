@@ -19,7 +19,6 @@ layout: post
     <div class="caption t2">Arctic Ocean under the sunset.</div>
     <div class="caption t3">I learned a new word "LGBT" in a library of Helsinki.</div>
     <div class="caption t4">I will use this picture as the cover if I have something to publish one day.</div>
-  </div>
 </div>
 
 <div class="about-page">
