@@ -4,7 +4,7 @@ layout: post
 
 <div class="about-page">
   <p class="sidebar-title about-me">About me.</p>
-  <p class="about-p">My name is Ye Huang. I currently work as a web developer at <mark><a href="https://www.tieto.com/product-development/overview">Tieto PDS</a></mark>. I am <mark><a href="http://www.aalto.fi/en/studies/education/programme/geoinformatics_master/">MSc in Geoinformatics</a></mark> and a big fan of visualisation. Recently, I restarted to maintain my Github Page as I found <mark><a href="https://github.com/muan/site/releases/tag/v5.0.1-monospace">a template</a></mark> that could arouse my desire to write blogs.</p>
+  <p class="about-p">My name is Ye Huang. I am <mark><a href="http://www.aalto.fi/en/studies/education/programme/geoinformatics_master/">MSc in Geoinformatics</a></mark> and was a web developer at <mark><a href="https://www.tieto.com/">Tieto</a></mark>. Recently, I went back from Finland to China. If you have any possible opportunities related to <mark><a href="https://en.wikipedia.org/wiki/Geographic_information_system">GIS</a></mark>, <mark><a href="https://en.wikipedia.org/wiki/Information_visualization">Visualisation</a></mark> or <mark><a href="https://en.wikipedia.org/wiki/Smart_city">Smart City</a></mark>, please keep me in mind.
   <p class="about-p">Want more?</p>
   <ul class="list">
     <li><a href="https://fi.linkedin.com/pub/huang-ye/4a/668/425">Linkedin</a> | <a href="https://github.com/crabcanon">Github</a> | <a href="https://www.codewars.com/users/crabcanon">Codewars</a> | <a href="http://www.zhihu.com/people/ye-huang-7-35">『知乎』</a></li>
@@ -23,9 +23,10 @@ layout: post
 </div>
 
 <div class="about-page">
-  <p class="sidebar-title about-others">Open-source projects for fun.:zap:</p>
-  <p class="about-p">Please feel free to <mark>fork and contribute your codes</mark>. Let's make some amazing demos together!</p>
+  <p class="sidebar-title about-others">Recent personal projects.:zap:</p>
+  <p class="about-p">Please feel free to <mark>contribute your ideas</mark>.</p>
   <ul class="list">
+    <li><a href="https://github.com/crabcanon/serverless-gis">serverless-gis</a></li>
     <li><a href="https://github.com/crabcanon/angular2-ionic2-demo">angular2-ionic2-demo</a></li>
     <li><a href="https://github.com/crabcanon/AngularFire-Chat">angularfire-ionic-chat</a></li>
     <li><a href="https://github.com/crabcanon/angular-es6-demo">angular-es6-demo</a>
@@ -36,8 +37,8 @@ layout: post
 <div class="about-page">
   <p class="sidebar-title about-others">Web technologies that I use.</p>
   <ul class="list">
-    <li>Front-end: <a href="https://facebook.github.io/react/">React</a>, <a href="https://angularjs.org/">AngularJS</a>, <a href="https://www.sencha.com/products/extjs/#overview">ExtJS</a>, <a href="http://reactivex.io/rxjs/">RxJS</a></li>
-    <li>Back-end: <a href="http://rubyonrails.org/">Rails</a>, <a href="http://sailsjs.org/">Sails</a></li>
+    <li>Front-end: <a href="https://facebook.github.io/react/">React</a>, <a href="https://angular.io/">Angular</a>, <a href="https://www.sencha.com/products/extjs/#overview">ExtJS</a>, <a href="http://reactivex.io/rxjs/">RxJS</a></li>
+    <li>Back-end: <a href="https://nodejs.org">Node</a>, <a href="https://www.python.org/">Python</a></li>
     <li>Visualisations: <a href="http://d3js.org/">D3</a>, <a href="https://cartodb.com/">CartoDB</a>, <a href="https://www.mapbox.com/">Mapbox</a>, <a href="http://www.esri.com/software/arcgis">ArcGIS</a>, <a href="http://boundlessgeo.com/">OpenGeo</a></li>
     <li>Others(learning): <a href="http://graphql.org/">GraphQL</a>, <a href="https://facebook.github.io/relay/">Relay</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://serverless.com/">Serverless</a></li>
   </ul>
