@@ -4,10 +4,10 @@ layout: post
 
 <div class="about-page">
   <p class="sidebar-title about-me">About me.</p>
-  <p class="about-p">My name is Ye Huang. I am <mark><a href="http://www.aalto.fi/en/studies/education/programme/geoinformatics_master/">MSc in Geoinformatics</a></mark> and was a web developer at <mark><a href="https://www.tieto.com/">Tieto</a></mark>. Recently, I went back from Finland to China. If you have any possible opportunities related to <mark><a href="https://en.wikipedia.org/wiki/Geographic_information_system">GIS</a></mark>, <mark><a href="https://en.wikipedia.org/wiki/Information_visualization">Visualisation</a></mark> or <mark><a href="https://en.wikipedia.org/wiki/Smart_city">Smart City</a></mark>, please keep me in mind.
+  <p class="about-p">My name is Ye Huang. I currently work as an Engineer at <mark><a href="https://www.huawei.com/">Huawei</a></mark>. Since I've updated "about me" for quite many times, I really have no idea how to introduce myself this time. Sorry for now...:cactus:  
   <p class="about-p">Want more?</p>
   <ul class="list">
-    <li><a href="https://fi.linkedin.com/pub/huang-ye/4a/668/425">Linkedin</a> | <a href="https://github.com/crabcanon">Github</a> | <a href="https://www.codewars.com/users/crabcanon">Codewars</a> | <a href="http://www.zhihu.com/people/ye-huang-7-35">『知乎』</a></li>
+    <li><a href="https://www.linkedin.com/in/huang-ye-4256684a/">Linkedin</a> | <a href="https://github.com/crabcanon">Github</a> | <a href="https://www.codewars.com/users/crabcanon">Codewars</a> | <a href="http://www.zhihu.com/people/ye-huang-7-35">『知乎』</a></li>
   </ul>
 
   <div class="photos">
