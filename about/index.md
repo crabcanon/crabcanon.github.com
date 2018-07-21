@@ -4,7 +4,7 @@ layout: post
 
 <div class="about-page">
   <p class="sidebar-title about-me">About me.</p>
-  <p class="about-p">My name is Ye Huang. I currently work as an Engineer at <mark><a href="https://www.huawei.com/">Huawei</a></mark>. Since I've updated "about me" for quite many times, I really have no idea how to introduce myself this time. Sorry for now...:cactus:  
+  <p class="about-p">My name is Ye Huang. I currently work as an Engineer at <mark><a href="https://www.huawei.com/">Huawei</a></mark>. Since I've updated "About me" for quite many times, I really have no clue how I'm supposed to introduce myself for now...sorry:cactus:  
   <p class="about-p">Want more?</p>
   <ul class="list">
     <li><a href="https://www.linkedin.com/in/huang-ye-4256684a/">Linkedin</a> | <a href="https://github.com/crabcanon">Github</a> | <a href="https://www.codewars.com/users/crabcanon">Codewars</a> | <a href="http://www.zhihu.com/people/ye-huang-7-35">『知乎』</a></li>
