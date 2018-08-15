@@ -36,8 +36,8 @@ layout: post
 <div class="about-page">
   <p class="sidebar-title about-others">Web technologies that I use.</p>
   <ul class="list">
-    <li>Front-end: <a href="https://facebook.github.io/react/">React</a>, <a href="https://angular.io/">Angular</a>, <a href="https://www.sencha.com/products/extjs/#overview">ExtJS</a>, <a href="http://reactivex.io/rxjs/">RxJS</a></li>
-    <li>Back-end: <a href="https://nodejs.org">Node</a>, <a href="https://www.python.org/">Python</a></li>
+    <li>Front-end: <a href="https://facebook.github.io/react/">React</a>, <a href="https://angular.io/">Angular</a>, <a href="https://vuejs.org/index.html">Vue</a>, <a href="http://reactivex.io/rxjs/">RxJS</a></li>
+    <li>Back-end: <a href="https://nodejs.org">Node</a>, <a href="https://www.python.org/">Python</a>, <a href="https://www.java.com/">Java</a></li>
     <li>Visualisations: <a href="http://d3js.org/">D3</a>, <a href="https://cartodb.com/">CartoDB</a>, <a href="https://www.mapbox.com/">Mapbox</a>, <a href="http://www.esri.com/software/arcgis">ArcGIS</a>, <a href="http://boundlessgeo.com/">OpenGeo</a></li>
     <li>Others(learning): <a href="http://graphql.org/">GraphQL</a>, <a href="https://facebook.github.io/relay/">Relay</a>, <a href="https://www.docker.com/">Docker</a>, <a href="https://serverless.com/">Serverless</a></li>
   </ul>
