@@ -8,7 +8,7 @@ tags: [Ruby, Excel]
 
 #### 1. Introduction
 
-Recently, I got a small task from my boss which required me to find and eliminate the repeat items based on specific columns from 5 Excel files by Ruby. To be more clear, details are listed as following:
+Recently, I got a small task from my boss that required me to find and eliminate repeat items based on specific columns from 5 Excel files by Ruby. To be more clear, details are listed as following:
 
 - One seed Excel file which contains all the items
 - Other Excel files will be used to retrieve and compare with the seed Excel file based on specific columns
