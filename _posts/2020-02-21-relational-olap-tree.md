@@ -8,14 +8,14 @@ tags: [OLAP, NCP]
 
 It's been a while that I didn't update my personal website, also speak or write in English. A long spring festival for most Chinese people due to the outbreak of Novel Coronavirus Pneumonia. Though I returned to work a little bit earlier than most people, I didn't have to work very late as everyone prefer to reduce time spent with other people. What surprised me was my country could let 1.4 billion citizens wear masks over just one night. 
 
-<hr style="margin: 70px 200px;">
+<hr style="margin: 50px 200px;">
 
 <div style="width: 300px; margin-left: auto; margin-right: auto;"><img src="/assets/img/blogs/20200221-1.jpeg" width="300px"/></div>
 <div style="width: 300px; margin-left: auto; margin-right: auto;"><img src="/assets/img/blogs/20200221-2.jpeg" width="300px"/></div>
 <div style="width: 300px; margin-left: auto; margin-right: auto;"><img src="/assets/img/blogs/20200221-3.jpeg" width="300px"/></div>
 <div style="width: 300px; margin-left: auto; margin-right: auto;"><img src="/assets/img/blogs/20200221-4.jpeg" width="300px"/></div>
 
-<hr style="margin: 70px 200px;">
+<hr style="margin: 50px 200px;">
 
 As I have more time to stay at home, like today, it's a good idea to record some memory pieces just in case.
 
