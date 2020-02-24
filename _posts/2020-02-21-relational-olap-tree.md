@@ -10,7 +10,10 @@ It's been a while that I didn't update my personal website, also speak or write 
 
 <hr style="margin: 70px 200px;">
 
-<div style="width: 300px; margin-left: auto; margin-right: auto;"><img src="/assets/img/blogs/20200221-4.jpeg" width="300px"/></div>
+<div style="width: 500px; margin-left: auto; margin-right: auto;"><img src="/assets/img/blogs/20200221-1.jpeg" width="300px"/></div>
+<div style="width: 500px; margin-left: auto; margin-right: auto;"><img src="/assets/img/blogs/20200221-2.jpeg" width="300px"/></div>
+<div style="width: 500px; margin-left: auto; margin-right: auto;"><img src="/assets/img/blogs/20200221-3.jpeg" width="300px"/></div>
+<div style="width: 500px; margin-left: auto; margin-right: auto;"><img src="/assets/img/blogs/20200221-4.jpeg" width="300px"/></div>
 
 <hr style="margin: 70px 200px;">
 
